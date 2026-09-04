@@ -47,8 +47,8 @@
                           },
                           "styles": {
                             "base": {
-                              "fontWeight": "500",
-                              "textTransform": "lowercase",
+                              "fontWeight": "900",
+                              "textTransform": "capitalize",
                               "fontSize": 43
                             }
                           }
