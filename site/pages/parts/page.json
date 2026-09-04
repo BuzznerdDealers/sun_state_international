@@ -60,7 +60,13 @@
                           "props": {
                             "align": "left",
                             "width": "prose",
-                            "text": "Write something here."
+                            "text": "When your truck or trailer needs a part, downtime isn’t just an inconvenience; it’s lost revenue. The Parts Department at Sun State International is built around one goal: helping you get the right part, fast, with service you can count on. Whether you’re replacing a critical component or planning ahead with routine maintenance parts, our team is here to make the process straightforward, efficient, and dependable."
+                          },
+                          "styles": {
+                            "base": {
+                              "fontWeight": "400",
+                              "fontSize": 18
+                            }
                           }
                         }
                       ]
