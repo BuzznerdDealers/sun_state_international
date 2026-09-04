@@ -1,4 +1,32 @@
 {
   "version": 2,
-  "nodes": []
+  "nodes": [
+    {
+      "id": "section",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
