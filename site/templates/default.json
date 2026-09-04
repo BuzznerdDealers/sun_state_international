@@ -2,37 +2,126 @@
   "version": 2,
   "id": "default",
   "name": "Site template",
-  "conditions": [{ "type": "entireSite", "ref": null }],
+  "conditions": [
+    {
+      "type": "entireSite",
+      "ref": null
+    }
+  ],
   "nodes": [
     {
       "id": "utility-bar",
       "type": "section",
-      "props": { "width": "full", "background": "accent", "paddingY": 0 },
+      "props": {
+        "width": "full",
+        "background": "accent",
+        "paddingY": 1
+      },
+      "styles": {
+        "base": {
+          "paddingLeft": 48,
+          "paddingRight": 48
+        }
+      },
       "children": [
         {
           "id": "utility-row",
           "type": "row",
-          "props": { "gap": 4, "align": "center" },
+          "props": {
+            "gap": 4,
+            "align": "center"
+          },
           "children": [
             {
               "id": "utility-social-col",
               "type": "column",
-              "props": { "span": 5, "align": "start" },
-              "styles": { "base": { "display": "flex", "alignItems": "center", "gap": 14 } },
+              "props": {
+                "span": 4,
+                "align": "center"
+              },
+              "styles": {
+                "base": {
+                  "display": "flex",
+                  "alignItems": "center",
+                  "gap": 14
+                }
+              },
               "children": [
-                { "id": "utility-social-1", "type": "image", "props": { "image": { "src": "/icons/twitter.svg", "alt": "Twitter" }, "url": "#", "width": "prose" } },
-                { "id": "utility-social-2", "type": "image", "props": { "image": { "src": "/icons/facebook.svg", "alt": "Facebook" }, "url": "#", "width": "prose" } },
-                { "id": "utility-social-3", "type": "image", "props": { "image": { "src": "/icons/instagram.svg", "alt": "Instagram" }, "url": "#", "width": "prose" } },
-                { "id": "utility-social-4", "type": "image", "props": { "image": { "src": "/icons/linkedin.svg", "alt": "LinkedIn" }, "url": "#", "width": "prose" } },
-                { "id": "utility-social-5", "type": "image", "props": { "image": { "src": "/icons/youtube.svg", "alt": "YouTube" }, "url": "#", "width": "prose" } }
+                {
+                  "id": "utility-social-1",
+                  "type": "image",
+                  "props": {
+                    "image": {
+                      "src": "/icons/twitter.svg",
+                      "alt": "Twitter"
+                    },
+                    "url": "#"
+                  }
+                },
+                {
+                  "id": "utility-social-2",
+                  "type": "image",
+                  "props": {
+                    "image": {
+                      "src": "/icons/facebook.svg",
+                      "alt": "Facebook"
+                    },
+                    "url": "#"
+                  }
+                },
+                {
+                  "id": "utility-social-3",
+                  "type": "image",
+                  "props": {
+                    "image": {
+                      "src": "/icons/instagram.svg",
+                      "alt": "Instagram"
+                    },
+                    "url": "#"
+                  }
+                },
+                {
+                  "id": "utility-social-4",
+                  "type": "image",
+                  "props": {
+                    "image": {
+                      "src": "/icons/linkedin.svg",
+                      "alt": "LinkedIn"
+                    },
+                    "url": "#"
+                  }
+                },
+                {
+                  "id": "utility-social-5",
+                  "type": "image",
+                  "props": {
+                    "image": {
+                      "src": "/icons/youtube.svg",
+                      "alt": "YouTube"
+                    },
+                    "url": "#"
+                  }
+                }
               ]
             },
             {
               "id": "utility-links-col",
               "type": "column",
-              "props": { "span": 7, "align": "end" },
+              "props": {
+                "span": 8,
+                "align": "center"
+              },
               "children": [
-                { "id": "utility-menu", "type": "menu", "props": { "menuId": "utility", "layout": "horizontal", "depth": 1, "align": "end" } }
+                {
+                  "id": "utility-menu",
+                  "type": "menu",
+                  "props": {
+                    "menuId": "utility",
+                    "layout": "horizontal",
+                    "depth": 1,
+                    "align": "end"
+                  }
+                }
               ]
             }
           ]
@@ -42,70 +131,244 @@
     {
       "id": "header",
       "type": "section",
-      "props": { "width": "full", "background": "ink", "paddingY": 2 },
+      "props": {
+        "width": "full",
+        "background": "ink",
+        "paddingY": 1
+      },
+      "styles": {
+        "base": {
+          "paddingTop": 18,
+          "paddingBottom": 26,
+          "paddingLeft": 48,
+          "paddingRight": 48,
+          "position": "relative",
+          "overflow": "visible"
+        }
+      },
       "children": [
         {
           "id": "header-row",
           "type": "row",
-          "props": { "gap": 6, "align": "center" },
+          "props": {
+            "gap": 6,
+            "align": "center"
+          },
           "children": [
             {
               "id": "header-logo-col",
               "type": "column",
-              "props": { "span": 3 },
+              "props": {
+                "span": 3,
+                "align": "center"
+              },
               "children": [
-                { "id": "header-logo", "type": "logo", "props": { "image": { "src": "/img/sunstate-logo.png", "alt": "Sun State International" }, "url": "/", "height": 64 } }
+                {
+                  "id": "header-logo",
+                  "type": "logo",
+                  "props": {
+                    "image": {
+                      "src": "/img/sunstate-logo.png",
+                      "alt": "Sun State International"
+                    },
+                    "url": "/",
+                    "height": 64
+                  }
+                }
               ]
             },
             {
               "id": "header-nav-col",
               "type": "column",
-              "props": { "span": 9, "align": "end" },
-              "styles": { "base": { "display": "flex", "alignItems": "center", "justifyContent": "flex-end", "gap": 24 } },
+              "props": {
+                "span": 9,
+                "align": "center"
+              },
+              "styles": {
+                "base": {
+                  "display": "flex",
+                  "alignItems": "center",
+                  "justifyContent": "end",
+                  "gap": 4
+                }
+              },
               "children": [
-                { "id": "header-menu", "type": "menu", "props": { "menuId": "main", "layout": "mega", "collapseOnMobile": true, "depth": 3, "align": "end" } },
-                { "id": "header-phone", "type": "buttons", "props": { "items": [{ "ctaId": "call-phone" }], "align": "left" } }
+                {
+                  "id": "header-menu",
+                  "type": "menu",
+                  "props": {
+                    "menuId": "main",
+                    "layout": "mega",
+                    "collapseOnMobile": true,
+                    "depth": 3,
+                    "align": "end"
+                  }
+                },
+                {
+                  "id": "header-phone",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "ctaId": "call-phone"
+                      }
+                    ],
+                    "align": "left"
+                  }
+                }
               ]
             }
           ]
         }
       ]
     },
-    { "id": "content", "type": "contentArea", "props": { "label": "Page content" } },
+    {
+      "id": "content",
+      "type": "contentArea",
+      "props": {
+        "label": "Page content"
+      }
+    },
     {
       "id": "footer",
       "type": "section",
-      "props": { "width": "full", "background": "ink", "paddingY": 8 },
+      "props": {
+        "width": "boxed",
+        "background": "ink",
+        "paddingY": 1
+      },
+      "styles": {
+        "base": {
+          "paddingTop": 80,
+          "paddingBottom": 48
+        }
+      },
       "children": [
         {
           "id": "footer-main-row",
           "type": "row",
-          "props": { "gap": 6, "stackOn": "tablet" },
+          "props": {
+            "gap": 6,
+            "stackOn": "mobile"
+          },
+          "styles": {
+            "base": {
+              "display": "grid",
+              "gridColumns": "1.4fr 1fr 1fr 1fr",
+              "gap": 40,
+              "marginBottom": 60
+            }
+          },
           "children": [
             {
               "id": "footer-brand-col",
               "type": "column",
-              "props": { "span": 5 },
+              "props": {
+                "span": 12
+              },
               "children": [
-                { "id": "footer-logo", "type": "image", "props": { "image": { "src": "/img/sunstate-logo.png", "alt": "Sun State International" }, "width": "prose" } },
-                { "id": "footer-blurb", "type": "text", "props": { "text": "International trucks, IC Bus, Hyundai Translead and Globe Trailers. Serving Tampa, Davenport, Sarasota and Brooksville, Florida for 25 years." } },
-                { "id": "footer-mail", "type": "text", "props": { "text": "<a href=\"mailto:info@sunstateint.com\">info@sunstateint.com</a>" } },
+                {
+                  "id": "footer-logo",
+                  "type": "image",
+                  "props": {
+                    "image": {
+                      "src": "/img/sunstate-logo.png",
+                      "alt": "Sun State International"
+                    }
+                  }
+                },
+                {
+                  "id": "footer-blurb",
+                  "type": "text",
+                  "props": {
+                    "text": "International trucks, IC Bus, Hyundai Translead and Globe Trailers. Serving Tampa, Davenport, Sarasota and Brooksville, Florida for 25 years."
+                  }
+                },
+                {
+                  "id": "footer-mail",
+                  "type": "text",
+                  "props": {
+                    "text": "<a href=\"mailto:info@sunstateint.com\">info@sunstateint.com</a>"
+                  }
+                },
                 {
                   "id": "footer-social-row",
                   "type": "row",
-                  "props": { "gap": 3 },
+                  "props": {
+                    "gap": 3
+                  },
                   "children": [
                     {
                       "id": "footer-social-col",
                       "type": "column",
-                      "props": { "span": 12, "padding": 0 },
-                      "styles": { "base": { "display": "flex", "alignItems": "center", "gap": 14, "marginTop": 18 } },
+                      "props": {
+                        "span": 12,
+                        "padding": 0
+                      },
+                      "styles": {
+                        "base": {
+                          "display": "flex",
+                          "alignItems": "center",
+                          "gap": 14,
+                          "marginTop": 18
+                        }
+                      },
                       "children": [
-                        { "id": "footer-social-1", "type": "image", "props": { "image": { "src": "/icons/twitter.svg", "alt": "Twitter" }, "url": "#" } },
-                        { "id": "footer-social-2", "type": "image", "props": { "image": { "src": "/icons/facebook.svg", "alt": "Facebook" }, "url": "#" } },
-                        { "id": "footer-social-3", "type": "image", "props": { "image": { "src": "/icons/instagram.svg", "alt": "Instagram" }, "url": "#" } },
-                        { "id": "footer-social-4", "type": "image", "props": { "image": { "src": "/icons/linkedin.svg", "alt": "LinkedIn" }, "url": "#" } },
-                        { "id": "footer-social-5", "type": "image", "props": { "image": { "src": "/icons/youtube.svg", "alt": "YouTube" }, "url": "#" } }
+                        {
+                          "id": "footer-social-1",
+                          "type": "image",
+                          "props": {
+                            "image": {
+                              "src": "/icons/twitter.svg",
+                              "alt": "Twitter"
+                            },
+                            "url": "#"
+                          }
+                        },
+                        {
+                          "id": "footer-social-2",
+                          "type": "image",
+                          "props": {
+                            "image": {
+                              "src": "/icons/facebook.svg",
+                              "alt": "Facebook"
+                            },
+                            "url": "#"
+                          }
+                        },
+                        {
+                          "id": "footer-social-3",
+                          "type": "image",
+                          "props": {
+                            "image": {
+                              "src": "/icons/instagram.svg",
+                              "alt": "Instagram"
+                            },
+                            "url": "#"
+                          }
+                        },
+                        {
+                          "id": "footer-social-4",
+                          "type": "image",
+                          "props": {
+                            "image": {
+                              "src": "/icons/linkedin.svg",
+                              "alt": "LinkedIn"
+                            },
+                            "url": "#"
+                          }
+                        },
+                        {
+                          "id": "footer-social-5",
+                          "type": "image",
+                          "props": {
+                            "image": {
+                              "src": "/icons/youtube.svg",
+                              "alt": "YouTube"
+                            },
+                            "url": "#"
+                          }
+                        }
                       ]
                     }
                   ]
@@ -115,28 +378,79 @@
             {
               "id": "footer-brands-col",
               "type": "column",
-              "props": { "span": 2 },
+              "props": {
+                "span": 12
+              },
               "children": [
-                { "id": "footer-brands-heading", "type": "heading", "props": { "text": "BRANDS", "headingLevel": 4 } },
-                { "id": "footer-brands-menu", "type": "menu", "props": { "menuId": "footer-brands", "layout": "vertical", "depth": 1 } }
+                {
+                  "id": "footer-brands-heading",
+                  "type": "heading",
+                  "props": {
+                    "text": "BRANDS",
+                    "headingLevel": 4
+                  }
+                },
+                {
+                  "id": "footer-brands-menu",
+                  "type": "menu",
+                  "props": {
+                    "menuId": "footer-brands",
+                    "layout": "vertical",
+                    "depth": 1
+                  }
+                }
               ]
             },
             {
               "id": "footer-shop-col",
               "type": "column",
-              "props": { "span": 2 },
+              "props": {
+                "span": 12
+              },
               "children": [
-                { "id": "footer-shop-heading", "type": "heading", "props": { "text": "SHOP", "headingLevel": 4 } },
-                { "id": "footer-shop-menu", "type": "menu", "props": { "menuId": "footer-shop", "layout": "vertical", "depth": 1 } }
+                {
+                  "id": "footer-shop-heading",
+                  "type": "heading",
+                  "props": {
+                    "text": "SHOP",
+                    "headingLevel": 4
+                  }
+                },
+                {
+                  "id": "footer-shop-menu",
+                  "type": "menu",
+                  "props": {
+                    "menuId": "footer-shop",
+                    "layout": "vertical",
+                    "depth": 1
+                  }
+                }
               ]
             },
             {
               "id": "footer-company-col",
               "type": "column",
-              "props": { "span": 3 },
+              "props": {
+                "span": 12
+              },
               "children": [
-                { "id": "footer-company-heading", "type": "heading", "props": { "text": "COMPANY", "headingLevel": 4 } },
-                { "id": "footer-company-menu", "type": "menu", "props": { "menuId": "footer-company", "layout": "vertical", "depth": 1 } }
+                {
+                  "id": "footer-company-heading",
+                  "type": "heading",
+                  "props": {
+                    "text": "COMPANY",
+                    "headingLevel": 4
+                  }
+                },
+                {
+                  "id": "footer-company-menu",
+                  "type": "menu",
+                  "props": {
+                    "menuId": "footer-company",
+                    "layout": "vertical",
+                    "depth": 1
+                  }
+                }
               ]
             }
           ]
@@ -144,29 +458,98 @@
         {
           "id": "footer-legal-row",
           "type": "row",
-          "props": { "gap": 4, "align": "center" },
+          "props": {
+            "gap": 4,
+            "align": "center"
+          },
           "children": [
-            { "id": "footer-legal-copy-col", "type": "column", "props": { "span": 6 }, "children": [
-              { "id": "footer-legal-copy", "type": "text", "props": { "text": "© 2026 Sun State International Trucks, LLC. All rights reserved." } }
-            ] },
-            { "id": "footer-legal-links-col", "type": "column", "props": { "span": 6, "align": "end" }, "children": [
-              { "id": "footer-legal-menu", "type": "menu", "props": { "menuId": "footer-legal", "layout": "horizontal", "depth": 1, "align": "end" } }
-            ] }
+            {
+              "id": "footer-legal-copy-col",
+              "type": "column",
+              "props": {
+                "span": 6,
+                "align": "center"
+              },
+              "children": [
+                {
+                  "id": "footer-legal-copy",
+                  "type": "text",
+                  "props": {
+                    "text": "© 2026 Sun State International Trucks, LLC. All rights reserved."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "footer-legal-links-col",
+              "type": "column",
+              "props": {
+                "span": 6,
+                "align": "center"
+              },
+              "children": [
+                {
+                  "id": "footer-legal-menu",
+                  "type": "menu",
+                  "props": {
+                    "menuId": "footer-legal",
+                    "layout": "horizontal",
+                    "depth": 1,
+                    "align": "end"
+                  }
+                }
+              ]
+            }
           ]
         },
         {
           "id": "footer-credit-row",
           "type": "row",
-          "props": { "gap": 2, "align": "center" },
+          "props": {
+            "gap": 2,
+            "align": "center"
+          },
           "children": [
-            { "id": "footer-credit-col", "type": "column", "props": { "span": 12, "align": "center" }, "styles": { "base": { "display": "flex", "alignItems": "center", "justifyContent": "center", "gap": 8 } }, "children": [
-              { "id": "footer-credit-text", "type": "text", "props": { "text": "Built by", "align": "center" } },
-              { "id": "footer-credit-logo", "type": "image", "props": { "image": { "src": "/img/buzznerd-logo-cropped.png", "alt": "Buzznerd" } } }
-            ] }
+            {
+              "id": "footer-credit-col",
+              "type": "column",
+              "props": {
+                "span": 12,
+                "align": "center"
+              },
+              "styles": {
+                "base": {
+                  "display": "flex",
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "gap": 8
+                }
+              },
+              "children": [
+                {
+                  "id": "footer-credit-text",
+                  "type": "text",
+                  "props": {
+                    "text": "Built by",
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "footer-credit-logo",
+                  "type": "image",
+                  "props": {
+                    "image": {
+                      "src": "/img/buzznerd-logo-cropped.png",
+                      "alt": "Buzznerd"
+                    }
+                  }
+                }
+              ]
+            }
           ]
         }
       ]
     }
   ],
-  "css": "[data-bz-node=\"utility-bar\"]{padding:10px var(--container-pad);} [data-bz-node=\"utility-social-col\"] img,[data-bz-node=\"footer-social-col\"] img{width:14px;height:14px;filter:brightness(0) invert(1);} [data-bz-node=\"utility-menu\"] a{color:#fff;font-size:12px;font-weight:600;} [data-bz-node=\"header\"]{border-bottom:1px solid #333;overflow:visible;} [data-bz-node=\"header-menu\"] a,[data-bz-node=\"header-menu\"] button{color:#EDEDED;font-size:14px;font-weight:600;} [data-bz-node=\"header-menu\"] [aria-current=\"page\"]{color:var(--accent);} [data-bz-node=\"footer\"] h4{font-size:11px;letter-spacing:.1em;color:#8A8A8A;margin-bottom:16px;} [data-bz-node=\"footer\"] a{color:#fff;font-size:14px;} [data-bz-node=\"footer-blurb\"] p{font-size:13px;color:#A0A0A0;max-width:260px;} [data-bz-node=\"footer-mail\"] p,[data-bz-node=\"footer-mail\"] a{font-size:13px;color:#A0A0A0;} [data-bz-node=\"footer-legal-row\"]{border-top:1px solid #333;padding-top:24px;margin-top:48px;} [data-bz-node=\"footer-legal-copy\"] p{font-size:12px;color:#8A8A8A;margin:0;} [data-bz-node=\"footer-legal-menu\"] a{font-size:12px;color:#8A8A8A;} [data-bz-node=\"footer-credit-row\"]{margin-top:28px;} [data-bz-node=\"footer-credit-text\"] p{font-size:12px;color:#8A8A8A;margin:0;} [data-bz-node=\"footer-credit-logo\"] img{height:22px;width:auto;} [data-bz-node=\"footer-logo\"] img{height:56px;width:auto;margin-bottom:16px;}"
+  "css": "/* ---------------------------------------------------------- UTILITY BAR ---\n   Red strip: socials pinned left, quick links right, 10px tall padding. */\n\n[data-bz-node=\"utility-bar\"] { padding-block: 10px; }\n[data-bz-node=\"utility-bar\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"utility-social-col\"] img,\n[data-bz-node=\"footer-social-col\"] img {\n  width: 14px; height: 14px;\n  /* Source icons are black SVGs, inverted to white rather than shipping a\n     second set — the handoff's own decision, carried over. */\n  filter: brightness(0) invert(1);\n}\n[data-bz-node=\"footer-social-col\"] img { width: 16px; height: 16px; }\n[data-bz-node=\"utility-social-col\"] a,\n[data-bz-node=\"footer-social-col\"] a { display: flex; line-height: 1; }\n[data-bz-node=\"utility-social-col\"] a:hover,\n[data-bz-node=\"footer-social-col\"] a:hover { opacity: 0.7; }\n[data-bz-node=\"utility-menu\"] .bz-nav { gap: 22px; }\n[data-bz-node=\"utility-menu\"] .bz-navitem { font: 600 12px / 1.6 var(--font-body); }\n[data-bz-node=\"utility-menu\"] a { color: #fff; font: 600 12px / 1.6 var(--font-body); padding: 0; }\n[data-bz-node=\"utility-menu\"] a:hover { color: var(--ink); text-decoration: none; }\n\n/* --------------------------------------------------------------- HEADER ---\n   Dark bar, logo left at 64px, nav right, red phone button at the nav end.\n   The mega panel is absolutely positioned and viewport-wide, so nothing in\n   the header may clip overflow. */\n\n[data-bz-node=\"header\"] { border-bottom: 1px solid #333; overflow: visible; }\n[data-bz-node=\"header\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"header-logo\"] { line-height: 0; }\n[data-bz-node=\"header-logo\"] a { display: flex; align-items: center; }\n[data-bz-node=\"header-logo\"] img { height: 64px; width: auto; display: block; }\n[data-bz-node=\"header-menu\"] .bz-nav { gap: 4px; row-gap: 6px; }\n[data-bz-node=\"header-menu\"] .bz-navitem > a,\n[data-bz-node=\"header-menu\"] .bz-navitem > button,\n[data-bz-node=\"header-menu\"] .bz-navitem > .bz-navlabel {\n  display: inline-flex; align-items: center; gap: 4px;\n  padding: 8px 10px;\n  color: #EDEDED;\n  font: 600 var(--text-small) / normal var(--font-body);\n}\n[data-bz-node=\"header-menu\"] .bz-navitem > a:hover,\n[data-bz-node=\"header-menu\"] .bz-navitem > button:hover { color: var(--accent); text-decoration: none; }\n[data-bz-node=\"header-menu\"] .bz-nav > .bz-navitem--has-sub > .bz-navlabel::after {\n  content: \"\\25BE\";\n  font-size: 10px;\n}\n[data-bz-node=\"header-menu\"] [aria-current=\"page\"] { color: var(--accent); font-weight: 700; }\n[data-bz-node=\"header-phone\"] { margin-left: 8px; }\n[data-bz-node=\"header-phone\"] .bz-btn { min-height: 0; padding: 11px 18px; font: 700 var(--text-small) / 1.6 var(--font-body); }\n\n/* --------------------------------------------------------------- FOOTER ---\n   Brand column wider than the three link columns; legal row rules off the\n   grid above it; build credit centred under both. */\n\n[data-bz-node=\"footer\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"footer-logo\"] img { height: 56px; width: auto; display: block; margin-bottom: var(--space-5); }\n[data-bz-node=\"footer-blurb\"] p { font-size: 13px; line-height: 1.6; color: #A0A0A0; max-width: 260px; margin-bottom: var(--space-3); }\n[data-bz-node=\"footer-mail\"] p, [data-bz-node=\"footer-mail\"] a { font-size: 13px; color: #A0A0A0; }\n[data-bz-node=\"footer\"] h4 {\n  font: 700 var(--text-eyebrow) / 1 var(--font-body);\n  letter-spacing: 0.1em;\n  color: #8A8A8A;\n  margin: 0 0 var(--space-5);\n}\n[data-bz-node=\"footer\"] .bz-menu--vertical .bz-nav { gap: var(--space-3); }\n[data-bz-node=\"footer\"] .bz-menu--vertical a { color: #fff; font: 400 var(--text-small) / 1.4 var(--font-body); }\n[data-bz-node=\"footer-legal-row\"] { border-top: 1px solid #333; padding-top: var(--space-5); }\n[data-bz-node=\"footer-legal-copy\"] p { font-size: 12px; color: #8A8A8A; margin: 0; }\n[data-bz-node=\"footer-legal-menu\"] .bz-nav { gap: var(--space-5); }\n[data-bz-node=\"footer-legal-menu\"] a { font: 400 12px / 1 var(--font-body); color: #8A8A8A; }\n[data-bz-node=\"footer-credit-row\"] { margin-top: var(--space-6); }\n[data-bz-node=\"footer-credit-text\"] p { font-size: 12px; color: #8A8A8A; margin: 0; }\n[data-bz-node=\"footer-credit-logo\"] img { height: 22px; width: auto; position: relative; top: 4px; }\n"
 }

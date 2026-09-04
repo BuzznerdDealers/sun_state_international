@@ -62,7 +62,7 @@
               "id": "locations-map-col",
               "type": "column",
               "props": { "span": 12 },
-              "styles": { "base": { "minHeight": 460, "position": "relative", "background": "var(--paper)", "borderWidth": 1, "borderStyle": "solid", "borderColor": "var(--line)", "marginBottom": 4 } },
+              "styles": { "base": { "minHeight": 460, "position": "relative", "background": "paper", "borderWidth": 1, "borderStyle": "solid", "borderColor": "line", "marginBottom": 4 } },
               "children": [
                 {
                   "id": "locations-map-frame",
