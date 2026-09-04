@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "id": "map-embed",
+  "name": "Bare (map iframe)",
+  "conditions": [{ "type": "page", "ref": "locations-map" }],
+  "nodes": [
+    { "id": "map-embed-content", "type": "contentArea", "props": { "label": "Page content" } }
+  ],
+  "css": "html,body{margin:0;padding:0;height:100%;} [data-bz-node=\"map-embed-content\"]{height:100vh;}"
+}

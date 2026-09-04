@@ -1,0 +1,28 @@
+{
+  "id": "location-card",
+  "label": "Location card",
+  "description": "One dealership location: brand dots, name, phone, perk tags and a directions link. Carries the literal data-bz-part=\"item\" plus data-brand/data-perk/data-city attributes the Locations component's filter behaviour reads — no typed block prop exposes those, so this card is a coded widget rather than plain blocks.",
+  "category": "content",
+  "props": [
+    { "key": "number", "type": "text", "label": "Card number", "required": true },
+    { "key": "city", "type": "text", "label": "City", "required": true },
+    { "key": "state", "type": "text", "label": "State", "required": true },
+    { "key": "name", "type": "text", "label": "Location name", "required": true },
+    { "key": "phone", "type": "text", "label": "Phone", "required": true },
+    { "key": "brand1Color", "type": "color", "label": "Brand dot 1 color" },
+    { "key": "brand1Outline", "type": "boolean", "label": "Brand dot 1 is outline (no assigned color)" },
+    { "key": "brand2Color", "type": "color", "label": "Brand dot 2 color" },
+    { "key": "brand2Outline", "type": "boolean", "label": "Brand dot 2 is outline (no assigned color)" },
+    { "key": "perkInStoreShopping", "type": "boolean", "label": "Perk: In-store shopping" },
+    { "key": "perkCurbsidePickup", "type": "boolean", "label": "Perk: Curbside pickup" },
+    { "key": "perkAfterHoursService", "type": "boolean", "label": "Perk: After-hours service" },
+    { "key": "perkInStorePickup", "type": "boolean", "label": "Perk: In-store pickup" },
+    { "key": "perkDelivery", "type": "boolean", "label": "Perk: Delivery" },
+    { "key": "directionsUrl", "type": "url", "label": "Directions link (Google Maps)", "required": true },
+    { "key": "dataBrand", "type": "text", "label": "Brand facet values (space separated, lower-case)" },
+    { "key": "dataPerk", "type": "text", "label": "Perk facet values (space separated, lower-case)" },
+    { "key": "dataCity", "type": "text", "label": "City facet value (lower-case, no state)", "required": true }
+  ],
+  "html": "<div class=\"loc-card\" data-bz-part=\"item\" data-brand=\"{{dataBrand}}\" data-perk=\"{{dataPerk}}\" data-city=\"{{dataCity}}\"><div class=\"loc-card__dots\">{{#if brand1Color}}<span class=\"loc-card__dot\" style=\"background:{{brand1Color}}\"></span>{{/if}}{{#if brand1Outline}}<span class=\"loc-card__dot loc-card__dot--outline\"></span>{{/if}}{{#if brand2Color}}<span class=\"loc-card__dot\" style=\"background:{{brand2Color}}\"></span>{{/if}}{{#if brand2Outline}}<span class=\"loc-card__dot loc-card__dot--outline\"></span>{{/if}}</div><div class=\"loc-card__head\"><span class=\"loc-card__num\">{{number}}</span><span class=\"loc-card__city\">{{city}}</span><span class=\"loc-card__state\">{{state}}</span></div><p class=\"loc-card__name\">{{name}}</p><p class=\"loc-card__phone\">{{phone}}</p><div class=\"loc-card__tags\">{{#if perkInStoreShopping}}<span class=\"loc-card__tag\">IN-STORE SHOPPING</span>{{/if}}{{#if perkCurbsidePickup}}<span class=\"loc-card__tag\">CURBSIDE PICKUP</span>{{/if}}{{#if perkAfterHoursService}}<span class=\"loc-card__tag\">AFTER-HOURS SERVICE</span>{{/if}}{{#if perkInStorePickup}}<span class=\"loc-card__tag\">IN-STORE PICKUP</span>{{/if}}{{#if perkDelivery}}<span class=\"loc-card__tag\">DELIVERY</span>{{/if}}</div><a class=\"loc-card__directions\" href=\"{{link directionsUrl}}\" target=\"_blank\" rel=\"noopener\">Get directions &rarr;</a></div>",
+  "css": ".loc-card{flex:0 0 320px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);padding:var(--space-6);font-family:var(--font-body);} .loc-card[hidden]{display:none;} .loc-card__dots{display:flex;gap:6px;margin-bottom:14px;min-height:9px;} .loc-card__dot{width:9px;height:9px;border-radius:50%;display:inline-block;} .loc-card__dot--outline{border:1.5px solid var(--ink);} .loc-card__head{display:flex;align-items:baseline;gap:8px;margin-bottom:4px;} .loc-card__num{color:var(--muted);font-size:12px;font-weight:700;} .loc-card__city{font-family:var(--font-heading);font-weight:700;font-size:19px;color:var(--ink);} .loc-card__state{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--muted);} .loc-card__name{font-size:13px;font-weight:600;color:var(--muted);margin:0 0 12px;} .loc-card__phone{font-size:14px;color:var(--muted);margin:0 0 16px;} .loc-card__tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;} .loc-card__tag{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--muted);border:1px solid var(--line);padding:5px 8px;} .loc-card__directions{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);}"
+}

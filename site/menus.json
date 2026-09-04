@@ -1,0 +1,157 @@
+{
+  "version": 3,
+  "menus": [
+    {
+      "id": "main",
+      "name": "Main navigation",
+      "items": [
+        {
+          "id": "trucks-trailers",
+          "label": "Trucks & Trailers",
+          "type": "label",
+          "children": [
+            {
+              "id": "tt-showroom",
+              "label": "Showroom",
+              "type": "label",
+              "children": [
+                { "id": "tt-international", "label": "International", "type": "url", "url": "/#locations" },
+                { "id": "tt-ic-bus", "label": "IC Bus", "type": "url", "url": "/#locations" },
+                { "id": "tt-hyundai", "label": "Hyundai Translead", "type": "url", "url": "/#locations" },
+                { "id": "tt-globe", "label": "Globe Trailers", "type": "url", "url": "/#locations" }
+              ]
+            },
+            {
+              "id": "tt-type",
+              "label": "Type",
+              "type": "label",
+              "children": [
+                { "id": "tt-type-truck", "label": "Trucks", "type": "url", "url": "/#truck-types" },
+                { "id": "tt-type-trailer", "label": "Trailers", "type": "url", "url": "/#truck-types" }
+              ]
+            },
+            {
+              "id": "tt-category",
+              "label": "Category",
+              "type": "label",
+              "children": [
+                { "id": "tt-cat-dump", "label": "Dump Trucks", "type": "url", "url": "/#services" },
+                { "id": "tt-cat-sleeper", "label": "Sleeper Cabs", "type": "url", "url": "/#services" },
+                { "id": "tt-cat-day", "label": "Day Cabs", "type": "url", "url": "/#services" },
+                { "id": "tt-cat-yard", "label": "Yard Trucks", "type": "url", "url": "/#services" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "parts",
+          "label": "Parts",
+          "type": "label",
+          "children": [
+            {
+              "id": "parts-col",
+              "label": "Parts",
+              "type": "label",
+              "children": [
+                { "id": "parts-order", "label": "Order Parts Online", "type": "url", "url": "/#services" },
+                { "id": "parts-brooksville", "label": "Truck & Trailer Parts — Brooksville, FL", "type": "url", "url": "/#locations" },
+                { "id": "parts-tampa", "label": "Sun State Aftermarket Parts — Tampa, FL", "type": "url", "url": "/#locations" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "service",
+          "label": "Service",
+          "type": "label",
+          "children": [
+            {
+              "id": "service-col",
+              "label": "Service",
+              "type": "label",
+              "children": [
+                { "id": "service-appointment", "label": "Schedule a Service Appointment", "type": "url", "url": "/#services" },
+                { "id": "service-diamond", "label": "Diamond Edge Certified Service Centers", "type": "url", "url": "/#services" },
+                { "id": "service-mobile", "label": "Mobile Maintenance Support", "type": "url", "url": "/#services" }
+              ]
+            }
+          ]
+        },
+        { "id": "aftermarket", "label": "Aftermarket", "type": "url", "url": "/#locations" },
+        { "id": "our-story", "label": "Our Story", "type": "page", "ref": "our-story" },
+        {
+          "id": "location-details",
+          "label": "Location Details",
+          "type": "label",
+          "children": [
+            {
+              "id": "locations-col",
+              "label": "Locations",
+              "type": "label",
+              "children": [
+                { "id": "loc-tampa", "label": "Tampa, FL", "type": "url", "url": "/#locations" },
+                { "id": "loc-davenport", "label": "Davenport, FL", "type": "url", "url": "/#locations" },
+                { "id": "loc-sarasota", "label": "Sarasota, FL", "type": "url", "url": "/#locations" },
+                { "id": "loc-brooksville", "label": "Brooksville, FL", "type": "url", "url": "/#locations" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "utility",
+      "name": "Utility bar links",
+      "items": [
+        { "id": "u-tampa", "label": "Tampa", "type": "url", "url": "/#locations" },
+        { "id": "u-sarasota", "label": "Sarasota", "type": "url", "url": "/#locations" },
+        { "id": "u-davenport", "label": "Davenport", "type": "url", "url": "/#locations" },
+        { "id": "u-brooksville", "label": "Brooksville", "type": "url", "url": "/#locations" },
+        { "id": "u-aftermarket", "label": "Aftermarket", "type": "url", "url": "/#services" },
+        { "id": "u-trailers", "label": "Trailers", "type": "url", "url": "/#services" },
+        { "id": "u-centers", "label": "Sun State US Centers", "type": "url", "url": "/#locations" }
+      ]
+    },
+    {
+      "id": "footer-brands",
+      "name": "Footer — Brands",
+      "items": [
+        { "id": "fb-international", "label": "International", "type": "url", "url": "/#locations" },
+        { "id": "fb-ic-bus", "label": "IC Bus", "type": "url", "url": "/#locations" },
+        { "id": "fb-hyundai", "label": "Hyundai Translead", "type": "url", "url": "/#locations" },
+        { "id": "fb-globe", "label": "Globe Trailers", "type": "url", "url": "/#locations" }
+      ]
+    },
+    {
+      "id": "footer-shop",
+      "name": "Footer — Shop",
+      "items": [
+        { "id": "fs-new-trucks", "label": "New Trucks", "type": "inventory", "ref": "inventory?condition=new" },
+        { "id": "fs-used-trucks", "label": "Used Trucks", "type": "inventory", "ref": "inventory?condition=used" },
+        { "id": "fs-new-trailers", "label": "New Trailers", "type": "inventory", "ref": "inventory?condition=new&category=trailers" },
+        { "id": "fs-used-trailers", "label": "Used Trailers", "type": "inventory", "ref": "inventory?condition=used&category=trailers" },
+        { "id": "fs-parts", "label": "Parts", "type": "inventory", "ref": "parts" }
+      ]
+    },
+    {
+      "id": "footer-company",
+      "name": "Footer — Company",
+      "items": [
+        { "id": "fc-about", "label": "About Us", "type": "page", "ref": "our-story" },
+        { "id": "fc-careers", "label": "Careers", "type": "page", "ref": "our-story" },
+        { "id": "fc-blog", "label": "Blog", "type": "url", "url": "#" },
+        { "id": "fc-community", "label": "Community Involvement", "type": "url", "url": "#" },
+        { "id": "fc-contact", "label": "Contact", "type": "url", "url": "tel:+18135218148" }
+      ]
+    },
+    {
+      "id": "footer-legal",
+      "name": "Footer — Legal",
+      "items": [
+        { "id": "fl-privacy", "label": "Privacy", "type": "url", "url": "#" },
+        { "id": "fl-terms", "label": "Terms & Conditions", "type": "url", "url": "#" },
+        { "id": "fl-sitemap", "label": "Sitemap", "type": "url", "url": "#" }
+      ]
+    }
+  ]
+}

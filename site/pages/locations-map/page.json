@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "nodes": [
+    {
+      "id": "map-root",
+      "type": "section",
+      "props": { "width": "full", "background": "none", "paddingY": 0, "minHeight": "full" },
+      "children": [
+        {
+          "id": "map-row",
+          "type": "row",
+          "props": { "gap": 0 },
+          "children": [
+            {
+              "id": "map-col",
+              "type": "column",
+              "props": { "span": 12 },
+              "children": [
+                {
+                  "id": "map-canvas",
+                  "type": "customHtml",
+                  "props": {
+                    "html": "<svg id=\"ss-map\" role=\"img\" aria-label=\"Map of Sun State International locations in Florida\"></svg><div id=\"ss-popup\" class=\"ss-popup\" hidden><button type=\"button\" class=\"ss-popup__close\" aria-label=\"Close\">&times;</button><h3 id=\"ss-popup-city\"></h3><div class=\"ss-popup__phone\" id=\"ss-popup-phone\"></div><div class=\"ss-popup__row\"><a class=\"ss-popup__directions\" id=\"ss-popup-directions\" target=\"_top\" rel=\"noopener\">Directions</a><a class=\"ss-popup__inventory\" href=\"/store/inventory\" target=\"_top\" rel=\"noopener\">Inventory</a></div></div>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

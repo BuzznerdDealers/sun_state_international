@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "home",
+    "title": "Sun State International — Trucks, Trailers & Parts in Southwest Florida",
+    "description": "International trucks, IC Bus, Hyundai Translead and Globe Trailers. Sales, service and genuine parts across Tampa, Davenport, Sarasota and Brooksville, Florida for 25 years.",
+    "path": "/",
+    "out": "index.html",
+    "dir": "home"
+  },
+  {
+    "slug": "our-story",
+    "title": "Our Story",
+    "description": "Where quality meets family — the people, values and 30-year history behind Sun State International.",
+    "path": "/our-story",
+    "out": "our-story/index.html",
+    "dir": "our-story"
+  },
+  {
+    "slug": "locations-map",
+    "title": "Locations map",
+    "description": "Interactive map of Sun State International's Southwest Florida locations. Embedded by the homepage's Locations section.",
+    "path": "/locations-map",
+    "out": "locations-map/index.html",
+    "dir": "locations-map"
+  }
+]

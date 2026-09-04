@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "id": "value-cards",
+  "name": "Value card grid",
+  "props": [
+    { "key": "colSpan", "type": "number", "label": "Column span (12-column grid: 3 = 4-up, 4 = 3-up)", "default": 3 },
+    {
+      "key": "items",
+      "type": "list",
+      "label": "Cards",
+      "fields": [
+        { "key": "title", "type": "text", "label": "Title" },
+        { "key": "body", "type": "textarea", "label": "Body" }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "value-cards-row",
+      "type": "row",
+      "props": { "gap": 5, "stackOn": "tablet" },
+      "children": [
+        {
+          "id": "value-card-col",
+          "type": "column",
+          "props": { "span": "{{colSpan}}", "repeat": "items", "background": "none", "padding": 0 },
+          "children": [
+            { "id": "value-card-title", "type": "heading", "props": { "text": "{{title}}", "headingLevel": 3 } },
+            { "id": "value-card-body", "type": "text", "props": { "text": "{{body}}", "width": "full" } }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-node^=\"value-card-col\"]{border:1px solid var(--line);padding:28px 24px;} [data-bz-node^=\"value-card-title\"] h3{font-size:17px;margin-bottom:12px;} [data-bz-node^=\"value-card-body\"] p{font-size:14px;line-height:1.6;color:var(--muted);}"
+}

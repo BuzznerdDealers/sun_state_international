@@ -1,0 +1,60 @@
+{
+  "buttons": [
+    {
+      "id": "call-phone",
+      "label": "813.521.8148",
+      "url": "tel:+18135218148",
+      "style": "primary",
+      "intent": "call"
+    },
+    {
+      "id": "contact-us",
+      "label": "Contact us",
+      "url": "tel:+18135218148",
+      "style": "primary",
+      "intent": "contact"
+    },
+    {
+      "id": "see-availability",
+      "label": "See what's available",
+      "url": "/store/inventory",
+      "style": "primary",
+      "intent": "search-inventory"
+    },
+    {
+      "id": "browse-all-inventory",
+      "label": "View all inventory",
+      "url": "/store/inventory",
+      "style": "link",
+      "intent": "browse-inventory"
+    },
+    {
+      "id": "read-more-story",
+      "label": "Read more",
+      "url": "/our-story",
+      "style": "link",
+      "intent": "read-more"
+    },
+    {
+      "id": "trailers-cta",
+      "label": "See what's available now",
+      "url": "/store/inventory?category=trailers",
+      "style": "primary",
+      "intent": "browse-trailers"
+    },
+    {
+      "id": "globe-trailers-cta",
+      "label": "Globe Trailers",
+      "url": "/store/inventory?brand=globe-trailers",
+      "style": "primary",
+      "intent": "browse-brand"
+    },
+    {
+      "id": "careers-apply",
+      "label": "Let's Get You Going!",
+      "url": "#",
+      "style": "primary",
+      "intent": "careers"
+    }
+  ]
+}

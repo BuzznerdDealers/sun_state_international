@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "id": "type-slider",
+  "name": "Equipment type carousel",
+  "props": [
+    { "key": "heading", "type": "text", "label": "Heading", "default": "Choose a type to explore" },
+    {
+      "key": "items",
+      "type": "list",
+      "label": "Types",
+      "fields": [
+        { "key": "label", "type": "text", "label": "Label" },
+        { "key": "image", "type": "image", "label": "Photo" },
+        { "key": "ctaLabel", "type": "text", "label": "CTA label" },
+        { "key": "ctaUrl", "type": "url", "label": "CTA link" }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "type-slider-section",
+      "type": "section",
+      "props": { "width": "wide", "background": "ink", "paddingY": 8, "anchor": "truck-types" },
+      "children": [
+        {
+          "id": "type-slider-title-row",
+          "type": "row",
+          "props": { "gap": 0 },
+          "children": [
+            { "id": "type-slider-title-col", "type": "column", "props": { "span": 12 }, "children": [
+              { "id": "type-slider-title", "type": "heading", "props": { "text": "{{heading}}", "headingLevel": 2, "align": "center" } }
+            ] }
+          ]
+        },
+        {
+          "id": "type-slider-track",
+          "type": "row",
+          "props": { "gap": 5, "align": "stretch", "stackOn": "mobile", "behaviour": "carousel", "behaviourOptions": "{\"label\":\"Equipment types\"}" },
+          "children": [
+            {
+              "id": "type-slide",
+              "type": "column",
+              "props": { "span": 4, "part": "slide", "repeat": "items" },
+              "children": [
+                { "id": "type-slide-img", "type": "image", "props": { "image": "{{image}}", "width": "full" } },
+                { "id": "type-slide-label", "type": "heading", "props": { "text": "{{label}}", "headingLevel": 3, "align": "center" } },
+                { "id": "type-slide-cta", "type": "buttons", "props": { "items": [{ "label": "{{ctaLabel}}", "url": "{{ctaUrl}}", "style": "primary" }], "align": "center" } }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "type-slider-nav-row",
+          "type": "row",
+          "props": { "gap": 3, "align": "center" },
+          "children": [
+            { "id": "type-slider-nav-col", "type": "column", "props": { "span": 12, "align": "center" }, "children": [
+              { "id": "type-slider-prev", "type": "buttons", "props": { "items": [{ "label": "‹", "url": "#" }], "align": "center", "part": "prev" } },
+              { "id": "type-slider-next", "type": "buttons", "props": { "items": [{ "label": "›", "url": "#" }], "align": "center", "part": "next" } }
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-section=\"type-slider\"] h2{color:#fff;font-size:32px;margin-bottom:32px;} [data-bz-node^=\"type-slide\"] img{aspect-ratio:4/5;object-fit:cover;} [data-bz-node^=\"type-slide-label\"] h3{color:#B5B5B5;font-size:16px;text-align:center;margin:14px 0;} [data-bz-node=\"type-slider-track\"]{padding-bottom:8px;} [data-bz-node=\"type-slider-prev\"] a,[data-bz-node=\"type-slider-next\"] a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid #444;color:#fff;background:none;text-decoration:none;font-size:18px;} [data-bz-node=\"type-slider-nav-row\"]{margin-top:20px;}"
+}

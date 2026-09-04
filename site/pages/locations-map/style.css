@@ -1,0 +1,24 @@
+/* Bare full-bleed map document, embedded by the homepage's Locations section
+   via an <iframe>. Loaded only on this page (map-embed template has no
+   header/footer), so bare element selectors are safe here. */
+html, body { margin: 0; padding: 0; height: 100%; background: var(--paper, #F4F4F4); overflow: hidden; }
+#ss-map { width: 100%; height: 100%; display: block; }
+
+#ss-popup {
+  position: absolute;
+  display: none;
+  width: 230px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .22);
+  padding: 16px;
+  z-index: 10;
+  font-family: var(--font-body, sans-serif);
+}
+#ss-popup:not([hidden]).is-open { display: block; }
+#ss-popup h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; color: var(--ink, #141414); }
+#ss-popup .ss-popup__phone { font-size: 13px; color: var(--ink, #141414); margin-bottom: 12px; }
+#ss-popup .ss-popup__row { display: flex; gap: 8px; }
+#ss-popup a { flex: 1; text-align: center; font-size: 12.5px; font-weight: 700; padding: 10px 0; text-decoration: none; cursor: pointer; }
+#ss-popup .ss-popup__directions { background: var(--ink, #141414); color: #fff; }
+#ss-popup .ss-popup__inventory { background: #fff; color: var(--ink, #141414); border: 1.5px solid var(--line, #DCDCDC); }
+#ss-popup .ss-popup__close { position: absolute; top: 8px; right: 10px; background: none; border: none; font-size: 16px; color: var(--muted, #6C6C6C); cursor: pointer; line-height: 1; padding: 4px; }

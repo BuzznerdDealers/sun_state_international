@@ -1,0 +1,142 @@
+{
+  "version": 2,
+  "id": "locations",
+  "name": "Locations finder",
+  "props": [
+    { "key": "heading", "type": "text", "label": "Heading", "default": "Find a location" },
+    { "key": "lede", "type": "textarea", "label": "Intro copy" },
+    {
+      "key": "locations",
+      "type": "list",
+      "label": "Locations",
+      "fields": [
+        { "key": "number", "type": "text", "label": "Number" },
+        { "key": "city", "type": "text", "label": "City" },
+        { "key": "state", "type": "text", "label": "State" },
+        { "key": "name", "type": "text", "label": "Location name" },
+        { "key": "phone", "type": "text", "label": "Phone" },
+        { "key": "brand1Color", "type": "color", "label": "Brand dot 1 color" },
+        { "key": "brand1Outline", "type": "boolean", "label": "Brand dot 1 outline" },
+        { "key": "brand2Color", "type": "color", "label": "Brand dot 2 color" },
+        { "key": "brand2Outline", "type": "boolean", "label": "Brand dot 2 outline" },
+        { "key": "perkInStoreShopping", "type": "boolean", "label": "Perk: in-store shopping" },
+        { "key": "perkCurbsidePickup", "type": "boolean", "label": "Perk: curbside pickup" },
+        { "key": "perkAfterHoursService", "type": "boolean", "label": "Perk: after-hours service" },
+        { "key": "perkInStorePickup", "type": "boolean", "label": "Perk: in-store pickup" },
+        { "key": "perkDelivery", "type": "boolean", "label": "Perk: delivery" },
+        { "key": "directionsUrl", "type": "url", "label": "Directions link" },
+        { "key": "dataBrand", "type": "text", "label": "Brand facet values" },
+        { "key": "dataPerk", "type": "text", "label": "Perk facet values" },
+        { "key": "dataCity", "type": "text", "label": "City facet value" }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "locations-section",
+      "type": "section",
+      "props": { "width": "boxed", "background": "none", "paddingY": 7, "behaviour": "filter", "anchor": "locations" },
+      "children": [
+        {
+          "id": "locations-head-row",
+          "type": "row",
+          "props": { "gap": 4 },
+          "children": [
+            {
+              "id": "locations-head-col",
+              "type": "column",
+              "props": { "span": 12 },
+              "children": [
+                { "id": "locations-heading", "type": "heading", "props": { "eyebrow": "FIND A LOCATION", "text": "{{heading}}", "headingLevel": 2 } },
+                { "id": "locations-lede", "type": "text", "props": { "text": "{{lede}}", "width": "prose" } }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "locations-map-row",
+          "type": "row",
+          "props": { "gap": 0 },
+          "children": [
+            {
+              "id": "locations-map-col",
+              "type": "column",
+              "props": { "span": 12 },
+              "styles": { "base": { "minHeight": "460px", "position": "relative", "background": "var(--paper)", "borderWidth": "1px", "borderStyle": "solid", "borderColor": "var(--line)", "marginBottom": "4px" } },
+              "children": [
+                {
+                  "id": "locations-map-frame",
+                  "type": "customHtml",
+                  "props": { "html": "<iframe src=\"/locations-map\" title=\"Sun State International dealership locations map\" data-bz-el=\"frame\" data-bz-intent=\"locations-map\" loading=\"lazy\"></iframe>" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "locations-controls-row",
+          "type": "row",
+          "props": { "gap": 0 },
+          "children": [
+            {
+              "id": "locations-controls-col",
+              "type": "column",
+              "props": { "span": 12 },
+              "children": [
+                {
+                  "id": "locations-controls",
+                  "type": "customHtml",
+                  "props": {
+                    "html": "<div class=\"loc-controls\"><div class=\"filter-row\"><div class=\"filter-row__label\">BRAND</div><div class=\"pill-rail\"><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"brand\" data-bz-value=\"all\" aria-pressed=\"true\">ALL</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"brand\" data-bz-value=\"international\" aria-pressed=\"false\"><span class=\"pill__dot\" style=\"background:#EE2D24\"></span>INTERNATIONAL</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"brand\" data-bz-value=\"ic_bus\" aria-pressed=\"false\"><span class=\"pill__dot\" style=\"background:#141414\"></span>IC BUS</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"brand\" data-bz-value=\"hyundai_translead\" aria-pressed=\"false\"><span class=\"pill__dot\" style=\"background:#6C6C6C\"></span>HYUNDAI TRANSLEAD</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"brand\" data-bz-value=\"globe_trailers\" aria-pressed=\"false\">GLOBE TRAILERS</button></div></div><div class=\"filter-row\"><div class=\"filter-row__label\">PERKS</div><div class=\"pill-rail\"><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"perk\" data-bz-value=\"all\" aria-pressed=\"true\">ALL</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"perk\" data-bz-value=\"in-store-shopping\" aria-pressed=\"false\">IN-STORE SHOPPING</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"perk\" data-bz-value=\"curbside-pickup\" aria-pressed=\"false\">CURBSIDE PICKUP</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"perk\" data-bz-value=\"after-hours-service\" aria-pressed=\"false\">AFTER-HOURS SERVICE</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"perk\" data-bz-value=\"in-store-pickup\" aria-pressed=\"false\">IN-STORE PICKUP</button><button type=\"button\" class=\"pill\" data-bz-part=\"control\" data-bz-facet=\"perk\" data-bz-value=\"delivery\" aria-pressed=\"false\">DELIVERY</button></div></div><div class=\"loc-controls__head\"><button type=\"button\" class=\"btn btn--ghost loc-clear\" data-bz-part=\"control\" data-bz-facet=\"city\" data-bz-value=\"all\" aria-pressed=\"true\">&larr; Show all locations</button></div><div class=\"loc-controls__cities\" hidden aria-hidden=\"true\"><button type=\"button\" data-bz-part=\"control\" data-bz-facet=\"city\" data-bz-value=\"tampa\">Tampa</button><button type=\"button\" data-bz-part=\"control\" data-bz-facet=\"city\" data-bz-value=\"davenport\">Davenport</button><button type=\"button\" data-bz-part=\"control\" data-bz-facet=\"city\" data-bz-value=\"sarasota\">Sarasota</button><button type=\"button\" data-bz-part=\"control\" data-bz-facet=\"city\" data-bz-value=\"brooksville\">Brooksville</button></div></div>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "locations-cards-row",
+          "type": "row",
+          "props": { "gap": 0 },
+          "children": [
+            {
+              "id": "locations-cards-col",
+              "type": "column",
+              "props": { "span": 12 },
+              "styles": { "base": { "display": "flex", "gap": "20px", "overflowX": "auto", "paddingBottom": "4px" } },
+              "children": [
+                {
+                  "id": "location-card",
+                  "type": "location-card",
+                  "props": {
+                    "repeat": "locations",
+                    "number": "{{number}}",
+                    "city": "{{city}}",
+                    "state": "{{state}}",
+                    "name": "{{name}}",
+                    "phone": "{{phone}}",
+                    "brand1Color": "{{brand1Color}}",
+                    "brand1Outline": "{{brand1Outline}}",
+                    "brand2Color": "{{brand2Color}}",
+                    "brand2Outline": "{{brand2Outline}}",
+                    "perkInStoreShopping": "{{perkInStoreShopping}}",
+                    "perkCurbsidePickup": "{{perkCurbsidePickup}}",
+                    "perkAfterHoursService": "{{perkAfterHoursService}}",
+                    "perkInStorePickup": "{{perkInStorePickup}}",
+                    "perkDelivery": "{{perkDelivery}}",
+                    "directionsUrl": "{{directionsUrl}}",
+                    "dataBrand": "{{dataBrand}}",
+                    "dataPerk": "{{dataPerk}}",
+                    "dataCity": "{{dataCity}}"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-section=\"locations\"] .map-frame,[data-bz-section=\"locations\"] #locations-map-frame{height:460px;} [data-bz-node=\"locations-map-frame\"] iframe{width:100%;height:100%;border:none;display:block;} [data-bz-section=\"locations\"] .loc-controls{margin-bottom:18px;} [data-bz-section=\"locations\"] .filter-row{display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap;margin-bottom:14px;} [data-bz-section=\"locations\"] .filter-row__label{width:68px;flex-shrink:0;font:700 11px/1 var(--font-body);letter-spacing:.1em;color:var(--muted);} [data-bz-section=\"locations\"] .pill-rail{display:flex;gap:10px;flex-wrap:nowrap;overflow-x:auto;min-width:0;padding-bottom:4px;} [data-bz-section=\"locations\"] .pill{display:flex;align-items:center;gap:7px;flex-shrink:0;padding:10px 16px;background:var(--card);color:var(--ink);border:1.5px solid var(--line);border-radius:var(--radius-input);font-size:13px;font-weight:700;letter-spacing:.04em;white-space:nowrap;cursor:pointer;font-family:var(--font-body);} [data-bz-section=\"locations\"] .pill[aria-pressed=\"true\"]{background:var(--accent);color:#fff;border-color:transparent;} [data-bz-section=\"locations\"] .pill__dot{width:8px;height:8px;border-radius:50%;display:inline-block;} [data-bz-section=\"locations\"] .loc-controls__head{display:flex;align-items:center;justify-content:flex-end;margin-bottom:18px;} [data-bz-section=\"locations\"] .loc-clear{min-height:20px;padding:0;background:none;border:none;color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:3px;font-size:14px;cursor:pointer;font-family:var(--font-body);} [data-bz-section=\"locations\"] .loc-clear[aria-pressed=\"true\"]{display:none;}",
+  "js": "(function(){function ready(fn){if(document.readyState!=='loading'){fn();}else{document.addEventListener('DOMContentLoaded',fn);}}ready(function(){document.querySelectorAll('[data-bz-section=\"locations\"]').forEach(function(root){var frameHost=root.querySelector('[data-bz-el=\"frame\"][data-bz-intent=\"locations-map\"]');if(!frameHost)return;function visibleCities(){var cities={};root.querySelectorAll('.loc-card[data-bz-part~=\"item\"]').forEach(function(card){if(card.hidden)return;var c=card.getAttribute('data-city');if(c)cities[c]=true;});return Object.keys(cities);}function sync(){try{if(frameHost.contentWindow&&frameHost.contentWindow.setVisibleCities){frameHost.contentWindow.setVisibleCities(visibleCities());}}catch(e){}}root.addEventListener('bz:filter',sync);frameHost.addEventListener('load',sync);window.__onLocationPinClick=window.__onLocationPinClick||function(cityWithState){var city=String(cityWithState||'').split(',')[0].trim().toLowerCase();var btn=root.querySelector('[data-bz-part~=\"control\"][data-bz-facet=\"city\"][data-bz-value=\"'+city+'\"]');if(btn){btn.click();var target=document.getElementById('locations');if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}};window.__sunstateSelectBrand=window.__sunstateSelectBrand||function(brandId){var btn=root.querySelector('[data-bz-part~=\"control\"][data-bz-facet=\"brand\"][data-bz-value=\"'+String(brandId||'').toLowerCase()+'\"]');if(btn)btn.click();};});});})();"
+}
