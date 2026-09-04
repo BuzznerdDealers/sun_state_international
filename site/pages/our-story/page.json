@@ -115,7 +115,7 @@
               "id": "mission-text",
               "type": "text",
               "props": { "text": "We strive to be the premier provider of quality transportation products, parts and service at a fair price, with an unrivaled commitment to our customers' success — matched only by our dedication to our employees' growth, development and well-being, and our calling to have a meaningful impact in our community.", "align": "center" },
-              "styles": { "base": { "fontSize": "24px", "fontWeight": "700", "lineHeight": "1.45", "textColor": "#ffffff" } }
+              "styles": { "base": { "fontSize": 24, "fontWeight": "700", "lineHeight": "1.45", "textColor": "#ffffff" } }
             }
           ] }
         ] }

@@ -18,7 +18,7 @@
               "id": "utility-social-col",
               "type": "column",
               "props": { "span": 5, "align": "start" },
-              "styles": { "base": { "display": "flex", "alignItems": "center", "gap": "14px" } },
+              "styles": { "base": { "display": "flex", "alignItems": "center", "gap": 14 } },
               "children": [
                 { "id": "utility-social-1", "type": "image", "props": { "image": { "src": "/icons/twitter.svg", "alt": "Twitter" }, "url": "#", "width": "prose" } },
                 { "id": "utility-social-2", "type": "image", "props": { "image": { "src": "/icons/facebook.svg", "alt": "Facebook" }, "url": "#", "width": "prose" } },
@@ -61,7 +61,7 @@
               "id": "header-nav-col",
               "type": "column",
               "props": { "span": 9, "align": "end" },
-              "styles": { "base": { "display": "flex", "alignItems": "center", "justifyContent": "flex-end", "gap": "24px" } },
+              "styles": { "base": { "display": "flex", "alignItems": "center", "justifyContent": "flex-end", "gap": 24 } },
               "children": [
                 { "id": "header-menu", "type": "menu", "props": { "menuId": "main", "layout": "mega", "collapseOnMobile": true, "depth": 3, "align": "end" } },
                 { "id": "header-phone", "type": "buttons", "props": { "items": [{ "ctaId": "call-phone" }], "align": "left" } }
@@ -99,7 +99,7 @@
                       "id": "footer-social-col",
                       "type": "column",
                       "props": { "span": 12, "padding": 0 },
-                      "styles": { "base": { "display": "flex", "alignItems": "center", "gap": "14px", "marginTop": "18px" } },
+                      "styles": { "base": { "display": "flex", "alignItems": "center", "gap": 14, "marginTop": 18 } },
                       "children": [
                         { "id": "footer-social-1", "type": "image", "props": { "image": { "src": "/icons/twitter.svg", "alt": "Twitter" }, "url": "#" } },
                         { "id": "footer-social-2", "type": "image", "props": { "image": { "src": "/icons/facebook.svg", "alt": "Facebook" }, "url": "#" } },
@@ -159,7 +159,7 @@
           "type": "row",
           "props": { "gap": 2, "align": "center" },
           "children": [
-            { "id": "footer-credit-col", "type": "column", "props": { "span": 12, "align": "center" }, "styles": { "base": { "display": "flex", "alignItems": "center", "justifyContent": "center", "gap": "8px" } }, "children": [
+            { "id": "footer-credit-col", "type": "column", "props": { "span": 12, "align": "center" }, "styles": { "base": { "display": "flex", "alignItems": "center", "justifyContent": "center", "gap": 8 } }, "children": [
               { "id": "footer-credit-text", "type": "text", "props": { "text": "Built by", "align": "center" } },
               { "id": "footer-credit-logo", "type": "image", "props": { "image": { "src": "/img/buzznerd-logo-cropped.png", "alt": "Buzznerd" } } }
             ] }

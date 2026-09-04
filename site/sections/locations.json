@@ -62,7 +62,7 @@
               "id": "locations-map-col",
               "type": "column",
               "props": { "span": 12 },
-              "styles": { "base": { "minHeight": "460px", "position": "relative", "background": "var(--paper)", "borderWidth": "1px", "borderStyle": "solid", "borderColor": "var(--line)", "marginBottom": "4px" } },
+              "styles": { "base": { "minHeight": 460, "position": "relative", "background": "var(--paper)", "borderWidth": 1, "borderStyle": "solid", "borderColor": "var(--line)", "marginBottom": 4 } },
               "children": [
                 {
                   "id": "locations-map-frame",
@@ -103,7 +103,7 @@
               "id": "locations-cards-col",
               "type": "column",
               "props": { "span": 12 },
-              "styles": { "base": { "display": "flex", "gap": "20px", "overflowX": "auto", "paddingBottom": "4px" } },
+              "styles": { "base": { "display": "flex", "gap": 20, "overflowX": "auto", "paddingBottom": 4 } },
               "children": [
                 {
                   "id": "location-card",
