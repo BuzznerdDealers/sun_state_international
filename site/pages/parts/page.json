@@ -49,8 +49,18 @@
                             "base": {
                               "fontWeight": "900",
                               "textTransform": "capitalize",
-                              "fontSize": 43
+                              "fontSize": 43,
+                              "paddingBottom": 0
                             }
+                          }
+                        },
+                        {
+                          "id": "text",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Write something here."
                           }
                         }
                       ]
