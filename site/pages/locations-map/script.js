@@ -55,8 +55,8 @@
         .data(statesData.features)
         .join('path')
         .attr('d', path)
-        .attr('fill', 'var(--ink, #141414)')
-        .attr('stroke', 'var(--paper, #F4F4F4)')
+        .attr('fill', '#141414')
+        .attr('stroke', '#F4F4F4')
         .attr('stroke-width', 1);
 
       var g = svg.append('g');
@@ -85,9 +85,12 @@
 
     window.setVisibleCities = function (cities) {
       if (!mapReady) { pendingVisible = cities; return; }
+      // The host page's cards carry lower-case facet values; the pins are keyed
+      // by label. Match on a normalised form so either side can send either.
+      var wanted = (cities || []).map(function (c) { return String(c).split(',')[0].trim().toLowerCase(); });
       Object.keys(pinElements).forEach(function (city) {
         var el = pinElements[city];
-        var matched = cities.indexOf(city) > -1;
+        var matched = wanted.indexOf(city.toLowerCase()) > -1;
         if (matched) {
           el.halo.attr('r', 16).attr('fill', '#fff').attr('opacity', 1);
           el.dot.attr('r', 10).attr('fill', '#EE2D24').attr('stroke', 'none').attr('opacity', 1);
@@ -99,8 +102,8 @@
       var popup = document.getElementById('ss-popup');
       var cityLabel = document.getElementById('ss-popup-city');
       if (popup && cityLabel && !popup.hidden) {
-        var shownCity = cityLabel.textContent.split(',')[0];
-        if (cities.indexOf(shownCity) === -1) popup.hidden = true;
+        var shownCity = cityLabel.textContent.split(',')[0].trim().toLowerCase();
+        if (wanted.indexOf(shownCity) === -1) popup.hidden = true;
       }
     };
 
