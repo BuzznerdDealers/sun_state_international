@@ -70,8 +70,8 @@
                 "src": "/img/type-sleeper-cab.png",
                 "alt": "International sleeper cab truck"
               },
-              "ctaLabel": "Shop sleeper cabs",
-              "ctaUrl": "/store/inventory?category=sleeper-cabs"
+              "ctaLabel": "Buy Now →",
+              "ctaUrl": "/#services"
             },
             {
               "label": "International Dump Trucks",
@@ -79,8 +79,8 @@
                 "src": "/img/type-dump-truck.png",
                 "alt": "International dump truck"
               },
-              "ctaLabel": "Shop dump trucks",
-              "ctaUrl": "/store/inventory?category=dump-trucks"
+              "ctaLabel": "Buy Now →",
+              "ctaUrl": "/#services"
             },
             {
               "label": "International Trucks",
@@ -88,8 +88,8 @@
                 "src": "/img/type-international-truck.png",
                 "alt": "International truck"
               },
-              "ctaLabel": "Shop International trucks",
-              "ctaUrl": "/store/inventory?brand=international"
+              "ctaLabel": "Buy Now →",
+              "ctaUrl": "/#services"
             },
             {
               "label": "IC Bus",
@@ -97,8 +97,8 @@
                 "src": "/img/type-ic-bus.png",
                 "alt": "IC Bus school bus"
               },
-              "ctaLabel": "Shop IC Bus",
-              "ctaUrl": "/store/inventory?brand=ic-bus"
+              "ctaLabel": "Buy Now →",
+              "ctaUrl": "/#services"
             },
             {
               "label": "Capacity Yard Trucks",
@@ -106,8 +106,8 @@
                 "src": "/img/type-yard-truck.png",
                 "alt": "Capacity yard truck"
               },
-              "ctaLabel": "Shop yard trucks",
-              "ctaUrl": "/store/inventory?category=yard-trucks"
+              "ctaLabel": "Buy Now →",
+              "ctaUrl": "/#services"
             }
           ]
         }
@@ -302,305 +302,173 @@
               "ctaLabel": "Learn more →",
               "ctaUrl": "/#services"
             }
-          ]
+          ],
+          "eyebrow": "OUR INVENTORY",
+          "heading": "Everything to keep you moving.",
+          "lede": "We make finding the right equipment from reputable brands easier than ever at Sun State International. Whether you need a commercial truck, trailer, or school bus, we have the equipment you need to keep your business moving."
         }
       }
     },
     {
-      "id": "featured-inventory-heading-row",
-      "type": "row",
+      "id": "featured-listings-section",
+      "type": "sharedSection",
       "props": {
-        "gap": 0
-      },
-      "children": [
-        {
-          "id": "featured-inventory-heading-col",
-          "type": "column",
-          "props": {
-            "span": 12
-          },
-          "children": [
+        "sectionId": "featured-listings",
+        "values": {
+          "eyebrow": "INVENTORY",
+          "heading": "Featured listings",
+          "items": [
             {
-              "id": "featured-inventory-heading",
-              "type": "heading",
-              "props": {
-                "eyebrow": "INVENTORY",
-                "text": "Featured listings",
-                "headingLevel": 2
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "featured-inventory-widget",
-      "type": "widget",
-      "props": {
-        "widget": "inventory-carousel",
-        "config": {
-          "count": 4,
-          "layout": "grid"
-        }
-      }
-    },
-    {
-      "id": "featured-inventory-cta-row",
-      "type": "row",
-      "props": {
-        "gap": 0
-      },
-      "children": [
-        {
-          "id": "featured-inventory-cta-col",
-          "type": "column",
-          "props": {
-            "span": 12,
-            "align": "end"
-          },
-          "children": [
-            {
-              "id": "featured-inventory-cta",
-              "type": "buttons",
-              "props": {
-                "items": [
-                  {
-                    "ctaId": "browse-all-inventory"
-                  }
-                ],
-                "align": "left"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "trailers-banner-row",
-      "type": "row",
-      "props": {
-        "gap": 0
-      },
-      "children": [
-        {
-          "id": "trailers-banner-copy-col",
-          "type": "column",
-          "props": {
-            "span": 6,
-            "padding": 7
-          },
-          "children": [
-            {
-              "id": "trailers-banner-heading",
-              "type": "heading",
-              "props": {
-                "eyebrow": "NEW & USED TRAILERS",
-                "text": "The same trailers, every time.",
-                "headingLevel": 2
-              }
-            },
-            {
-              "id": "trailers-banner-body",
-              "type": "text",
-              "props": {
-                "text": "At Sun State Trailers, customer service is our priority. With quality products, quick service, and dedicated care, we provide everything you need for your business to succeed. Explore our diverse selection of new and used trailers to find the equipment you're looking for."
-              }
-            },
-            {
-              "id": "trailers-banner-cta",
-              "type": "buttons",
-              "props": {
-                "items": [
-                  {
-                    "ctaId": "trailers-cta"
-                  }
-                ],
-                "align": "left"
-              }
-            }
-          ]
-        },
-        {
-          "id": "trailers-banner-media-col",
-          "type": "column",
-          "props": {
-            "span": 6
-          },
-          "children": [
-            {
-              "id": "trailers-banner-media",
-              "type": "image",
-              "props": {
-                "image": {
-                  "src": "/img/trailers-lineup.png",
-                  "alt": "Lineup of new trailers"
-                },
-                "width": "full"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "brands-banner-row",
-      "type": "row",
-      "props": {
-        "gap": 0
-      },
-      "children": [
-        {
-          "id": "brands-banner-media-col",
-          "type": "column",
-          "props": {
-            "span": 6
-          },
-          "children": [
-            {
-              "id": "brands-banner-media",
-              "type": "image",
-              "props": {
-                "image": {
-                  "src": "/img/globe-trailer-detail.png",
-                  "alt": "Globe Trailers detail"
-                },
-                "width": "full"
-              }
-            }
-          ]
-        },
-        {
-          "id": "brands-banner-copy-col",
-          "type": "column",
-          "props": {
-            "span": 6,
-            "padding": 7
-          },
-          "children": [
-            {
-              "id": "brands-banner-heading",
-              "type": "heading",
-              "props": {
-                "eyebrow": "ABOUT OUR BRANDS",
-                "text": "Built by industry leaders.",
-                "headingLevel": 2
-              }
-            },
-            {
-              "id": "brands-banner-body",
-              "type": "text",
-              "props": {
-                "text": "At Sun State, we offer only the best quality for the best price — International trucks, IC Bus, and trailers from industry leaders like Hyundai Translead and Globe Trailers. When you choose a truck or trailer through Sun State, you're investing in durability, reliability, and innovation."
-              }
-            },
-            {
-              "id": "brands-banner-cta",
-              "type": "buttons",
-              "props": {
-                "items": [
-                  {
-                    "ctaId": "globe-trailers-cta"
-                  }
-                ],
-                "align": "left"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "testimonials",
-      "type": "testimonials",
-      "props": {
-        "heading": "What our customers say.",
-        "headingLevel": 2,
-        "items": [
-          {
-            "quote": "The team at Sun State International kept our fleet on the road with fast, reliable service.",
-            "name": "Fleet Manager",
-            "role": "Tampa, FL"
-          },
-          {
-            "quote": "Great selection of trucks and trailers, and the parts team always comes through same-day.",
-            "name": "Owner-Operator",
-            "role": "Sarasota, FL"
-          },
-          {
-            "quote": "Dedicated care from sales through financing. They made the whole process easy.",
-            "name": "Business Owner",
-            "role": "Davenport, FL"
-          }
-        ]
-      }
-    },
-    {
-      "id": "contact-cta",
-      "type": "section",
-      "props": {
-        "width": "boxed",
-        "background": "ink",
-        "paddingY": 6,
-        "align": "center"
-      },
-      "children": [
-        {
-          "id": "contact-cta-row",
-          "type": "row",
-          "props": {
-            "gap": 0
-          },
-          "children": [
-            {
-              "id": "contact-cta-col",
-              "type": "column",
-              "props": {
-                "span": 12,
-                "align": "center"
+              "photo": {
+                "src": "/img/type-sleeper-cab.png",
+                "alt": "2024 International LT Series"
               },
-              "children": [
-                {
-                  "id": "contact-cta-heading",
-                  "type": "heading",
-                  "props": {
-                    "text": "Ready to get on the road?",
-                    "headingLevel": 2,
-                    "align": "center"
-                  }
-                },
-                {
-                  "id": "contact-cta-body",
-                  "type": "text",
-                  "props": {
-                    "text": "Contact us to explore our trucks and experience nothing less than the dedicated care you deserve.",
-                    "align": "center"
-                  }
-                },
-                {
-                  "id": "contact-cta-buttons",
-                  "type": "buttons",
-                  "props": {
-                    "items": [
-                      {
-                        "ctaId": "contact-us"
-                      }
-                    ],
-                    "align": "center"
-                  }
-                },
-                {
-                  "id": "contact-cta-note",
-                  "type": "text",
-                  "props": {
-                    "text": "Call us today · 813.521.8148",
-                    "align": "center"
-                  }
-                }
-              ]
+              "title": "2024 International LT Series",
+              "location": "Tampa, FL",
+              "spec1Value": "2024",
+              "spec1Label": "Year",
+              "spec2Value": "4,200 mi",
+              "spec2Label": "Mileage",
+              "spec3Value": "Sleeper",
+              "spec3Label": "Cab",
+              "price": "$148,900",
+              "est": "Est. $2,712/mo",
+              "ctaLabel": "Check availability",
+              "ctaUrl": "/store/inventory"
+            },
+            {
+              "photo": {
+                "src": "/img/type-dump-truck.png",
+                "alt": "2023 International HX Series Dump Truck"
+              },
+              "title": "2023 International HX Series Dump Truck",
+              "location": "Brooksville, FL",
+              "spec1Value": "2023",
+              "spec1Label": "Year",
+              "spec2Value": "18,600 mi",
+              "spec2Label": "Mileage",
+              "spec3Value": "10-yd",
+              "spec3Label": "Bed",
+              "price": "$132,500",
+              "est": "Est. $2,412/mo",
+              "ctaLabel": "Check availability",
+              "ctaUrl": "/store/inventory"
+            },
+            {
+              "photo": {
+                "src": "/img/type-international-truck.png",
+                "alt": "2024 International MV Series"
+              },
+              "title": "2024 International MV Series",
+              "location": "Sarasota, FL",
+              "spec1Value": "2024",
+              "spec1Label": "Year",
+              "spec2Value": "3,400 mi",
+              "spec2Label": "Mileage",
+              "spec3Value": "Day Cab",
+              "spec3Label": "Cab",
+              "price": "$128,900",
+              "est": "Est. $2,354/mo",
+              "ctaLabel": "Check availability",
+              "ctaUrl": "/store/inventory"
+            },
+            {
+              "photo": {
+                "src": "/img/trailers-lineup.png",
+                "alt": "Hyundai Translead Dry Van Trailer"
+              },
+              "title": "Hyundai Translead Dry Van Trailer",
+              "location": "Tampa, FL",
+              "spec1Value": "2024",
+              "spec1Label": "Year",
+              "spec2Value": "53 ft",
+              "spec2Label": "Length",
+              "spec3Value": "Dry Van",
+              "spec3Label": "Type",
+              "price": "$42,900",
+              "est": "Est. $783/mo",
+              "ctaLabel": "Check availability",
+              "ctaUrl": "/store/inventory"
             }
           ]
         }
-      ]
+      }
+    },
+    {
+      "id": "trailers-banner-section",
+      "type": "sharedSection",
+      "props": {
+        "sectionId": "banner",
+        "values": {
+          "eyebrow": "NEW & USED TRAILERS",
+          "heading": "The same trailers, every time.",
+          "body": "At Sun State Trailers, customer service is our priority. With quality products, quick service, and dedicated care, we provide everything you need for your business to succeed. Explore our diverse selection of new and used trailers to find the equipment you're looking for.",
+          "ctaLabel": "See what's available now",
+          "ctaUrl": "/store/inventory?category=trailers",
+          "photo": {
+            "src": "/img/trailers-lineup.png",
+            "alt": "Lineup of new trailers"
+          }
+        }
+      }
+    },
+    {
+      "id": "brands-banner-section",
+      "type": "sharedSection",
+      "props": {
+        "sectionId": "banner",
+        "values": {
+          "eyebrow": "ABOUT OUR BRANDS",
+          "heading": "Built by industry leaders.",
+          "body": "At Sun State, we offer only the best quality for the best price — International trucks, IC Bus, and trailers from industry leaders like Hyundai Translead and Globe Trailers. When you choose a truck or trailer through Sun State, you're investing in durability, reliability, and innovation.",
+          "ctaLabel": "Globe Trailers",
+          "ctaUrl": "/store/inventory?brand=globe-trailers",
+          "photo": {
+            "src": "/img/globe-trailer-detail.png",
+            "alt": "Globe Trailers detail"
+          }
+        }
+      }
+    },
+    {
+      "id": "testimonials-section",
+      "type": "sharedSection",
+      "props": {
+        "sectionId": "testimonials-band",
+        "values": {
+          "eyebrow": "TESTIMONIALS",
+          "heading": "What our customers say.",
+          "items": [
+            {
+              "quote": "The team at Sun State International kept our fleet on the road with fast, reliable service.",
+              "name": "Fleet Manager",
+              "role": "Tampa, FL"
+            },
+            {
+              "quote": "Great selection of trucks and trailers, and the parts team always comes through same-day.",
+              "name": "Owner-Operator",
+              "role": "Sarasota, FL"
+            },
+            {
+              "quote": "Dedicated care from sales through financing. They made the whole process easy.",
+              "name": "Business Owner",
+              "role": "Davenport, FL"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "contact-cta-section",
+      "type": "sharedSection",
+      "props": {
+        "sectionId": "contact-cta",
+        "values": {
+          "heading": "Ready to get on the road?",
+          "body": "Contact us to explore our trucks and experience nothing less than the dedicated care you deserve.",
+          "note": "Call us today · 813.521.8148"
+        }
+      }
     }
   ]
 }

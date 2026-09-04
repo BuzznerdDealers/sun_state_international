@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "id": "banner",
+  "name": "Bordered banner",
+  "description": "Bordered two-up: copy on one side, photograph on the other, divided by a hairline. Which side the photograph sits on is a per-placement choice, set in the page's own CSS.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "body",
+      "type": "textarea",
+      "label": "Body copy"
+    },
+    {
+      "key": "ctaLabel",
+      "type": "text",
+      "label": "CTA label"
+    },
+    {
+      "key": "ctaUrl",
+      "type": "url",
+      "label": "CTA link"
+    },
+    {
+      "key": "photo",
+      "type": "image",
+      "label": "Photograph"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "banner-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 1
+      },
+      "children": [
+        {
+          "id": "banner-row",
+          "type": "row",
+          "props": {
+            "gap": 0,
+            "align": "stretch",
+            "stackOn": "mobile"
+          },
+          "children": [
+            {
+              "id": "banner-copy-col",
+              "type": "column",
+              "props": {
+                "span": 6
+              },
+              "children": [
+                {
+                  "id": "banner-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                },
+                {
+                  "id": "banner-body",
+                  "type": "text",
+                  "props": {
+                    "text": "{{body}}"
+                  }
+                },
+                {
+                  "id": "banner-cta",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "label": "{{ctaLabel}}",
+                        "url": "{{ctaUrl}}",
+                        "style": "primary"
+                      }
+                    ],
+                    "align": "left"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "banner-media-col",
+              "type": "column",
+              "props": {
+                "span": 6,
+                "padding": 0
+              },
+              "children": [
+                {
+                  "id": "banner-media",
+                  "type": "image",
+                  "props": {
+                    "image": "{{photo}}",
+                    "width": "full"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "/* Layout for this component's own nodes.\n   These were per-node `styles` overrides. Past a certain number of them in\n   one document the browser stops matching the compiled\n   [data-bz-node=\"x\"][data-bz-node] rules — some apply and some silently do\n   not — so the same declarations live here instead, where they hold. See the\n   note in the commit message; this is a platform bug worth fixing upstream.\n   ------------------------------------------------------------------------- */\n[data-bz-node=\"banner-band\"]{padding-top:100px;padding-bottom:120px}\n[data-bz-node=\"banner-copy-col\"]{display:flex;flex-direction:column;justify-content:center;padding-top:56px;padding-right:56px;padding-bottom:56px;padding-left:56px}\n@media (max-width: 640px){\n[data-bz-node=\"banner-band\"]{padding-top:56px;padding-bottom:64px}\n[data-bz-node=\"banner-copy-col\"]{padding-top:32px;padding-right:20px;padding-bottom:32px;padding-left:20px}\n}\n\n/* ----------------------------------------------------------------- BANNER ---\n   The whole two-up sits inside one hairline box, with a second hairline\n   between the panes. The photograph pane has a minimum height so the box\n   keeps its proportion when the copy is short. */\n\n[data-bz-node=\"banner-band\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"banner-row\"] { border: 1px solid var(--line); }\n[data-bz-node=\"banner-media-col\"] { border-left: 1px solid var(--line); min-height: 340px; }\n\n[data-bz-node=\"banner-heading\"] h2 { font: 800 var(--text-h3) / 1.2 var(--font-heading); margin: 0 0 16px; }\n.bz-block[data-bz-node=\"banner-heading\"] p.bz-eyebrow { margin: 0 0 16px; }\n[data-bz-node=\"banner-body\"] { margin-bottom: 28px; }\n[data-bz-node=\"banner-body\"] p { font-size: var(--text-base, 15px); line-height: 1.6; }\n[data-bz-node=\"banner-body\"] .bz-text { max-width: none; }\n\n[data-bz-node=\"banner-media-col\"], [data-bz-node=\"banner-media\"],\n[data-bz-node=\"banner-media\"] .bz-container, [data-bz-node=\"banner-media\"] figure { height: 100%; }\n[data-bz-node=\"banner-media\"] img {\n  width: 100%; height: 100%;\n  object-fit: cover; object-position: center;\n  display: block;\n}\n\n/* Which side the photograph sits on is set per placement, in the page CSS —\n   a component prop cannot reach a stylesheet, and reordering the DOM would\n   put the photograph before the copy for a screen reader. */\n\n@media (max-width: 640px) {\n  [data-bz-node=\"banner-media-col\"] { border-left: 0; min-height: 180px; }\n}\n"
+}

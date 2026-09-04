@@ -1,0 +1,125 @@
+{
+  "version": 2,
+  "id": "testimonials-band",
+  "name": "Testimonials",
+  "description": "Three bordered quote cards on the paper band. Quote, then the speaker's role and city.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "items",
+      "type": "list",
+      "label": "Quotes",
+      "fields": [
+        {
+          "key": "quote",
+          "type": "textarea",
+          "label": "Quote"
+        },
+        {
+          "key": "name",
+          "type": "text",
+          "label": "Speaker"
+        },
+        {
+          "key": "role",
+          "type": "text",
+          "label": "Location"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "testimonials-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "background": "paper",
+        "paddingY": 1,
+        "anchor": "testimonials"
+      },
+      "children": [
+        {
+          "id": "testimonials-head-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "testimonials-head-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "testimonials-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "testimonials-grid-row",
+          "type": "row",
+          "props": {
+            "gap": 6,
+            "align": "stretch",
+            "stackOn": "tablet"
+          },
+          "children": [
+            {
+              "id": "quote-card",
+              "type": "column",
+              "props": {
+                "span": 4,
+                "padding": 0,
+                "repeat": "items"
+              },
+              "children": [
+                {
+                  "id": "quote-card-quote",
+                  "type": "text",
+                  "props": {
+                    "text": "“{{quote}}”"
+                  }
+                },
+                {
+                  "id": "quote-card-name",
+                  "type": "text",
+                  "props": {
+                    "text": "{{name}}"
+                  }
+                },
+                {
+                  "id": "quote-card-role",
+                  "type": "text",
+                  "props": {
+                    "text": "{{role}}"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "/* ----------------------------------------------------------- TESTIMONIALS ---\n   Bordered white cards on the paper band. The handoff carries no star\n   rating, so none is drawn. */\n\n[data-bz-node=\"testimonials-band\"]{padding-top:120px;padding-bottom:120px;}\n[data-bz-node=\"testimonials-band\"] .bz-block{padding-block:0;}\n[data-bz-node=\"testimonials-heading\"] h2{margin:0 0 52px;}\n[data-bz-node=\"testimonials-grid-row\"]{gap:32px;}\n[data-bz-node=\"testimonials-grid-row\"] > .bz-col{\n  display:flex;flex-direction:column;\n  background:var(--card);border:1px solid var(--line);padding:32px;\n}\n[data-bz-node=\"testimonials-grid-row\"] .bz-text{max-width:none;}\n[data-bz-node=\"testimonials-grid-row\"] > .bz-col > .bz-block:nth-child(1) p{\n  font-size:var(--text-body);line-height:1.6;color:#242424;margin:0 0 20px;\n}\n[data-bz-node=\"testimonials-grid-row\"] > .bz-col > .bz-block:nth-child(2) p{\n  font:700 var(--text-small)/1.6 var(--font-body);color:#242424;margin:0;\n}\n[data-bz-node=\"testimonials-grid-row\"] > .bz-col > .bz-block:nth-child(3) p{\n  font:400 13px/1.6 var(--font-body);color:var(--muted);margin:0;\n}\n@media (max-width:640px){[data-bz-node=\"testimonials-band\"]{padding-top:64px;padding-bottom:64px;}}\n"
+}

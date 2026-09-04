@@ -17,12 +17,6 @@
         "background": "accent",
         "paddingY": 1
       },
-      "styles": {
-        "base": {
-          "paddingLeft": 48,
-          "paddingRight": 48
-        }
-      },
       "children": [
         {
           "id": "utility-row",
@@ -38,13 +32,6 @@
               "props": {
                 "span": 4,
                 "align": "center"
-              },
-              "styles": {
-                "base": {
-                  "display": "flex",
-                  "alignItems": "center",
-                  "gap": 14
-                }
               },
               "children": [
                 {
@@ -136,16 +123,6 @@
         "background": "ink",
         "paddingY": 1
       },
-      "styles": {
-        "base": {
-          "paddingTop": 18,
-          "paddingBottom": 26,
-          "paddingLeft": 48,
-          "paddingRight": 48,
-          "position": "relative",
-          "overflow": "visible"
-        }
-      },
       "children": [
         {
           "id": "header-row",
@@ -183,14 +160,6 @@
               "props": {
                 "span": 9,
                 "align": "center"
-              },
-              "styles": {
-                "base": {
-                  "display": "flex",
-                  "alignItems": "center",
-                  "justifyContent": "end",
-                  "gap": 4
-                }
               },
               "children": [
                 {
@@ -237,12 +206,6 @@
         "background": "ink",
         "paddingY": 1
       },
-      "styles": {
-        "base": {
-          "paddingTop": 80,
-          "paddingBottom": 48
-        }
-      },
       "children": [
         {
           "id": "footer-main-row",
@@ -251,20 +214,12 @@
             "gap": 6,
             "stackOn": "mobile"
           },
-          "styles": {
-            "base": {
-              "display": "grid",
-              "gridColumns": "1.4fr 1fr 1fr 1fr",
-              "gap": 40,
-              "marginBottom": 60
-            }
-          },
           "children": [
             {
               "id": "footer-brand-col",
               "type": "column",
               "props": {
-                "span": 12
+                "span": 1
               },
               "children": [
                 {
@@ -304,14 +259,6 @@
                       "props": {
                         "span": 12,
                         "padding": 0
-                      },
-                      "styles": {
-                        "base": {
-                          "display": "flex",
-                          "alignItems": "center",
-                          "gap": 14,
-                          "marginTop": 18
-                        }
                       },
                       "children": [
                         {
@@ -379,7 +326,7 @@
               "id": "footer-brands-col",
               "type": "column",
               "props": {
-                "span": 12
+                "span": 1
               },
               "children": [
                 {
@@ -405,7 +352,7 @@
               "id": "footer-shop-col",
               "type": "column",
               "props": {
-                "span": 12
+                "span": 1
               },
               "children": [
                 {
@@ -431,7 +378,7 @@
               "id": "footer-company-col",
               "type": "column",
               "props": {
-                "span": 12
+                "span": 1
               },
               "children": [
                 {
@@ -517,14 +464,6 @@
                 "span": 12,
                 "align": "center"
               },
-              "styles": {
-                "base": {
-                  "display": "flex",
-                  "alignItems": "center",
-                  "justifyContent": "center",
-                  "gap": 8
-                }
-              },
               "children": [
                 {
                   "id": "footer-credit-text",
@@ -551,5 +490,5 @@
       ]
     }
   ],
-  "css": "/* ---------------------------------------------------------- UTILITY BAR ---\n   Red strip: socials pinned left, quick links right, 10px tall padding. */\n\n[data-bz-node=\"utility-bar\"] { padding-block: 10px; }\n[data-bz-node=\"utility-bar\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"utility-social-col\"] img,\n[data-bz-node=\"footer-social-col\"] img {\n  width: 14px; height: 14px;\n  /* Source icons are black SVGs, inverted to white rather than shipping a\n     second set — the handoff's own decision, carried over. */\n  filter: brightness(0) invert(1);\n}\n[data-bz-node=\"footer-social-col\"] img { width: 16px; height: 16px; }\n[data-bz-node=\"utility-social-col\"] a,\n[data-bz-node=\"footer-social-col\"] a { display: flex; line-height: 1; }\n[data-bz-node=\"utility-social-col\"] a:hover,\n[data-bz-node=\"footer-social-col\"] a:hover { opacity: 0.7; }\n[data-bz-node=\"utility-menu\"] .bz-nav { gap: 22px; }\n[data-bz-node=\"utility-menu\"] .bz-navitem { font: 600 12px / 1.6 var(--font-body); }\n[data-bz-node=\"utility-menu\"] a { color: #fff; font: 600 12px / 1.6 var(--font-body); padding: 0; }\n[data-bz-node=\"utility-menu\"] a:hover { color: var(--ink); text-decoration: none; }\n\n/* --------------------------------------------------------------- HEADER ---\n   Dark bar, logo left at 64px, nav right, red phone button at the nav end.\n   The mega panel is absolutely positioned and viewport-wide, so nothing in\n   the header may clip overflow. */\n\n[data-bz-node=\"header\"] { border-bottom: 1px solid #333; overflow: visible; }\n[data-bz-node=\"header\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"header-logo\"] { line-height: 0; }\n[data-bz-node=\"header-logo\"] a { display: flex; align-items: center; }\n[data-bz-node=\"header-logo\"] img { height: 64px; width: auto; display: block; }\n[data-bz-node=\"header-menu\"] .bz-nav { gap: 4px; row-gap: 6px; }\n[data-bz-node=\"header-menu\"] .bz-navitem > a,\n[data-bz-node=\"header-menu\"] .bz-navitem > button,\n[data-bz-node=\"header-menu\"] .bz-navitem > .bz-navlabel {\n  display: inline-flex; align-items: center; gap: 4px;\n  padding: 8px 10px;\n  color: #EDEDED;\n  font: 600 var(--text-small) / normal var(--font-body);\n}\n[data-bz-node=\"header-menu\"] .bz-navitem > a:hover,\n[data-bz-node=\"header-menu\"] .bz-navitem > button:hover { color: var(--accent); text-decoration: none; }\n[data-bz-node=\"header-menu\"] .bz-nav > .bz-navitem--has-sub > .bz-navlabel::after {\n  content: \"\\25BE\";\n  font-size: 10px;\n}\n[data-bz-node=\"header-menu\"] [aria-current=\"page\"] { color: var(--accent); font-weight: 700; }\n[data-bz-node=\"header-phone\"] { margin-left: 8px; }\n[data-bz-node=\"header-phone\"] .bz-btn { min-height: 0; padding: 11px 18px; font: 700 var(--text-small) / 1.6 var(--font-body); }\n\n/* --------------------------------------------------------------- FOOTER ---\n   Brand column wider than the three link columns; legal row rules off the\n   grid above it; build credit centred under both. */\n\n[data-bz-node=\"footer\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"footer-logo\"] img { height: 56px; width: auto; display: block; margin-bottom: var(--space-5); }\n[data-bz-node=\"footer-blurb\"] p { font-size: 13px; line-height: 1.6; color: #A0A0A0; max-width: 260px; margin-bottom: var(--space-3); }\n[data-bz-node=\"footer-mail\"] p, [data-bz-node=\"footer-mail\"] a { font-size: 13px; color: #A0A0A0; }\n[data-bz-node=\"footer\"] h4 {\n  font: 700 var(--text-eyebrow) / 1 var(--font-body);\n  letter-spacing: 0.1em;\n  color: #8A8A8A;\n  margin: 0 0 var(--space-5);\n}\n[data-bz-node=\"footer\"] .bz-menu--vertical .bz-nav { gap: var(--space-3); }\n[data-bz-node=\"footer\"] .bz-menu--vertical a { color: #fff; font: 400 var(--text-small) / 1.4 var(--font-body); }\n[data-bz-node=\"footer-legal-row\"] { border-top: 1px solid #333; padding-top: var(--space-5); }\n[data-bz-node=\"footer-legal-copy\"] p { font-size: 12px; color: #8A8A8A; margin: 0; }\n[data-bz-node=\"footer-legal-menu\"] .bz-nav { gap: var(--space-5); }\n[data-bz-node=\"footer-legal-menu\"] a { font: 400 12px / 1 var(--font-body); color: #8A8A8A; }\n[data-bz-node=\"footer-credit-row\"] { margin-top: var(--space-6); }\n[data-bz-node=\"footer-credit-text\"] p { font-size: 12px; color: #8A8A8A; margin: 0; }\n[data-bz-node=\"footer-credit-logo\"] img { height: 22px; width: auto; position: relative; top: 4px; }\n"
+  "css": "/* Layout for this component's own nodes.\n   These were per-node `styles` overrides. Past a certain number of them in\n   one document the browser stops matching the compiled\n   [data-bz-node=\"x\"][data-bz-node] rules — some apply and some silently do\n   not — so the same declarations live here instead, where they hold. See the\n   note in the commit message; this is a platform bug worth fixing upstream.\n   ------------------------------------------------------------------------- */\n[data-bz-node=\"utility-bar\"]{padding-left:48px;padding-right:48px}\n[data-bz-node=\"utility-social-col\"]{display:flex;align-items:center;gap:14px}\n[data-bz-node=\"header\"]{padding-top:18px;padding-bottom:26px;padding-left:48px;padding-right:48px;position:relative;overflow:visible}\n[data-bz-node=\"header-nav-col\"]{display:flex;align-items:center;justify-content:flex-end;gap:4px}\n[data-bz-node=\"footer\"]{padding-top:80px;padding-bottom:48px}\n[data-bz-node=\"footer-main-row\"]{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px}\n[data-bz-node=\"footer-social-col\"]{display:flex;align-items:center;gap:14px;margin-top:18px}\n[data-bz-node=\"footer-credit-col\"]{display:flex;align-items:baseline;justify-content:center;gap:8px}\n\n/* ---------------------------------------------------------- UTILITY BAR ---\n   Red strip: socials pinned left, quick links right, 10px tall padding. */\n\n[data-bz-node=\"utility-bar\"] { padding-block: 10px; }\n[data-bz-node=\"utility-bar\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"utility-social-col\"] img,\n[data-bz-node=\"footer-social-col\"] img {\n  width: 14px; height: 14px;\n  /* Source icons are black SVGs, inverted to white rather than shipping a\n     second set — the handoff's own decision, carried over. */\n  filter: brightness(0) invert(1);\n}\n[data-bz-node=\"footer-social-col\"] img { width: 16px; height: 16px; }\n[data-bz-node=\"utility-social-col\"] a,\n[data-bz-node=\"footer-social-col\"] a { display: flex; line-height: 1; }\n[data-bz-node=\"utility-social-col\"] a:hover,\n[data-bz-node=\"footer-social-col\"] a:hover { opacity: 0.7; }\n[data-bz-node=\"utility-menu\"] .bz-nav { gap: 22px; }\n[data-bz-node=\"utility-menu\"] .bz-navitem { font: 600 12px / 1.6 var(--font-body); }\n[data-bz-node=\"utility-menu\"] a { color: #fff; font: 600 12px / 1.6 var(--font-body); padding: 0; }\n[data-bz-node=\"utility-menu\"] a:hover { color: var(--ink); text-decoration: none; }\n\n/* --------------------------------------------------------------- HEADER ---\n   Dark bar, logo left at 64px, nav right, red phone button at the nav end.\n   The mega panel is absolutely positioned and viewport-wide, so nothing in\n   the header may clip overflow. */\n\n[data-bz-node=\"header\"] { border-bottom: 1px solid #333; overflow: visible; }\n[data-bz-node=\"header\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"header-logo\"] { line-height: 0; }\n[data-bz-node=\"header-logo\"] a { display: flex; align-items: center; }\n[data-bz-node=\"header-logo\"] img { height: 64px; width: auto; display: block; }\n[data-bz-node=\"header-menu\"] .bz-nav { gap: 4px; row-gap: 6px; }\n[data-bz-node=\"header-menu\"] .bz-navitem > a,\n[data-bz-node=\"header-menu\"] .bz-navitem > button,\n[data-bz-node=\"header-menu\"] .bz-navitem > .bz-navlabel {\n  display: inline-flex; align-items: center; gap: 4px;\n  padding: 8px 10px;\n  color: #EDEDED;\n  font: 600 var(--text-small) / normal var(--font-body);\n}\n[data-bz-node=\"header-menu\"] .bz-navitem > a:hover,\n[data-bz-node=\"header-menu\"] .bz-navitem > button:hover { color: var(--accent); text-decoration: none; }\n[data-bz-node=\"header-menu\"] .bz-nav > .bz-navitem--has-sub > .bz-navlabel::after {\n  content: \"\\25BE\";\n  font-size: 10px;\n}\n[data-bz-node=\"header-menu\"] [aria-current=\"page\"] { color: var(--accent); font-weight: 700; }\n[data-bz-node=\"header-phone\"] { margin-left: 8px; }\n[data-bz-node=\"header-phone\"] .bz-btn { min-height: 0; padding: 11px 18px; font: 700 var(--text-small) / 1.6 var(--font-body); }\n\n/* --------------------------------------------------------------- FOOTER ---\n   Brand column wider than the three link columns; legal row rules off the\n   grid above it; build credit centred under both. */\n\n[data-bz-node=\"footer\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"footer-logo\"] img { height: 56px; width: auto; display: block; margin-bottom: 16px; }\n[data-bz-node=\"footer-blurb\"] { margin-bottom: 10px; }\n[data-bz-node=\"footer-blurb\"] p { font-size: 13px; line-height: 1.6; color: #A0A0A0; max-width: 260px; }\n[data-bz-node=\"footer-mail\"] p, [data-bz-node=\"footer-mail\"] a { font: 400 13px / 1.6 var(--font-body); color: #A0A0A0; }\n[data-bz-node=\"footer\"] h4 {\n  font: 700 var(--text-eyebrow) / 1 var(--font-body);\n  letter-spacing: 0.1em;\n  color: #8A8A8A;\n  margin: 0 0 var(--space-5);\n}\n[data-bz-node=\"footer\"] .bz-menu--vertical .bz-nav { gap: 10px; }\n[data-bz-node=\"footer\"] .bz-menu--vertical .bz-navitem { font: 400 var(--text-small) / 1.6 var(--font-body); }\n[data-bz-node=\"footer\"] .bz-menu--vertical a { padding: 0; color: #fff; font: 400 var(--text-small) / 1.6 var(--font-body); }\n[data-bz-node=\"footer-legal-row\"] { border-top: 1px solid #333; padding-top: var(--space-5); }\n[data-bz-node=\"footer-legal-copy\"] p { font-size: 12px; color: #8A8A8A; margin: 0; }\n[data-bz-node=\"footer-legal-menu\"] .bz-nav { gap: var(--space-5); }\n[data-bz-node=\"footer-legal-menu\"] .bz-navitem { font: 400 12px / 1.6 var(--font-body); }\n[data-bz-node=\"footer-legal-menu\"] a { padding: 0; font: 400 12px / 1.6 var(--font-body); color: #8A8A8A; }\n[data-bz-node=\"footer-credit-row\"] { margin-top: var(--space-6); }\n[data-bz-node=\"footer-credit-text\"] p { font-size: 12px; color: #8A8A8A; margin: 0; }\n[data-bz-node=\"footer-credit-logo\"] img { height: 22px; width: auto; position: relative; top: 4px; }\n\n@media (max-width: 640px) {\n  [data-bz-node=\"footer-main-row\"] { grid-template-columns: 1fr; gap: 36px; }\n}\n\n/* --------------------------------------------------------------- PHONE ---\n   The handoff's two breakpoints. Below 640px the utility bar keeps only the\n   socials, and the header collapses to logo + phone + hamburger on one line. */\n\n@media (max-width: 640px) {\n  [data-bz-node=\"utility-bar\"] { padding-inline: 20px; }\n  [data-bz-node=\"utility-row\"] { display: flex; justify-content: center; }\n  [data-bz-node=\"utility-links-col\"] { display: none; }\n  [data-bz-node=\"utility-social-col\"] { justify-content: center; }\n\n  [data-bz-node=\"header\"] { padding: 14px 16px; }\n  [data-bz-node=\"header-row\"] { display: flex; align-items: center; gap: 12px; }\n  [data-bz-node=\"header-logo-col\"] { flex: 0 0 auto; }\n  [data-bz-node=\"header-logo\"] img { height: 40px; }\n  [data-bz-node=\"header-nav-col\"] { flex: 1 1 auto; justify-content: flex-end; gap: 8px; }\n  [data-bz-node=\"header-phone\"] { margin-left: 0; order: 1; }\n  [data-bz-node=\"header-phone\"] .bz-btn { padding: 0 12px; height: 40px; font-size: var(--text-xs, 13px); }\n  [data-bz-node=\"header-menu\"] { order: 2; }\n}\n\n/* The renderer's collapsed-menu button draws its bars in currentColor, which\n   on the dark header has to be the chrome text colour. */\n[data-bz-node=\"header-menu\"] .bz-menu-toggle { color: #EDEDED; border-color: #333; }\n"
 }

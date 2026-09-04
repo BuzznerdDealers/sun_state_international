@@ -1,0 +1,24 @@
+/* The brands banner mirrors the trailers banner above it: photograph on the
+   left, copy on the right. The DOM order stays copy-first so reading order
+   and the mobile stack are unchanged; only the visual order flips, which is
+   why this is `order` rather than a different node tree. */
+[data-bz-node="brands-banner-section"] [data-bz-node="banner-copy-col"] {
+  order: 2;
+  border-left: 1px solid var(--line);
+}
+[data-bz-node="brands-banner-section"] [data-bz-node="banner-media-col"] {
+  order: 1;
+  border-left: 0;
+}
+[data-bz-node="brands-banner-section"] [data-bz-node="banner-band"] {
+  /* The two banners are one visual pair, so the second has no top padding. */
+  padding-top: 0;
+}
+
+@media (max-width: 640px) {
+  [data-bz-node="brands-banner-section"] [data-bz-node="banner-copy-col"] {
+    order: 1;
+    border-left: 0;
+  }
+  [data-bz-node="brands-banner-section"] [data-bz-node="banner-media-col"] { order: 2; }
+}
