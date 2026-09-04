@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "id": "about-split",
+  "name": "About split",
+  "description": "Two-up band: copy padded to the page grid on one side, photograph bleeding to the screen edge on the other.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "body",
+      "type": "textarea",
+      "label": "Body copy"
+    },
+    {
+      "key": "photo",
+      "type": "image",
+      "label": "Photograph"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "about",
+      "type": "section",
+      "props": {
+        "width": "full",
+        "background": "paper",
+        "paddingY": 1,
+        "anchor": "about"
+      },
+      "styles": {
+        "base": {
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "minHeight": 480
+        }
+      },
+      "children": [
+        {
+          "id": "about-row",
+          "type": "row",
+          "props": {
+            "gap": 0,
+            "align": "stretch",
+            "stackOn": "mobile"
+          },
+          "children": [
+            {
+              "id": "about-copy-col",
+              "type": "column",
+              "props": {
+                "span": 6
+              },
+              "styles": {
+                "base": {
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "justifyContent": "center",
+                  "alignItems": "start",
+                  "paddingTop": 60,
+                  "paddingRight": 40,
+                  "paddingBottom": 60,
+                  "paddingLeft": 128
+                },
+                "mobile": {
+                  "paddingTop": 44,
+                  "paddingRight": 20,
+                  "paddingBottom": 44,
+                  "paddingLeft": 20
+                }
+              },
+              "children": [
+                {
+                  "id": "about-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                },
+                {
+                  "id": "about-body",
+                  "type": "text",
+                  "props": {
+                    "text": "{{body}}"
+                  }
+                },
+                {
+                  "id": "about-cta",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "ctaId": "read-more-story"
+                      }
+                    ],
+                    "align": "left"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "about-media-col",
+              "type": "column",
+              "props": {
+                "span": 6,
+                "padding": 0
+              },
+              "children": [
+                {
+                  "id": "about-media",
+                  "type": "image",
+                  "props": {
+                    "image": "{{photo}}",
+                    "width": "full"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "/* The copy pane's left padding is the distance from the screen edge to where\n   a boxed section's container would start, so this copy lines up with every\n   other section's on the page while the photograph runs to the edge. */\n[data-bz-node=\"about\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"about-heading\"] h2 { margin: 0 0 22px; }\n[data-bz-node=\"about-body\"] { margin-bottom: 28px; }\n[data-bz-node=\"about-body\"] p { max-width: 460px; line-height: 1.7; }\n[data-bz-node=\"about-body\"] .bz-text { max-width: none; }\n\n[data-bz-node=\"about-media-col\"], [data-bz-node=\"about-media\"],\n[data-bz-node=\"about-media\"] .bz-container, [data-bz-node=\"about-media\"] figure { height: 100%; }\n[data-bz-node=\"about-media\"] img {\n  width: 100%; height: 100%;\n  object-fit: cover; object-position: center;\n  display: block;\n}\n@media (max-width: 640px) {\n  [data-bz-node=\"about-media-col\"] { min-height: 200px; }\n}\n"
+}

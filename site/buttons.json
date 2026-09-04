@@ -2,7 +2,7 @@
   "buttons": [
     {
       "id": "call-phone",
-      "label": "813.521.8148",
+      "label": "☎  813.521.8148",
       "url": "tel:+18135218148",
       "style": "primary",
       "intent": "call"
@@ -23,14 +23,14 @@
     },
     {
       "id": "browse-all-inventory",
-      "label": "View all inventory",
+      "label": "View all inventory →",
       "url": "/store/inventory",
       "style": "link",
       "intent": "browse-inventory"
     },
     {
       "id": "read-more-story",
-      "label": "Read more",
+      "label": "Read more →",
       "url": "/our-story",
       "style": "link",
       "intent": "read-more"

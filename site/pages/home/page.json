@@ -2,37 +2,58 @@
   "version": 2,
   "nodes": [
     {
-      "id": "hero",
-      "type": "hero",
+      "id": "hero-section",
+      "type": "sharedSection",
       "props": {
-        "eyebrow": "CELEBRATING 25 YEARS · TAMPA · DAVENPORT · SARASOTA · BROOKSVILLE, FL",
-        "headline": "Your trusted partner for trucks, trailers, and more.",
-        "ctas": [{ "ctaId": "see-availability" }],
-        "image": { "src": "/img/hero-aerial-road.jpg", "alt": "Aerial view of a Florida highway at dusk" },
-        "showSearch": true,
-        "headingLevel": 1
+        "sectionId": "hero",
+        "values": {
+          "eyebrow": "CELEBRATING 25 YEARS · TAMPA · DAVENPORT · SARASOTA · BROOKSVILLE, FL",
+          "headline": "Your trusted partner for trucks, trailers, and more.",
+          "photo": {
+            "src": "/img/hero-aerial-road.jpg",
+            "alt": "Aerial view of a Florida highway at dusk"
+          },
+          "brandmark": {
+            "src": "/img/brand-logos.png",
+            "alt": "International, IC Bus, Hyundai Translead and Globe Trailers"
+          },
+          "searchLabel": "See what's available",
+          "searchUrl": "/store/inventory",
+          "brands": [
+            {
+              "label": "INTERNATIONAL",
+              "url": "/store/inventory?brand=international"
+            },
+            {
+              "label": "IC BUS",
+              "url": "/store/inventory?brand=ic-bus"
+            },
+            {
+              "label": "HYUNDAI TRANSLEAD",
+              "url": "/store/inventory?brand=hyundai-translead"
+            },
+            {
+              "label": "GLOBE TRAILERS",
+              "url": "/store/inventory?brand=globe-trailers"
+            }
+          ]
+        }
       }
     },
     {
-      "id": "hero-brandmark-row",
-      "type": "row",
-      "props": { "gap": 0 },
-      "children": [
-        { "id": "hero-brandmark-col", "type": "column", "props": { "span": 12, "align": "center" }, "children": [
-          { "id": "hero-brandmark", "type": "image", "props": { "image": { "src": "/img/brand-logos.png", "alt": "International, IC Bus, Hyundai Translead and Globe Trailers" }, "width": "prose" } }
-        ] }
-      ]
-    },
-    {
-      "id": "about",
-      "type": "splitHero",
+      "id": "about-section",
+      "type": "sharedSection",
       "props": {
-        "badge": "GOING THE EXTRA MILE",
-        "headline": "More than a dealership.",
-        "subhead": "At Sun State International, we're more than just a dealership — we're industry experts who understand the challenges of the road. Our culture is built on accountability, action, and a commitment to doing what's right. From our parts and service teams to our finance specialists, every member of the Sun State family is dedicated to helping you succeed.",
-        "ctas": [{ "ctaId": "read-more-story" }],
-        "image": { "src": "/img/office-dealer.jpg", "alt": "Sun State International dealership office" },
-        "headingLevel": 2
+        "sectionId": "about-split",
+        "values": {
+          "eyebrow": "GOING THE EXTRA MILE",
+          "heading": "More than a dealership.",
+          "body": "At Sun State International, we're more than just a dealership — we're industry experts who understand the challenges of the road. Our culture is built on accountability, action, and a commitment to doing what's right. From our parts and service teams to our finance specialists, every member of the Sun State family is dedicated to helping you succeed.",
+          "photo": {
+            "src": "/img/office-dealer.jpg",
+            "alt": "Sun State International dealership office"
+          }
+        }
       }
     },
     {
@@ -43,11 +64,51 @@
         "values": {
           "heading": "Choose a type to explore",
           "items": [
-            { "label": "International Sleeper Cabs", "image": { "src": "/img/type-sleeper-cab.png", "alt": "International sleeper cab truck" }, "ctaLabel": "Shop sleeper cabs", "ctaUrl": "/store/inventory?category=sleeper-cabs" },
-            { "label": "International Dump Trucks", "image": { "src": "/img/type-dump-truck.png", "alt": "International dump truck" }, "ctaLabel": "Shop dump trucks", "ctaUrl": "/store/inventory?category=dump-trucks" },
-            { "label": "International Trucks", "image": { "src": "/img/type-international-truck.png", "alt": "International truck" }, "ctaLabel": "Shop International trucks", "ctaUrl": "/store/inventory?brand=international" },
-            { "label": "IC Bus", "image": { "src": "/img/type-ic-bus.png", "alt": "IC Bus school bus" }, "ctaLabel": "Shop IC Bus", "ctaUrl": "/store/inventory?brand=ic-bus" },
-            { "label": "Capacity Yard Trucks", "image": { "src": "/img/type-yard-truck.png", "alt": "Capacity yard truck" }, "ctaLabel": "Shop yard trucks", "ctaUrl": "/store/inventory?category=yard-trucks" }
+            {
+              "label": "International Sleeper Cabs",
+              "image": {
+                "src": "/img/type-sleeper-cab.png",
+                "alt": "International sleeper cab truck"
+              },
+              "ctaLabel": "Shop sleeper cabs",
+              "ctaUrl": "/store/inventory?category=sleeper-cabs"
+            },
+            {
+              "label": "International Dump Trucks",
+              "image": {
+                "src": "/img/type-dump-truck.png",
+                "alt": "International dump truck"
+              },
+              "ctaLabel": "Shop dump trucks",
+              "ctaUrl": "/store/inventory?category=dump-trucks"
+            },
+            {
+              "label": "International Trucks",
+              "image": {
+                "src": "/img/type-international-truck.png",
+                "alt": "International truck"
+              },
+              "ctaLabel": "Shop International trucks",
+              "ctaUrl": "/store/inventory?brand=international"
+            },
+            {
+              "label": "IC Bus",
+              "image": {
+                "src": "/img/type-ic-bus.png",
+                "alt": "IC Bus school bus"
+              },
+              "ctaLabel": "Shop IC Bus",
+              "ctaUrl": "/store/inventory?brand=ic-bus"
+            },
+            {
+              "label": "Capacity Yard Trucks",
+              "image": {
+                "src": "/img/type-yard-truck.png",
+                "alt": "Capacity yard truck"
+              },
+              "ctaLabel": "Shop yard trucks",
+              "ctaUrl": "/store/inventory?category=yard-trucks"
+            }
           ]
         }
       }
@@ -62,46 +123,124 @@
           "lede": "Ready to find the right commercial trucks for your business? Visit us at one of our convenient locations across Southwest Florida to find the perfect trucks and trailers for your needs.",
           "locations": [
             {
-              "number": "01", "city": "Brooksville", "state": "FL", "name": "Truck & Trailer Parts", "phone": "(352) 277-0221",
-              "brand1Color": "", "brand1Outline": false, "brand2Color": "", "brand2Outline": false,
-              "perkInStoreShopping": true, "perkCurbsidePickup": true, "perkAfterHoursService": false, "perkInStorePickup": false, "perkDelivery": true,
+              "number": "01",
+              "city": "Brooksville",
+              "state": "FL",
+              "name": "Truck & Trailer Parts",
+              "phone": "(352) 277-0221",
+              "brand1Color": "",
+              "brand1Outline": false,
+              "brand2Color": "",
+              "brand2Outline": false,
+              "perkInStoreShopping": true,
+              "perkCurbsidePickup": true,
+              "perkAfterHoursService": false,
+              "perkInStorePickup": false,
+              "perkDelivery": true,
               "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Brooksville%2C%20FL",
-              "dataBrand": "", "dataPerk": "in-store-shopping curbside-pickup delivery", "dataCity": "brooksville"
+              "dataBrand": "",
+              "dataPerk": "in-store-shopping curbside-pickup delivery",
+              "dataCity": "brooksville"
             },
             {
-              "number": "02", "city": "Davenport", "state": "FL", "name": "Sun State International Trucks, LLC.", "phone": "(863) 238-2989",
-              "brand1Color": "#EE2D24", "brand1Outline": false, "brand2Color": "#141414", "brand2Outline": false,
-              "perkInStoreShopping": true, "perkCurbsidePickup": true, "perkAfterHoursService": true, "perkInStorePickup": false, "perkDelivery": false,
+              "number": "02",
+              "city": "Davenport",
+              "state": "FL",
+              "name": "Sun State International Trucks, LLC.",
+              "phone": "(863) 238-2989",
+              "brand1Color": "#EE2D24",
+              "brand1Outline": false,
+              "brand2Color": "#141414",
+              "brand2Outline": false,
+              "perkInStoreShopping": true,
+              "perkCurbsidePickup": true,
+              "perkAfterHoursService": true,
+              "perkInStorePickup": false,
+              "perkDelivery": false,
               "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Davenport%2C%20FL",
-              "dataBrand": "international ic_bus", "dataPerk": "in-store-shopping curbside-pickup after-hours-service", "dataCity": "davenport"
+              "dataBrand": "international ic_bus",
+              "dataPerk": "in-store-shopping curbside-pickup after-hours-service",
+              "dataCity": "davenport"
             },
             {
-              "number": "03", "city": "Sarasota", "state": "FL", "name": "Sun State International Trucks, LLC.", "phone": "(941) 549-2251",
-              "brand1Color": "#EE2D24", "brand1Outline": false, "brand2Color": "#141414", "brand2Outline": false,
-              "perkInStoreShopping": true, "perkCurbsidePickup": true, "perkAfterHoursService": true, "perkInStorePickup": false, "perkDelivery": false,
+              "number": "03",
+              "city": "Sarasota",
+              "state": "FL",
+              "name": "Sun State International Trucks, LLC.",
+              "phone": "(941) 549-2251",
+              "brand1Color": "#EE2D24",
+              "brand1Outline": false,
+              "brand2Color": "#141414",
+              "brand2Outline": false,
+              "perkInStoreShopping": true,
+              "perkCurbsidePickup": true,
+              "perkAfterHoursService": true,
+              "perkInStorePickup": false,
+              "perkDelivery": false,
               "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Sarasota%2C%20FL",
-              "dataBrand": "international ic_bus", "dataPerk": "in-store-shopping curbside-pickup after-hours-service", "dataCity": "sarasota"
+              "dataBrand": "international ic_bus",
+              "dataPerk": "in-store-shopping curbside-pickup after-hours-service",
+              "dataCity": "sarasota"
             },
             {
-              "number": "04", "city": "Tampa", "state": "FL", "name": "Sun State Aftermarket Parts", "phone": "(813) 521-8053",
-              "brand1Color": "", "brand1Outline": false, "brand2Color": "", "brand2Outline": false,
-              "perkInStoreShopping": true, "perkCurbsidePickup": false, "perkAfterHoursService": false, "perkInStorePickup": false, "perkDelivery": true,
+              "number": "04",
+              "city": "Tampa",
+              "state": "FL",
+              "name": "Sun State Aftermarket Parts",
+              "phone": "(813) 521-8053",
+              "brand1Color": "",
+              "brand1Outline": false,
+              "brand2Color": "",
+              "brand2Outline": false,
+              "perkInStoreShopping": true,
+              "perkCurbsidePickup": false,
+              "perkAfterHoursService": false,
+              "perkInStorePickup": false,
+              "perkDelivery": true,
               "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Tampa%2C%20FL",
-              "dataBrand": "", "dataPerk": "in-store-shopping delivery", "dataCity": "tampa"
+              "dataBrand": "",
+              "dataPerk": "in-store-shopping delivery",
+              "dataCity": "tampa"
             },
             {
-              "number": "05", "city": "Tampa", "state": "FL", "name": "Sun State International Trucks, LLC.", "phone": "(813) 521-8053",
-              "brand1Color": "#EE2D24", "brand1Outline": false, "brand2Color": "#141414", "brand2Outline": false,
-              "perkInStoreShopping": true, "perkCurbsidePickup": true, "perkAfterHoursService": true, "perkInStorePickup": false, "perkDelivery": false,
+              "number": "05",
+              "city": "Tampa",
+              "state": "FL",
+              "name": "Sun State International Trucks, LLC.",
+              "phone": "(813) 521-8053",
+              "brand1Color": "#EE2D24",
+              "brand1Outline": false,
+              "brand2Color": "#141414",
+              "brand2Outline": false,
+              "perkInStoreShopping": true,
+              "perkCurbsidePickup": true,
+              "perkAfterHoursService": true,
+              "perkInStorePickup": false,
+              "perkDelivery": false,
               "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Tampa%2C%20FL",
-              "dataBrand": "international ic_bus", "dataPerk": "in-store-shopping curbside-pickup after-hours-service", "dataCity": "tampa"
+              "dataBrand": "international ic_bus",
+              "dataPerk": "in-store-shopping curbside-pickup after-hours-service",
+              "dataCity": "tampa"
             },
             {
-              "number": "06", "city": "Tampa", "state": "FL", "name": "Trailer Sales", "phone": "(813) 521-8053",
-              "brand1Color": "#6C6C6C", "brand1Outline": false, "brand2Color": "", "brand2Outline": true,
-              "perkInStoreShopping": true, "perkCurbsidePickup": false, "perkAfterHoursService": false, "perkInStorePickup": true, "perkDelivery": true,
+              "number": "06",
+              "city": "Tampa",
+              "state": "FL",
+              "name": "Trailer Sales",
+              "phone": "(813) 521-8053",
+              "brand1Color": "#6C6C6C",
+              "brand1Outline": false,
+              "brand2Color": "",
+              "brand2Outline": true,
+              "perkInStoreShopping": true,
+              "perkCurbsidePickup": false,
+              "perkAfterHoursService": false,
+              "perkInStorePickup": true,
+              "perkDelivery": true,
               "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Tampa%2C%20FL",
-              "dataBrand": "hyundai_translead globe_trailers", "dataPerk": "in-store-shopping in-store-pickup delivery", "dataCity": "tampa"
+              "dataBrand": "hyundai_translead globe_trailers",
+              "dataPerk": "in-store-shopping in-store-pickup delivery",
+              "dataCity": "tampa"
             }
           ]
         }
@@ -114,13 +253,55 @@
         "sectionId": "services",
         "values": {
           "items": [
-            { "num": "01", "title": "Trucks", "desc": "Shop our wide selection of new and International trucks built to handle any job, equipped with advanced telematics via OnCommand Connection for real-time fleet insights.", "ctaLabel": "Browse trucks →", "ctaUrl": "/store/inventory?category=trucks" },
-            { "num": "02", "title": "Trailers", "desc": "Explore our diverse inventory of trailers, including flatbeds, dump trailers, and reefers, from trusted brands like Hyundai Translead and Globe Trailers.", "ctaLabel": "Browse trailers →", "ctaUrl": "/store/inventory?category=trailers" },
-            { "num": "03", "title": "IC Bus", "desc": "Built for safety and reliability, our IC Bus selection offers top-of-the-line school and commercial buses from industry-leading manufacturers.", "ctaLabel": "Browse buses →", "ctaUrl": "/store/inventory?brand=ic-bus" },
-            { "num": "04", "title": "Capacity Yard Trucks", "desc": "Capacity yard trucks deliver the reliability and power your business needs to run smoothly day after day.", "ctaLabel": "Explore models →", "ctaUrl": "/store/inventory?category=yard-trucks" },
-            { "num": "05", "title": "Service", "desc": "We offer full-service repairs for trucks and trailers at our Diamond Edge certified service centers, plus mobile maintenance support so we come to you.", "ctaLabel": "Schedule service →", "ctaUrl": "/#services" },
-            { "num": "06", "title": "Parts", "desc": "Order genuine parts online or in-store, with same-day pickup at our Aftermarket Parts and Truck & Trailer Parts locations.", "ctaLabel": "Order parts →", "ctaUrl": "/store/parts" },
-            { "num": "07", "title": "Financing", "desc": "Get financing options for your next truck or trailer purchase, with a team ready to walk you through it.", "ctaLabel": "Learn more →", "ctaUrl": "/#services" }
+            {
+              "num": "01",
+              "title": "Trucks",
+              "desc": "Shop our wide selection of new and International trucks built to handle any job, equipped with advanced telematics via OnCommand Connection for real-time fleet insights.",
+              "ctaLabel": "Browse trucks →",
+              "ctaUrl": "/store/inventory?category=trucks"
+            },
+            {
+              "num": "02",
+              "title": "Trailers",
+              "desc": "Explore our diverse inventory of trailers, including flatbeds, dump trailers, and reefers, from trusted brands like Hyundai Translead and Globe Trailers.",
+              "ctaLabel": "Browse trailers →",
+              "ctaUrl": "/store/inventory?category=trailers"
+            },
+            {
+              "num": "03",
+              "title": "IC Bus",
+              "desc": "Built for safety and reliability, our IC Bus selection offers top-of-the-line school and commercial buses from industry-leading manufacturers.",
+              "ctaLabel": "Browse buses →",
+              "ctaUrl": "/store/inventory?brand=ic-bus"
+            },
+            {
+              "num": "04",
+              "title": "Capacity Yard Trucks",
+              "desc": "Capacity yard trucks deliver the reliability and power your business needs to run smoothly day after day.",
+              "ctaLabel": "Explore models →",
+              "ctaUrl": "/store/inventory?category=yard-trucks"
+            },
+            {
+              "num": "05",
+              "title": "Service",
+              "desc": "We offer full-service repairs for trucks and trailers at our Diamond Edge certified service centers, plus mobile maintenance support so we come to you.",
+              "ctaLabel": "Schedule service →",
+              "ctaUrl": "/#services"
+            },
+            {
+              "num": "06",
+              "title": "Parts",
+              "desc": "Order genuine parts online or in-store, with same-day pickup at our Aftermarket Parts and Truck & Trailer Parts locations.",
+              "ctaLabel": "Order parts →",
+              "ctaUrl": "/store/parts"
+            },
+            {
+              "num": "07",
+              "title": "Financing",
+              "desc": "Get financing options for your next truck or trailer purchase, with a team ready to walk you through it.",
+              "ctaLabel": "Learn more →",
+              "ctaUrl": "/#services"
+            }
           ]
         }
       }
@@ -128,56 +309,204 @@
     {
       "id": "featured-inventory-heading-row",
       "type": "row",
-      "props": { "gap": 0 },
+      "props": {
+        "gap": 0
+      },
       "children": [
-        { "id": "featured-inventory-heading-col", "type": "column", "props": { "span": 12 }, "children": [
-          { "id": "featured-inventory-heading", "type": "heading", "props": { "eyebrow": "INVENTORY", "text": "Featured listings", "headingLevel": 2 } }
-        ] }
+        {
+          "id": "featured-inventory-heading-col",
+          "type": "column",
+          "props": {
+            "span": 12
+          },
+          "children": [
+            {
+              "id": "featured-inventory-heading",
+              "type": "heading",
+              "props": {
+                "eyebrow": "INVENTORY",
+                "text": "Featured listings",
+                "headingLevel": 2
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "id": "featured-inventory-widget",
       "type": "widget",
-      "props": { "widget": "inventory-carousel", "config": { "count": 4, "layout": "grid" } }
+      "props": {
+        "widget": "inventory-carousel",
+        "config": {
+          "count": 4,
+          "layout": "grid"
+        }
+      }
     },
     {
       "id": "featured-inventory-cta-row",
       "type": "row",
-      "props": { "gap": 0 },
+      "props": {
+        "gap": 0
+      },
       "children": [
-        { "id": "featured-inventory-cta-col", "type": "column", "props": { "span": 12, "align": "end" }, "children": [
-          { "id": "featured-inventory-cta", "type": "buttons", "props": { "items": [{ "ctaId": "browse-all-inventory" }], "align": "left" } }
-        ] }
+        {
+          "id": "featured-inventory-cta-col",
+          "type": "column",
+          "props": {
+            "span": 12,
+            "align": "end"
+          },
+          "children": [
+            {
+              "id": "featured-inventory-cta",
+              "type": "buttons",
+              "props": {
+                "items": [
+                  {
+                    "ctaId": "browse-all-inventory"
+                  }
+                ],
+                "align": "left"
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "id": "trailers-banner-row",
       "type": "row",
-      "props": { "gap": 0 },
+      "props": {
+        "gap": 0
+      },
       "children": [
-        { "id": "trailers-banner-copy-col", "type": "column", "props": { "span": 6, "padding": 7 }, "children": [
-          { "id": "trailers-banner-heading", "type": "heading", "props": { "eyebrow": "NEW & USED TRAILERS", "text": "The same trailers, every time.", "headingLevel": 2 } },
-          { "id": "trailers-banner-body", "type": "text", "props": { "text": "At Sun State Trailers, customer service is our priority. With quality products, quick service, and dedicated care, we provide everything you need for your business to succeed. Explore our diverse selection of new and used trailers to find the equipment you're looking for." } },
-          { "id": "trailers-banner-cta", "type": "buttons", "props": { "items": [{ "ctaId": "trailers-cta" }], "align": "left" } }
-        ] },
-        { "id": "trailers-banner-media-col", "type": "column", "props": { "span": 6 }, "children": [
-          { "id": "trailers-banner-media", "type": "image", "props": { "image": { "src": "/img/trailers-lineup.png", "alt": "Lineup of new trailers" }, "width": "full" } }
-        ] }
+        {
+          "id": "trailers-banner-copy-col",
+          "type": "column",
+          "props": {
+            "span": 6,
+            "padding": 7
+          },
+          "children": [
+            {
+              "id": "trailers-banner-heading",
+              "type": "heading",
+              "props": {
+                "eyebrow": "NEW & USED TRAILERS",
+                "text": "The same trailers, every time.",
+                "headingLevel": 2
+              }
+            },
+            {
+              "id": "trailers-banner-body",
+              "type": "text",
+              "props": {
+                "text": "At Sun State Trailers, customer service is our priority. With quality products, quick service, and dedicated care, we provide everything you need for your business to succeed. Explore our diverse selection of new and used trailers to find the equipment you're looking for."
+              }
+            },
+            {
+              "id": "trailers-banner-cta",
+              "type": "buttons",
+              "props": {
+                "items": [
+                  {
+                    "ctaId": "trailers-cta"
+                  }
+                ],
+                "align": "left"
+              }
+            }
+          ]
+        },
+        {
+          "id": "trailers-banner-media-col",
+          "type": "column",
+          "props": {
+            "span": 6
+          },
+          "children": [
+            {
+              "id": "trailers-banner-media",
+              "type": "image",
+              "props": {
+                "image": {
+                  "src": "/img/trailers-lineup.png",
+                  "alt": "Lineup of new trailers"
+                },
+                "width": "full"
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "id": "brands-banner-row",
       "type": "row",
-      "props": { "gap": 0 },
+      "props": {
+        "gap": 0
+      },
       "children": [
-        { "id": "brands-banner-media-col", "type": "column", "props": { "span": 6 }, "children": [
-          { "id": "brands-banner-media", "type": "image", "props": { "image": { "src": "/img/globe-trailer-detail.png", "alt": "Globe Trailers detail" }, "width": "full" } }
-        ] },
-        { "id": "brands-banner-copy-col", "type": "column", "props": { "span": 6, "padding": 7 }, "children": [
-          { "id": "brands-banner-heading", "type": "heading", "props": { "eyebrow": "ABOUT OUR BRANDS", "text": "Built by industry leaders.", "headingLevel": 2 } },
-          { "id": "brands-banner-body", "type": "text", "props": { "text": "At Sun State, we offer only the best quality for the best price — International trucks, IC Bus, and trailers from industry leaders like Hyundai Translead and Globe Trailers. When you choose a truck or trailer through Sun State, you're investing in durability, reliability, and innovation." } },
-          { "id": "brands-banner-cta", "type": "buttons", "props": { "items": [{ "ctaId": "globe-trailers-cta" }], "align": "left" } }
-        ] }
+        {
+          "id": "brands-banner-media-col",
+          "type": "column",
+          "props": {
+            "span": 6
+          },
+          "children": [
+            {
+              "id": "brands-banner-media",
+              "type": "image",
+              "props": {
+                "image": {
+                  "src": "/img/globe-trailer-detail.png",
+                  "alt": "Globe Trailers detail"
+                },
+                "width": "full"
+              }
+            }
+          ]
+        },
+        {
+          "id": "brands-banner-copy-col",
+          "type": "column",
+          "props": {
+            "span": 6,
+            "padding": 7
+          },
+          "children": [
+            {
+              "id": "brands-banner-heading",
+              "type": "heading",
+              "props": {
+                "eyebrow": "ABOUT OUR BRANDS",
+                "text": "Built by industry leaders.",
+                "headingLevel": 2
+              }
+            },
+            {
+              "id": "brands-banner-body",
+              "type": "text",
+              "props": {
+                "text": "At Sun State, we offer only the best quality for the best price — International trucks, IC Bus, and trailers from industry leaders like Hyundai Translead and Globe Trailers. When you choose a truck or trailer through Sun State, you're investing in durability, reliability, and innovation."
+              }
+            },
+            {
+              "id": "brands-banner-cta",
+              "type": "buttons",
+              "props": {
+                "items": [
+                  {
+                    "ctaId": "globe-trailers-cta"
+                  }
+                ],
+                "align": "left"
+              }
+            }
+          ]
+        }
       ]
     },
     {
@@ -187,25 +516,90 @@
         "heading": "What our customers say.",
         "headingLevel": 2,
         "items": [
-          { "quote": "The team at Sun State International kept our fleet on the road with fast, reliable service.", "name": "Fleet Manager", "role": "Tampa, FL" },
-          { "quote": "Great selection of trucks and trailers, and the parts team always comes through same-day.", "name": "Owner-Operator", "role": "Sarasota, FL" },
-          { "quote": "Dedicated care from sales through financing. They made the whole process easy.", "name": "Business Owner", "role": "Davenport, FL" }
+          {
+            "quote": "The team at Sun State International kept our fleet on the road with fast, reliable service.",
+            "name": "Fleet Manager",
+            "role": "Tampa, FL"
+          },
+          {
+            "quote": "Great selection of trucks and trailers, and the parts team always comes through same-day.",
+            "name": "Owner-Operator",
+            "role": "Sarasota, FL"
+          },
+          {
+            "quote": "Dedicated care from sales through financing. They made the whole process easy.",
+            "name": "Business Owner",
+            "role": "Davenport, FL"
+          }
         ]
       }
     },
     {
       "id": "contact-cta",
       "type": "section",
-      "props": { "width": "boxed", "background": "ink", "paddingY": 6, "align": "center" },
+      "props": {
+        "width": "boxed",
+        "background": "ink",
+        "paddingY": 6,
+        "align": "center"
+      },
       "children": [
-        { "id": "contact-cta-row", "type": "row", "props": { "gap": 0 }, "children": [
-          { "id": "contact-cta-col", "type": "column", "props": { "span": 12, "align": "center" }, "children": [
-            { "id": "contact-cta-heading", "type": "heading", "props": { "text": "Ready to get on the road?", "headingLevel": 2, "align": "center" } },
-            { "id": "contact-cta-body", "type": "text", "props": { "text": "Contact us to explore our trucks and experience nothing less than the dedicated care you deserve.", "align": "center" } },
-            { "id": "contact-cta-buttons", "type": "buttons", "props": { "items": [{ "ctaId": "contact-us" }], "align": "center" } },
-            { "id": "contact-cta-note", "type": "text", "props": { "text": "Call us today · 813.521.8148", "align": "center" } }
-          ] }
-        ] }
+        {
+          "id": "contact-cta-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "contact-cta-col",
+              "type": "column",
+              "props": {
+                "span": 12,
+                "align": "center"
+              },
+              "children": [
+                {
+                  "id": "contact-cta-heading",
+                  "type": "heading",
+                  "props": {
+                    "text": "Ready to get on the road?",
+                    "headingLevel": 2,
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "contact-cta-body",
+                  "type": "text",
+                  "props": {
+                    "text": "Contact us to explore our trucks and experience nothing less than the dedicated care you deserve.",
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "contact-cta-buttons",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "ctaId": "contact-us"
+                      }
+                    ],
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "contact-cta-note",
+                  "type": "text",
+                  "props": {
+                    "text": "Call us today · 813.521.8148",
+                    "align": "center"
+                  }
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]

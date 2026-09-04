@@ -1,0 +1,231 @@
+{
+  "version": 2,
+  "id": "hero",
+  "name": "Home hero",
+  "description": "Photograph with a scrim, centred headline, brand lockup, a Type/Category inventory search and brand shortcuts.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "headline",
+      "type": "text",
+      "label": "Headline"
+    },
+    {
+      "key": "photo",
+      "type": "image",
+      "label": "Background photograph"
+    },
+    {
+      "key": "brandmark",
+      "type": "image",
+      "label": "Brand lockup strip"
+    },
+    {
+      "key": "searchLabel",
+      "type": "text",
+      "label": "Search button label"
+    },
+    {
+      "key": "searchUrl",
+      "type": "url",
+      "label": "Search destination"
+    },
+    {
+      "key": "brands",
+      "type": "list",
+      "label": "Brand shortcuts",
+      "fields": [
+        {
+          "key": "label",
+          "type": "text",
+          "label": "Label"
+        },
+        {
+          "key": "url",
+          "type": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "hero",
+      "type": "section",
+      "props": {
+        "width": "full",
+        "paddingY": 1,
+        "anchor": "top"
+      },
+      "styles": {
+        "base": {
+          "paddingTop": 160,
+          "paddingBottom": 136,
+          "paddingLeft": 48,
+          "paddingRight": 48,
+          "position": "relative",
+          "overflow": "hidden"
+        },
+        "mobile": {
+          "paddingTop": 96,
+          "paddingBottom": 56,
+          "paddingLeft": 20,
+          "paddingRight": 20
+        }
+      },
+      "children": [
+        {
+          "id": "hero-photo-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "styles": {
+            "base": {
+              "position": "absolute",
+              "inset": 0,
+              "zIndex": 0
+            }
+          },
+          "children": [
+            {
+              "id": "hero-photo-col",
+              "type": "column",
+              "props": {
+                "span": 12,
+                "padding": 0
+              },
+              "styles": {
+                "base": {
+                  "height": "100%"
+                }
+              },
+              "children": [
+                {
+                  "id": "hero-photo",
+                  "type": "image",
+                  "props": {
+                    "image": "{{photo}}",
+                    "width": "full"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hero-inner",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "styles": {
+            "base": {
+              "maxWidth": 1280,
+              "marginLeft": "auto",
+              "marginRight": "auto",
+              "position": "relative",
+              "zIndex": 2
+            }
+          },
+          "children": [
+            {
+              "id": "hero-inner-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "hero-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{headline}}",
+                    "headingLevel": 1,
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "hero-brandmark",
+                  "type": "image",
+                  "props": {
+                    "image": "{{brandmark}}",
+                    "width": "full"
+                  }
+                },
+                {
+                  "id": "hero-search-row",
+                  "type": "row",
+                  "props": {
+                    "gap": 0,
+                    "behaviour": "dependentselect"
+                  },
+                  "children": [
+                    {
+                      "id": "hero-search-col",
+                      "type": "column",
+                      "props": {
+                        "span": 12
+                      },
+                      "children": [
+                        {
+                          "id": "hero-search",
+                          "type": "customHtml",
+                          "props": {
+                            "html": "<div class=\"ss-hero-search\">\n  <label>\n    <span class=\"ss-visually-hidden\">Vehicle type</span>\n    <select class=\"ss-field\" data-bz-part=\"parent\" data-ss-type>\n      <option value=\"\">Type</option>\n      <option value=\"truck\">Truck</option>\n      <option value=\"trailer\">Trailer</option>\n    </select>\n  </label>\n  <label>\n    <span class=\"ss-visually-hidden\">Vehicle category</span>\n    <select class=\"ss-field\" data-bz-part=\"child\" data-ss-category>\n      <option value=\"\">Category</option>\n      <option value=\"dump-trucks\" data-bz-when=\"truck\">Dump Trucks</option>\n      <option value=\"sleeper-cabs\" data-bz-when=\"truck\">Sleeper Cabs</option>\n      <option value=\"day-cabs\" data-bz-when=\"truck\">Day Cabs</option>\n      <option value=\"yard-trucks\" data-bz-when=\"truck\">Yard Trucks</option>\n      <option value=\"dry-van\" data-bz-when=\"trailer\">Dry Van</option>\n      <option value=\"flatbed\" data-bz-when=\"trailer\">Flatbed</option>\n      <option value=\"dump-trailers\" data-bz-when=\"trailer\">Dump Trailers</option>\n      <option value=\"refrigerated\" data-bz-when=\"trailer\">Refrigerated</option>\n    </select>\n  </label>\n  <button class=\"bz-btn bz-btn--primary\" type=\"button\" data-ss-search data-ss-url=\"{{searchUrl}}\">{{searchLabel}}</button>\n</div>"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "hero-brands-row",
+                  "type": "row",
+                  "props": {
+                    "gap": 0
+                  },
+                  "styles": {
+                    "base": {
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "flexWrap": "wrap",
+                      "gap": 36
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "hero-brand",
+                      "type": "column",
+                      "props": {
+                        "span": 3,
+                        "repeat": "brands"
+                      },
+                      "children": [
+                        {
+                          "id": "hero-brand-label",
+                          "type": "text",
+                          "props": {
+                            "text": "<a href=\"{{url}}\">{{label}}</a>"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "/* The photograph, its scrim and the copy are three layers, exactly as the\n   handoff has them — the scrim is drawn rather than being a node of its own so\n   the copy stays the only thing in the tree a dealer can select. */\n[data-bz-node=\"hero\"] { text-align: center; }\n/* The photograph fills the band; the scrim below sits over it, the copy over both. */\n[data-bz-node=\"hero-photo-row\"], [data-bz-node=\"hero-photo-row\"] .bz-col,\n[data-bz-node=\"hero-photo\"], [data-bz-node=\"hero-photo\"] .bz-container,\n[data-bz-node=\"hero-photo\"] figure { height: 100%; }\n[data-bz-node=\"hero-photo\"] img { width: 100%; height: 100%; object-fit: cover; object-position: center; }\n[data-bz-node=\"hero\"]::before {\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: rgba(20, 20, 20, 0.68);\n  z-index: 1;\n}\n[data-bz-node=\"hero\"] .bz-block { padding-block: 0; }\n\n.bz-block[data-bz-node=\"hero-heading\"] p.bz-eyebrow { color: #E2E2E2; margin: 0 0 18px; }\n[data-bz-node=\"hero-heading\"] h1 { max-width: 900px; margin: 0 auto 26px; color: #fff; }\n\n[data-bz-node=\"hero-brandmark\"] img {\n  display: block;\n  width: 82%;\n  max-width: 1400px;\n  margin: 0 auto 44px;\n  pointer-events: none;\n}\n\n/* Two selects and a CTA. The Category list is filtered from Type by the\n   platform's dependentselect behaviour (the options carry data-bz-when); the\n   component's own script only has to turn a submit into a navigation, which no\n   behaviour does. */\n.ss-hero-search {\n  display: flex;\n  gap: 12px;\n  max-width: 520px;\n  margin: 0 auto 56px;\n}\n.ss-hero-search label { flex: 1; margin: 0 6px; }\n.ss-field {\n  width: 100%;\n  min-height: 46px;\n  padding: 0 12px;\n  background: var(--paper);\n  border: 1.5px solid var(--line);\n  border-radius: var(--radius-input);\n  font-family: var(--font-body);\n  font-size: var(--text-small);\n  color: #242424;\n  appearance: none;\n}\n.ss-field:disabled { opacity: 1; color: #242424; background: var(--paper); }\n.ss-hero-search .bz-btn { white-space: nowrap; }\n.ss-visually-hidden {\n  position: absolute; width: 1px; height: 1px;\n  padding: 0; margin: -1px; overflow: hidden;\n  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;\n}\n\n/* Brand shortcuts */\n[data-bz-node=\"hero-brands-row\"] { font: 700 12px / 1 var(--font-body); letter-spacing: 0.1em; }\n[data-bz-node=\"hero-brands-row\"] .bz-col { padding: 0; }\n[data-bz-node^=\"hero-brand-label\"] p {\n  margin: 0;\n  font: 700 12px / 1 var(--font-body);\n  letter-spacing: 0.1em;\n}\n[data-bz-node=\"hero-brands-row\"] a {\n  display: inline-block;\n  padding: 4px 0;\n  color: #B5B5B5;\n  font: inherit;\n  letter-spacing: inherit;\n  text-decoration: none;\n}\n[data-bz-node=\"hero-brands-row\"] a:hover { color: #fff; text-decoration: none; }\n\n@media (max-width: 1100px) {\n  [data-bz-node=\"hero-heading\"] h1 { font-size: 46px; }\n}\n@media (max-width: 640px) {\n  [data-bz-node=\"hero-heading\"] h1 { font-size: 30px; }\n  [data-bz-node=\"hero-brandmark\"] img { width: 92%; margin-bottom: 32px; }\n  .ss-hero-search { flex-direction: column; max-width: 320px; gap: 12px; margin-bottom: 40px; }\n  .ss-hero-search label { margin: 0; }\n  [data-bz-node=\"hero-brands-row\"] { gap: 16px 22px; }\n}\n",
+  "js": "/* Turn the hero's Type + Category choice into an inventory search.\n\n   The dependent Category list is the platform's `dependentselect` behaviour —\n   this only adds the one thing a behaviour cannot do, which is navigate. */\n(function () {\n  var root = document.querySelector('[data-bz-node=\"hero-search\"]');\n  if (!root) return;\n\n  var button = root.querySelector('[data-ss-search]');\n  var type = root.querySelector('[data-ss-type]');\n  var category = root.querySelector('[data-ss-category]');\n  if (!button || !type || !category) return;\n\n  function go() {\n    var base = button.getAttribute('data-ss-url') || '/store/inventory';\n    var params = [];\n    if (type.value) params.push('type=' + encodeURIComponent(type.value));\n    if (category.value) params.push('category=' + encodeURIComponent(category.value));\n    window.location.href = params.length\n      ? base + (base.indexOf('?') > -1 ? '&' : '?') + params.join('&')\n      : base;\n  }\n\n  button.addEventListener('click', go);\n  root.addEventListener('keydown', function (event) {\n    if (event.key === 'Enter') { event.preventDefault(); go(); }\n  });\n})();\n"
+}
