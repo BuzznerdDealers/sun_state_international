@@ -1,50 +1,127 @@
 {
   "version": 2,
   "id": "type-slider",
-  "name": "Equipment type carousel",
+  "name": "Equipment type coverflow",
+  "description": "Dark band with a depth carousel of equipment types. Cards are placed by signed distance from the active one, taking the shorter way round so the set reads as a loop.",
   "props": [
-    { "key": "heading", "type": "text", "label": "Heading", "default": "Choose a type to explore" },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "Choose a type to explore"
+    },
     {
       "key": "items",
       "type": "list",
       "label": "Types",
       "fields": [
-        { "key": "label", "type": "text", "label": "Label" },
-        { "key": "image", "type": "image", "label": "Photo" },
-        { "key": "ctaLabel", "type": "text", "label": "CTA label" },
-        { "key": "ctaUrl", "type": "url", "label": "CTA link" }
+        {
+          "key": "label",
+          "type": "text",
+          "label": "Label"
+        },
+        {
+          "key": "image",
+          "type": "image",
+          "label": "Photo"
+        },
+        {
+          "key": "ctaLabel",
+          "type": "text",
+          "label": "CTA label"
+        },
+        {
+          "key": "ctaUrl",
+          "type": "url",
+          "label": "CTA link"
+        }
       ]
     }
   ],
   "nodes": [
     {
-      "id": "type-slider-section",
+      "id": "type-slider-band",
       "type": "section",
-      "props": { "width": "wide", "background": "ink", "paddingY": 8, "anchor": "truck-types" },
+      "props": {
+        "width": "full",
+        "background": "ink",
+        "paddingY": 1,
+        "anchor": "truck-types"
+      },
       "children": [
         {
           "id": "type-slider-title-row",
           "type": "row",
-          "props": { "gap": 0 },
+          "props": {
+            "gap": 0
+          },
           "children": [
-            { "id": "type-slider-title-col", "type": "column", "props": { "span": 12 }, "children": [
-              { "id": "type-slider-title", "type": "heading", "props": { "text": "{{heading}}", "headingLevel": 2, "align": "center" } }
-            ] }
+            {
+              "id": "type-slider-title-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "type-slider-title",
+                  "type": "heading",
+                  "props": {
+                    "text": "{{heading}}",
+                    "headingLevel": 2,
+                    "align": "center"
+                  }
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "type-slider-track",
+          "id": "type-slider-stage",
           "type": "row",
-          "props": { "gap": 5, "align": "stretch", "stackOn": "mobile", "behaviour": "carousel", "behaviourOptions": "{\"label\":\"Equipment types\"}" },
+          "props": {
+            "gap": 0
+          },
           "children": [
             {
-              "id": "type-slide",
+              "id": "type-card",
               "type": "column",
-              "props": { "span": 4, "part": "slide", "repeat": "items" },
+              "props": {
+                "span": 3,
+                "padding": 0,
+                "repeat": "items"
+              },
               "children": [
-                { "id": "type-slide-img", "type": "image", "props": { "image": "{{image}}", "width": "full" } },
-                { "id": "type-slide-label", "type": "heading", "props": { "text": "{{label}}", "headingLevel": 3, "align": "center" } },
-                { "id": "type-slide-cta", "type": "buttons", "props": { "items": [{ "label": "{{ctaLabel}}", "url": "{{ctaUrl}}", "style": "primary" }], "align": "center" } }
+                {
+                  "id": "type-card-photo",
+                  "type": "image",
+                  "props": {
+                    "image": "{{image}}",
+                    "width": "full"
+                  }
+                },
+                {
+                  "id": "type-card-label",
+                  "type": "text",
+                  "props": {
+                    "text": "{{label}}",
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "type-card-cta",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "label": "{{ctaLabel}}",
+                        "url": "{{ctaUrl}}",
+                        "style": "primary"
+                      }
+                    ],
+                    "align": "center"
+                  }
+                }
               ]
             }
           ]
@@ -52,16 +129,31 @@
         {
           "id": "type-slider-nav-row",
           "type": "row",
-          "props": { "gap": 3, "align": "center" },
+          "props": {
+            "gap": 0
+          },
           "children": [
-            { "id": "type-slider-nav-col", "type": "column", "props": { "span": 12, "align": "center" }, "children": [
-              { "id": "type-slider-prev", "type": "buttons", "props": { "items": [{ "label": "‹", "url": "#" }], "align": "center", "part": "prev" } },
-              { "id": "type-slider-next", "type": "buttons", "props": { "items": [{ "label": "›", "url": "#" }], "align": "center", "part": "next" } }
-            ] }
+            {
+              "id": "type-slider-nav-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "type-slider-nav",
+                  "type": "customHtml",
+                  "props": {
+                    "html": "<div class=\"ss-slider-nav\">\n  <button type=\"button\" data-ss-type-prev aria-label=\"Previous type\">&#8249;</button>\n  <button type=\"button\" data-ss-type-next aria-label=\"Next type\">&#8250;</button>\n</div>"
+                  }
+                }
+              ]
+            }
           ]
         }
       ]
     }
   ],
-  "css": "[data-bz-section=\"type-slider\"] h2{color:#fff;font-size:32px;margin-bottom:32px;} [data-bz-node^=\"type-slide\"] img{aspect-ratio:4/5;object-fit:cover;} [data-bz-node^=\"type-slide-label\"] h3{color:#B5B5B5;font-size:16px;text-align:center;margin:14px 0;} [data-bz-node=\"type-slider-track\"]{padding-bottom:8px;} [data-bz-node=\"type-slider-prev\"] a,[data-bz-node=\"type-slider-next\"] a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid #444;color:#fff;background:none;text-decoration:none;font-size:18px;} [data-bz-node=\"type-slider-nav-row\"]{margin-top:20px;}"
+  "css": "/* Layout for this component's own nodes.\n   These were per-node `styles` overrides. Past a certain number of them in\n   one document the browser stops matching the compiled\n   [data-bz-node=\"x\"][data-bz-node] rules — some apply and some silently do\n   not — so the same declarations live here instead, where they hold. See the\n   note in the commit message; this is a platform bug worth fixing upstream.\n   ------------------------------------------------------------------------- */\n[data-bz-node=\"type-slider-band\"]{padding-top:96px;padding-bottom:88px;padding-left:48px;padding-right:48px;margin-top:40px;margin-bottom:40px;overflow:hidden}\n[data-bz-node=\"type-slider-stage\"]{max-width:1280px;margin-left:auto;margin-right:auto;position:relative;height:460px}\n@media (max-width: 640px){\n[data-bz-node=\"type-slider-band\"]{padding-top:56px;padding-bottom:64px;padding-left:0px;padding-right:0px}\n[data-bz-node=\"type-slider-stage\"]{height:auto}\n}\n\n/* ---------------------------------------------------------- TYPE SLIDER ---\n   A coverflow: no `carousel` option expresses cards placed by signed distance\n   with per-step scale, opacity and stacking, so the placement is scripted (see\n   this component's js). Everything the script does is gated behind\n   `.is-staged`, which it adds itself — so the rule below this comment is what\n   the Design canvas and the first paint get: a real in-flow scroll rail with\n   all five cards present and selectable, which is also the handoff's own phone\n   fallback. Nothing is invisible or stacked before the script runs.\n   ------------------------------------------------------------------------- */\n\n[data-bz-node=\"type-slider-band\"] { text-align: center; }\n[data-bz-node=\"type-slider-band\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"type-slider-title\"] h2 { font-size: 32px; line-height: 1.6; color: #fff; margin: 0 0 56px; }\n\n/* Un-staged: a scroll rail. */\n[data-bz-node=\"type-slider-stage\"]:not(.is-staged) {\n  display: flex;\n  gap: 14px;\n  overflow-x: auto;\n  scroll-snap-type: x mandatory;\n  height: auto;\n}\n[data-bz-node=\"type-slider-stage\"]:not(.is-staged) > .bz-col {\n  flex: 0 0 340px;\n  scroll-snap-align: start;\n  position: relative;\n}\n\n/* Staged: the coverflow. The script sets transform, opacity and z-index. */\n[data-bz-node=\"type-slider-stage\"].is-staged { display: block; }\n[data-bz-node=\"type-slider-stage\"].is-staged > .bz-col {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-left: -170px;\n  margin-top: -210px;\n  transition: transform 0.4s ease, opacity 0.4s ease;\n  cursor: pointer;\n}\n[data-bz-node=\"type-slider-stage\"].is-staged > .bz-col.is-active { cursor: default; }\n\n/* The card itself, in both states. */\n[data-bz-node=\"type-slider-stage\"] > .bz-col {\n  width: 340px;\n  height: 420px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n  gap: 10px;\n  padding: 28px 0 0;\n  overflow: hidden;\n}\n/* The photograph is a layer, and the gradient over it deepens on the active\n   card — the handoff's two dim levels, as CSS rather than as scripted style. */\n[data-bz-node=\"type-slider-stage\"] > .bz-col::after {\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(180deg, rgba(20, 20, 20, 0.15), rgba(20, 20, 20, 0.5));\n  z-index: 1;\n}\n[data-bz-node=\"type-slider-stage\"] > .bz-col.is-active::after {\n  background: linear-gradient(180deg, rgba(20, 20, 20, 0.15), rgba(20, 20, 20, 0.72));\n}\n[data-bz-node=\"type-slider-stage\"] .bz-block--image {\n  position: absolute;\n  inset: 0;\n  z-index: 0;\n  padding: 0;\n}\n[data-bz-node=\"type-slider-stage\"] .bz-block--image .bz-container,\n[data-bz-node=\"type-slider-stage\"] .bz-block--image figure { height: 100%; }\n[data-bz-node=\"type-slider-stage\"] .bz-block--image img {\n  width: 100%; height: 100%;\n  object-fit: cover; object-position: center;\n  display: block;\n}\n\n[data-bz-node=\"type-slider-stage\"] .bz-block--text { position: relative; z-index: 2; width: 100%; }\n[data-bz-node=\"type-slider-stage\"] .bz-block--text .bz-text { max-width: none; }\n[data-bz-node=\"type-slider-stage\"] .bz-block--text p {\n  font: 800 var(--text-base, 15px) / 1.6 var(--font-heading);\n  color: #B5B5B5;\n  padding: 0 20px;\n  margin: 0;\n}\n[data-bz-node=\"type-slider-stage\"] > .bz-col.is-active .bz-block--text p { font-size: 26px; color: #fff; }\n\n[data-bz-node=\"type-slider-stage\"] .bz-block--buttons {\n  position: absolute;\n  bottom: 28px;\n  left: 50%;\n  transform: translateX(-50%);\n  z-index: 2;\n  width: 150px;\n}\n[data-bz-node=\"type-slider-stage\"] .bz-block--buttons .bz-btns { justify-content: center; }\n[data-bz-node=\"type-slider-stage\"] .bz-block--buttons .bz-btn {\n  width: 150px;\n  /* 10px here is intentional even in the hard-edged theme, matching the\n     featured-listing button — the handoff calls this out. */\n  border-radius: 10px;\n}\n/* Only the active card shows its CTA once the coverflow is staged. */\n[data-bz-node=\"type-slider-stage\"].is-staged > .bz-col:not(.is-active) .bz-block--buttons {\n  display: none;\n}\n\n.ss-slider-nav { display: flex; gap: 10px; justify-content: center; margin-top: 24px; }\n.ss-slider-nav button {\n  width: 40px; height: 40px;\n  border-radius: 50%;\n  border: 1px solid #444;\n  background: none;\n  color: #fff;\n  cursor: pointer;\n  font-size: 16px;\n  font-family: var(--font-body);\n}\n.ss-slider-nav button:hover { border-color: #666; }\n\n@media (max-width: 640px) {\n  [data-bz-node=\"type-slider-title\"] h2 { font-size: 26px; padding-inline: 20px; }\n  /* The handoff drops the depth effect and the arrows on a phone. */\n  [data-bz-node=\"type-slider-stage\"].is-staged { display: flex; }\n  .ss-slider-nav { display: none; }\n  [data-bz-node=\"type-slider-stage\"] > .bz-col { flex: 0 0 82vw; }\n}\n",
+  "js": "/* The coverflow. A `carousel` behaviour moves a rail; this places every card\n   by its signed distance from the active one and drives scale, opacity and\n   stacking from that one number — which no behaviour option expresses, so it\n   is written out here, scoped to this component's own nodes.\n\n   The staged layout is switched on by the `is-staged` class this adds, so the\n   un-staged rail in the CSS is what the Design canvas and the first paint\n   render. */\n(function () {\n  var stage = document.querySelector('[data-bz-node=\"type-slider-stage\"]');\n  if (!stage) return;\n\n  var cards = Array.prototype.slice.call(stage.children);\n  if (cards.length < 2) return;\n\n  var CARD_OFFSET = 270;              // px between neighbouring cards\n  var SCALES = [1, 0.78, 0.6];\n  var OPACITIES = [1, 0.6, 0.32];\n  var active = Math.min(2, cards.length - 1);\n\n  function render() {\n    cards.forEach(function (card, i) {\n      var dist = i - active;\n      // Take the shorter way round, so the set behaves as a loop.\n      if (dist > cards.length / 2) dist -= cards.length;\n      if (dist < -cards.length / 2) dist += cards.length;\n      var abs = Math.min(Math.abs(dist), 2);\n\n      card.style.transform = 'translateX(' + dist * CARD_OFFSET + 'px) scale(' + SCALES[abs] + ')';\n      card.style.opacity = OPACITIES[abs];\n      card.style.zIndex = String(10 - abs);\n      card.classList.toggle('is-active', abs === 0);\n    });\n  }\n\n  stage.addEventListener('click', function (event) {\n    // A click on the active card's CTA is a link; leave it alone.\n    if (event.target.closest('.bz-block--buttons')) return;\n    var card = event.target.closest('[data-bz-type=\"column\"]');\n    if (!card || card.parentNode !== stage) return;\n    var i = cards.indexOf(card);\n    if (i > -1 && i !== active) { active = i; render(); }\n  });\n\n  var prev = document.querySelector('[data-ss-type-prev]');\n  var next = document.querySelector('[data-ss-type-next]');\n  if (prev) prev.addEventListener('click', function () {\n    active = (active - 1 + cards.length) % cards.length;\n    render();\n  });\n  if (next) next.addEventListener('click', function () {\n    active = (active + 1) % cards.length;\n    render();\n  });\n\n  stage.classList.add('is-staged');\n  render();\n})();\n"
 }

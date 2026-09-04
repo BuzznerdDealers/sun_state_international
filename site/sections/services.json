@@ -1,47 +1,194 @@
 {
   "version": 2,
   "id": "services",
-  "name": "Services list",
+  "name": "Capability list",
+  "description": "Numbered capability rows on the paper band, each row a number, a title with its description, and a link.",
   "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "lede",
+      "type": "textarea",
+      "label": "Intro copy"
+    },
     {
       "key": "items",
       "type": "list",
       "label": "Rows",
       "fields": [
-        { "key": "num", "type": "text", "label": "Number" },
-        { "key": "title", "type": "text", "label": "Title" },
-        { "key": "desc", "type": "textarea", "label": "Description" },
-        { "key": "ctaLabel", "type": "text", "label": "CTA label" },
-        { "key": "ctaUrl", "type": "url", "label": "CTA link" }
+        {
+          "key": "num",
+          "type": "text",
+          "label": "Number"
+        },
+        {
+          "key": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "key": "desc",
+          "type": "textarea",
+          "label": "Description"
+        },
+        {
+          "key": "ctaLabel",
+          "type": "text",
+          "label": "CTA label"
+        },
+        {
+          "key": "ctaUrl",
+          "type": "url",
+          "label": "CTA link"
+        }
       ]
     }
   ],
   "nodes": [
     {
-      "id": "services-outer-row",
-      "type": "row",
-      "props": { "gap": 0 },
+      "id": "services-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "background": "paper",
+        "paddingY": 1,
+        "anchor": "services"
+      },
       "children": [
         {
-          "id": "services-outer-col",
-          "type": "column",
-          "props": { "span": 12 },
+          "id": "services-head-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
           "children": [
             {
-              "id": "service-row",
-              "type": "row",
-              "props": { "gap": 4, "stackOn": "mobile", "align": "center", "repeat": "items" },
+              "id": "services-head-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
               "children": [
-                { "id": "service-row-num", "type": "column", "props": { "span": 1 }, "children": [
-                  { "id": "service-row-num-text", "type": "text", "props": { "text": "{{num}}" } }
-                ] },
-                { "id": "service-row-body", "type": "column", "props": { "span": 8 }, "children": [
-                  { "id": "service-row-title", "type": "heading", "props": { "text": "{{title}}", "headingLevel": 3 } },
-                  { "id": "service-row-desc", "type": "text", "props": { "text": "{{desc}}" } }
-                ] },
-                { "id": "service-row-cta", "type": "column", "props": { "span": 3, "align": "end" }, "children": [
-                  { "id": "service-row-cta-buttons", "type": "buttons", "props": { "items": [{ "label": "{{ctaLabel}}", "url": "{{ctaUrl}}", "style": "link" }], "align": "left" } }
-                ] }
+                {
+                  "id": "services-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                },
+                {
+                  "id": "services-lede",
+                  "type": "text",
+                  "props": {
+                    "text": "{{lede}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "services-list-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "services-list-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "service-row",
+                  "type": "row",
+                  "props": {
+                    "gap": 0,
+                    "stackOn": "mobile",
+                    "align": "center",
+                    "repeat": "items"
+                  },
+                  "children": [
+                    {
+                      "id": "service-row-num",
+                      "type": "column",
+                      "props": {
+                        "span": 1,
+                        "padding": 0
+                      },
+                      "children": [
+                        {
+                          "id": "service-row-num-text",
+                          "type": "text",
+                          "props": {
+                            "text": "{{num}}"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "service-row-body",
+                      "type": "column",
+                      "props": {
+                        "span": 1,
+                        "padding": 0
+                      },
+                      "children": [
+                        {
+                          "id": "service-row-title",
+                          "type": "heading",
+                          "props": {
+                            "text": "{{title}}",
+                            "headingLevel": 3
+                          }
+                        },
+                        {
+                          "id": "service-row-desc",
+                          "type": "text",
+                          "props": {
+                            "text": "{{desc}}"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "service-row-cta",
+                      "type": "column",
+                      "props": {
+                        "span": 1,
+                        "padding": 0
+                      },
+                      "children": [
+                        {
+                          "id": "service-row-cta-buttons",
+                          "type": "buttons",
+                          "props": {
+                            "items": [
+                              {
+                                "label": "{{ctaLabel}}",
+                                "url": "{{ctaUrl}}",
+                                "style": "link"
+                              }
+                            ],
+                            "align": "left"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -49,5 +196,5 @@
       ]
     }
   ],
-  "css": "[data-bz-node^=\"service-row\"]{border-top:1px solid var(--line);padding:32px 0;} [data-bz-node^=\"service-row-num-text\"] p{font-family:var(--font-heading);font-weight:800;font-size:20px;color:var(--muted);margin:0;} [data-bz-node^=\"service-row-title\"] h3{font-family:var(--font-heading);font-weight:700;font-size:20px;margin-bottom:4px;} [data-bz-node^=\"service-row-desc\"] p{font-size:15px;color:var(--muted);}"
+  "css": "/* Layout for this component's own nodes.\n   These were per-node `styles` overrides. Past a certain number of them in\n   one document the browser stops matching the compiled\n   [data-bz-node=\"x\"][data-bz-node] rules — some apply and some silently do\n   not — so the same declarations live here instead, where they hold. See the\n   note in the commit message; this is a platform bug worth fixing upstream.\n   ------------------------------------------------------------------------- */\n[data-bz-node=\"services-band\"]{padding-top:120px;padding-bottom:120px}\n@media (max-width: 640px){\n[data-bz-node=\"services-band\"]{padding-top:64px;padding-bottom:64px}\n}\n\n/* --------------------------------------------------------------- SERVICES ---\n   Rows are separated by a top rule and the list is closed by one more, so the\n   set reads as a table rather than as seven cards. */\n\n[data-bz-node=\"services-band\"] .bz-block { padding-block: 0; }\n[data-bz-node=\"services-heading\"] h2 { margin: 0 0 20px; }\n[data-bz-node=\"services-lede\"] { margin-bottom: 56px; }\n[data-bz-node=\"services-lede\"] .bz-text { max-width: 680px; }\n[data-bz-node=\"services-lede\"] p { line-height: 1.7; }\n\n[data-bz-node=\"services-list-col\"] > .bz-row {\n  display: grid;\n  grid-template-columns: 60px 1fr auto;\n  gap: 28px;\n  align-items: center;\n  border-top: 1px solid var(--line);\n  padding: 32px 0;\n}\n[data-bz-node=\"services-list-col\"] > .bz-row:last-child {\n  border-bottom: 1px solid var(--line);\n}\n\n[data-bz-node=\"services-list-col\"] > .bz-row > .bz-col:nth-child(1) .bz-block--text p {\n  font: 800 20px / 1.6 var(--font-heading);\n  color: var(--muted);\n  margin: 0;\n}\n[data-bz-node=\"services-list-col\"] .bz-block--heading h3 {\n  font: 700 20px / 1.6 var(--font-heading);\n  margin: 0 0 4px;\n}\n[data-bz-node=\"services-list-col\"] > .bz-row > .bz-col:nth-child(2) .bz-block--text p {\n  font-size: var(--text-base, 15px);\n  line-height: 1.6;\n  color: #3f3f3f;\n  margin: 0;\n}\n[data-bz-node=\"services-list-col\"] .bz-block--text .bz-text { max-width: none; }\n[data-bz-node=\"services-list-col\"] .bz-block--buttons .bz-btn {\n  padding: 4px 0;\n  font: 700 var(--text-small) / 1.6 var(--font-body);\n  text-decoration: none;\n  white-space: nowrap;\n}\n[data-bz-node=\"services-list-col\"] .bz-block--buttons .bz-btns { justify-content: flex-end; }\n\n@media (max-width: 640px) {\n  [data-bz-node=\"services-list-col\"] > .bz-row {\n    grid-template-columns: 1fr;\n    gap: 8px;\n    padding: 24px 0;\n  }\n  [data-bz-node=\"services-list-col\"] > .bz-row > .bz-col:nth-child(1) .bz-block--text p { font-size: 16px; }\n}\n"
 }

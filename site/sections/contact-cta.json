@@ -1,0 +1,92 @@
+{
+  "version": 2,
+  "id": "contact-cta",
+  "name": "Closing CTA band",
+  "description": "Centred closing call to action on the dark field: heading, one line of copy, a button and a phone note.",
+  "props": [
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "body",
+      "type": "textarea",
+      "label": "Body copy"
+    },
+    {
+      "key": "note",
+      "type": "text",
+      "label": "Note under the button"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "contact-band",
+      "type": "section",
+      "props": {
+        "width": "full",
+        "paddingY": 1,
+        "anchor": "contact"
+      },
+      "children": [
+        {
+          "id": "contact-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "contact-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "contact-heading",
+                  "type": "heading",
+                  "props": {
+                    "text": "{{heading}}",
+                    "headingLevel": 2,
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "contact-body",
+                  "type": "text",
+                  "props": {
+                    "text": "{{body}}",
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "contact-buttons",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "ctaId": "contact-us"
+                      }
+                    ],
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "contact-note",
+                  "type": "text",
+                  "props": {
+                    "text": "{{note}}",
+                    "align": "center"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "/* ------------------------------------------------------------ CONTACT CTA ---\n   The handoff sets this band on --color-ink (#242424), which is its primary\n   text colour rather than the near-black used for the header and footer, so\n   the value is written out here rather than taken from the ink token. */\n\n[data-bz-node=\"contact-band\"]{\n  background:#242424;\n  padding:100px 48px;\n  text-align:center;\n}\n[data-bz-node=\"contact-band\"] .bz-block{padding-block:0;}\n[data-bz-node=\"contact-row\"]{max-width:560px;margin-inline:auto;}\n[data-bz-node=\"contact-heading\"] h2{\n  font:800 var(--text-h2-sm,34px)/1.6 var(--font-heading);\n  color:#fff;margin:0 0 14px;\n}\n[data-bz-node=\"contact-body\"] .bz-text{max-width:none;}\n[data-bz-node=\"contact-body\"]{margin-bottom:36px;}\n[data-bz-node=\"contact-body\"] p{\n  font-size:var(--text-base,15px);line-height:1.6;color:#C7C1B4;margin:0;\n}\n[data-bz-node=\"contact-buttons\"] .bz-btns{justify-content:center;}\n[data-bz-node=\"contact-note\"]{margin-top:20px;}\n[data-bz-node=\"contact-note\"] .bz-text{max-width:none;}\n[data-bz-node=\"contact-note\"] p{font-size:13px;line-height:1.6;color:#B0B0B0;margin:0;}\n@media (max-width:640px){\n  [data-bz-node=\"contact-band\"]{padding:56px 20px;}\n  [data-bz-node=\"contact-heading\"] h2{font-size:26px;}\n}\n"
+}

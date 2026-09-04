@@ -1,0 +1,241 @@
+{
+  "version": 2,
+  "id": "featured-listings",
+  "name": "Featured listings",
+  "description": "Four inventory cards: photograph, title, location, spec chips, price and a full-width CTA. Price and CTA sit at the card foot so a row of cards stays aligned whatever the title length.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "items",
+      "type": "list",
+      "label": "Listings",
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": "Photograph"
+        },
+        {
+          "key": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "key": "location",
+          "type": "text",
+          "label": "Location"
+        },
+        {
+          "key": "spec1Value",
+          "type": "text",
+          "label": "Spec 1 value"
+        },
+        {
+          "key": "spec1Label",
+          "type": "text",
+          "label": "Spec 1 label"
+        },
+        {
+          "key": "spec2Value",
+          "type": "text",
+          "label": "Spec 2 value"
+        },
+        {
+          "key": "spec2Label",
+          "type": "text",
+          "label": "Spec 2 label"
+        },
+        {
+          "key": "spec3Value",
+          "type": "text",
+          "label": "Spec 3 value"
+        },
+        {
+          "key": "spec3Label",
+          "type": "text",
+          "label": "Spec 3 label"
+        },
+        {
+          "key": "price",
+          "type": "text",
+          "label": "Price"
+        },
+        {
+          "key": "est",
+          "type": "text",
+          "label": "Estimated monthly"
+        },
+        {
+          "key": "ctaLabel",
+          "type": "text",
+          "label": "CTA label"
+        },
+        {
+          "key": "ctaUrl",
+          "type": "url",
+          "label": "CTA link"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "featured-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 1,
+        "anchor": "featured-inventory"
+      },
+      "children": [
+        {
+          "id": "featured-head-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "featured-head-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "featured-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "featured-grid-row",
+          "type": "row",
+          "props": {
+            "gap": 5,
+            "align": "stretch",
+            "stackOn": "tablet"
+          },
+          "children": [
+            {
+              "id": "listing",
+              "type": "column",
+              "props": {
+                "span": 3,
+                "padding": 0,
+                "repeat": "items"
+              },
+              "children": [
+                {
+                  "id": "listing-photo",
+                  "type": "image",
+                  "props": {
+                    "image": "{{photo}}",
+                    "width": "full"
+                  }
+                },
+                {
+                  "id": "listing-title",
+                  "type": "heading",
+                  "props": {
+                    "text": "{{title}}",
+                    "headingLevel": 3
+                  }
+                },
+                {
+                  "id": "listing-location",
+                  "type": "text",
+                  "props": {
+                    "text": "{{location}}"
+                  }
+                },
+                {
+                  "id": "listing-specs",
+                  "type": "customHtml",
+                  "props": {
+                    "html": "<div class=\"ss-specs\"><span class=\"ss-chip\"><strong>{{spec1Value}}</strong> {{spec1Label}}</span><span class=\"ss-chip\"><strong>{{spec2Value}}</strong> {{spec2Label}}</span><span class=\"ss-chip\"><strong>{{spec3Value}}</strong> {{spec3Label}}</span></div>"
+                  }
+                },
+                {
+                  "id": "listing-price",
+                  "type": "text",
+                  "props": {
+                    "text": "{{price}}"
+                  }
+                },
+                {
+                  "id": "listing-est",
+                  "type": "text",
+                  "props": {
+                    "text": "{{est}}"
+                  }
+                },
+                {
+                  "id": "listing-cta",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "label": "{{ctaLabel}}",
+                        "url": "{{ctaUrl}}",
+                        "style": "primary"
+                      }
+                    ],
+                    "align": "left"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "featured-cta-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "featured-cta-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "featured-cta",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "ctaId": "browse-all-inventory"
+                      }
+                    ],
+                    "align": "left"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "/* Layout for this component's own nodes.\n   These were per-node `styles` overrides. Past a certain number of them in\n   one document the browser stops matching the compiled\n   [data-bz-node=\"x\"][data-bz-node] rules — some apply and some silently do\n   not — so the same declarations live here instead, where they hold. See the\n   note in the commit message; this is a platform bug worth fixing upstream.\n   ------------------------------------------------------------------------- */\n[data-bz-node=\"featured-band\"]{padding-top:120px;padding-bottom:0px}\n@media (max-width: 640px){\n[data-bz-node=\"featured-band\"]{padding-top:64px}\n}\n\n/* ------------------------------------------------------- FEATURED LISTINGS ---\n   A card is a bordered column: photo at 4:3, then copy, with price and CTA\n   pushed to the foot by margin-top:auto so every card in the row lines up. */\n\n[data-bz-node=\"featured-band\"] .bz-block { padding-block: 0; }\n.bz-block[data-bz-node=\"featured-heading\"] p.bz-eyebrow { margin: 0 0 14px; }\n[data-bz-node=\"featured-heading\"] h2 { margin: 0 0 44px; }\n\n[data-bz-node=\"featured-grid-row\"] > .bz-col {\n  display: flex;\n  flex-direction: column;\n  background: var(--card);\n  border: 1px solid var(--line);\n}\n[data-bz-node=\"featured-grid-row\"] > .bz-col .bz-block--image img {\n  aspect-ratio: 4 / 3;\n  width: 100%;\n  object-fit: cover;\n  object-position: center;\n  display: block;\n}\n\n/* Everything below the photograph shares the card's 20px inset. */\n[data-bz-node=\"featured-grid-row\"] > .bz-col > .bz-block:not(.bz-block--image) { padding-inline: 20px; }\n[data-bz-node=\"featured-grid-row\"] > .bz-col > .bz-block--heading { margin-top: 20px; }\n[data-bz-node=\"featured-grid-row\"] > .bz-col > .bz-block--buttons { padding-bottom: 20px; }\n\n[data-bz-node=\"featured-grid-row\"] > .bz-col .bz-block--heading h3 {\n  font: 700 17px / 1.3 var(--font-heading);\n  margin: 0 0 4px;\n}\n[data-bz-node=\"featured-grid-row\"] > .bz-col > .bz-block:nth-child(3) p {\n  font-size: 13px;\n  line-height: 1.6;\n  color: var(--muted);\n  margin: 0 0 14px;\n}\n[data-bz-node=\"featured-grid-row\"] > .bz-col .bz-text,\n[data-bz-node=\"featured-grid-row\"] > .bz-col .bz-headingblock { max-width: none; }\n\n.ss-specs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }\n.ss-chip {\n  font: 400 12px / 1.6 var(--font-body);\n  border: 1px solid var(--line);\n  /* 6px is intentional even in the hard-edged theme — the handoff keeps spec\n     chips soft. */\n  border-radius: 6px;\n  padding: 6px 10px;\n  color: #242424;\n}\n.ss-chip strong { font-weight: 700; }\n\n/* The price is the first thing at the foot, so the spacer lands above it. */\n[data-bz-node=\"featured-grid-row\"] > .bz-col > .bz-block:nth-child(5) { margin-top: auto; }\n[data-bz-node=\"featured-grid-row\"] > .bz-col > .bz-block:nth-child(5) p {\n  font: 800 22px / 1.6 var(--font-heading);\n  color: #242424;\n  margin: 0 0 2px;\n}\n[data-bz-node=\"featured-grid-row\"] > .bz-col > .bz-block:nth-child(6) p {\n  font: 700 12px / 1.6 var(--font-body);\n  color: var(--accent);\n  margin: 0 0 16px;\n}\n[data-bz-node=\"featured-grid-row\"] > .bz-col .bz-block--buttons .bz-btn {\n  width: 100%;\n  font-size: 13px;\n  letter-spacing: 0.04em;\n  /* 10px, as the handoff has it for this one button. */\n  border-radius: 10px;\n}\n\n[data-bz-node=\"featured-cta-row\"] { margin-top: 28px; }\n[data-bz-node=\"featured-cta\"] .bz-btns { justify-content: flex-end; }\n[data-bz-node=\"featured-cta\"] .bz-btn { padding: 4px 0; font: 700 var(--text-small) / 1.6 var(--font-body); text-decoration: none; }\n"
+}
