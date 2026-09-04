@@ -22,5 +22,22 @@
     "path": "/locations-map",
     "out": "locations-map/index.html",
     "dir": "locations-map"
+  },
+  {
+    "slug": "test",
+    "dir": "test",
+    "title": "test",
+    "path": "/test",
+    "out": "test/index.html",
+    "status": "draft",
+    "seo": {
+      "ogImage": null,
+      "noindex": false
+    },
+    "templates": {
+      "header": null,
+      "footer": null,
+      "utilityNav": null
+    }
   }
 ]
