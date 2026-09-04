@@ -22,7 +22,59 @@
               "props": {
                 "span": 12
               },
-              "children": []
+              "children": [
+                {
+                  "id": "row-2",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-2",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "heading",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 2,
+                            "align": "left",
+                            "text": "Semi Truck & Trailer Parts Your Business Can Depend On"
+                          },
+                          "styles": {
+                            "base": {
+                              "fontWeight": "500",
+                              "textTransform": "lowercase",
+                              "fontSize": 30
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "tabs-section",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "image",
+                          "type": "image",
+                          "props": {
+                            "width": "full",
+                            "image": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
