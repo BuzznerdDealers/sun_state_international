@@ -68,6 +68,27 @@
                               "fontSize": 18
                             }
                           }
+                        },
+                        {
+                          "id": "buttons",
+                          "type": "buttons",
+                          "props": {
+                            "align": "left",
+                            "items": [
+                              {
+                                "ctaId": "trailers-cta",
+                                "label": "Find A Location",
+                                "url": "/home"
+                              }
+                            ],
+                            "behaviour": "dependentselect"
+                          },
+                          "styles": {
+                            "base": {
+                              "textColor": "#ffffff",
+                              "fontSize": 20
+                            }
+                          }
                         }
                       ]
                     },
