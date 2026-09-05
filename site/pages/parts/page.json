@@ -499,6 +499,105 @@
       ]
     },
     {
+      "id": "section-4",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-9",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-11",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "row-8",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-10",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "heading-9",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 2,
+                            "align": "left",
+                            "text": "Your Reliable\nPartner on the Road"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-12",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "For decades, Sun State International has built its reputation on dependable service, a <a href=\"#\">knowledgeable team</a>, and a genuine commitment to customer success. Our Parts Department is an extension of that promise, focused on keeping your trucks and trailers working, your drivers supported, and your business moving forward. When you’re ready to talk parts, service, or long-term support, our team is here."
+                          }
+                        },
+                        {
+                          "id": "buttons-9",
+                          "type": "buttons",
+                          "props": {
+                            "align": "left",
+                            "items": [
+                              {
+                                "label": "Contact Us"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-12",
+                      "type": "column",
+                      "props": {
+                        "span": 6,
+                        "background": "none"
+                      },
+                      "children": [
+                        {
+                          "id": "image-2",
+                          "type": "image",
+                          "props": {
+                            "width": "full",
+                            "image": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "section-3",
       "type": "section",
       "props": {
@@ -508,14 +607,14 @@
       },
       "children": [
         {
-          "id": "row-8",
+          "id": "row-10",
           "type": "row",
           "props": {
             "gap": 6
           },
           "children": [
             {
-              "id": "column-10",
+              "id": "column-13",
               "type": "column",
               "props": {
                 "span": 12
