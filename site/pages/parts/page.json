@@ -277,6 +277,95 @@
               ]
             }
           ]
+        },
+        {
+          "id": "row-5",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-6",
+              "type": "column",
+              "props": {
+                "span": 4
+              },
+              "children": [
+                {
+                  "id": "heading-5",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 3,
+                    "align": "left",
+                    "text": "International OEM Parts"
+                  }
+                },
+                {
+                  "id": "text-5",
+                  "type": "text",
+                  "props": {
+                    "align": "left",
+                    "width": "prose",
+                    "text": "As part of the International Truck family, Sun State International has access to one of the most extensive parts networks in the industry. We maintain over $3 million in on-hand inventory and have access to more than one million unique parts, giving our customers the confidence that what they need is within reach.\n"
+                  }
+                },
+                {
+                  "id": "text-6",
+                  "type": "text",
+                  "props": {
+                    "align": "left",
+                    "width": "prose",
+                    "text": "Choosing OEM means fewer surprises, better compatibility, and confidence that the part will perform the way it was designed to. Our team understands International systems inside and out and can help you navigate the International truck parts catalog or complete an International truck <a href=\"#\">parts online lookup </a>to ensure accuracy. For operators who value consistency, safety, and protecting the long-term health of their equipment, OEM parts remain the gold standard. <a href=\"#\">Talk to a Rep Now</a>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "column-7",
+              "type": "column",
+              "props": {
+                "span": 4
+              },
+              "children": [
+                {
+                  "id": "heading-6",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 3,
+                    "align": "left",
+                    "text": "Aftermarket Parts"
+                  }
+                },
+                {
+                  "id": "text-7",
+                  "type": "text",
+                  "props": {
+                    "align": "left",
+                    "width": "prose",
+                    "text": "In addition to OEM solutions, Sun State International offers a wide range of aftermarket truck parts to support different budgets and operating needs. Aftermarket options can be a cost-effective solution for many applications while still delivering dependable performance. Our parts specialists help you compare options so you can make informed decisions based on your truck’s usage, timeline, and budget.\n"
+                  }
+                },
+                {
+                  "id": "text-8",
+                  "type": "text",
+                  "props": {
+                    "align": "left",
+                    "width": "prose",
+                    "text": "Whether you’re looking for immediate availability or long-term savings, we’ll guide you to the best fit without pressure or guesswork. If you’re looking for aftermarket solutions, visit <a href=\"\">our location in Tampa, FL</a>."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "column-8",
+              "type": "column",
+              "props": {
+                "span": 4
+              },
+              "children": []
+            }
+          ]
         }
       ]
     }
