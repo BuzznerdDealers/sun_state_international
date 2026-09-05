@@ -503,7 +503,8 @@
       "type": "section",
       "props": {
         "width": "boxed",
-        "paddingY": 7
+        "paddingY": 7,
+        "background": "accent"
       },
       "children": [
         {
@@ -530,7 +531,8 @@
                   },
                   "styles": {
                     "base": {
-                      "paddingBottom": 0
+                      "paddingBottom": 0,
+                      "textColor": "#ffffff"
                     }
                   }
                 },
@@ -544,7 +546,8 @@
                   },
                   "styles": {
                     "base": {
-                      "fontSize": 20
+                      "fontSize": 20,
+                      "textColor": "#ffffff"
                     }
                   }
                 }
@@ -559,7 +562,6 @@
             "align": "center",
             "items": [
               {
-                "ctaId": "careers-apply",
                 "label": "Contact Us"
               }
             ]
