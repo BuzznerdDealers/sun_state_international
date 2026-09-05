@@ -398,6 +398,103 @@
               ]
             }
           ]
+        },
+        {
+          "id": "heading-4",
+          "type": "heading",
+          "props": {
+            "headingLevel": 5,
+            "align": "left",
+            "text": "Our parts locations include:"
+          }
+        },
+        {
+          "id": "buttons-4",
+          "type": "buttons",
+          "props": {
+            "align": "left",
+            "items": [
+              {
+                "ctaId": "careers-apply",
+                "label": "Tampa, FL",
+                "url": "#"
+              }
+            ]
+          },
+          "styles": {
+            "base": {
+              "display": "inline-block"
+            }
+          }
+        },
+        {
+          "id": "buttons-5",
+          "type": "buttons",
+          "props": {
+            "align": "left",
+            "items": [
+              {
+                "ctaId": "careers-apply",
+                "label": "Davenport, FL",
+                "url": "#"
+              }
+            ]
+          },
+          "styles": {
+            "base": {
+              "display": "inline-block",
+              "paddingLeft": 15
+            }
+          }
+        },
+        {
+          "id": "buttons-6",
+          "type": "buttons",
+          "props": {
+            "align": "left",
+            "items": [
+              {
+                "ctaId": "careers-apply",
+                "label": "Sarasota, FL",
+                "url": "#"
+              }
+            ]
+          },
+          "styles": {
+            "base": {
+              "display": "inline-block",
+              "paddingLeft": 15
+            }
+          }
+        },
+        {
+          "id": "buttons-7",
+          "type": "buttons",
+          "props": {
+            "align": "left",
+            "items": [
+              {
+                "ctaId": "careers-apply",
+                "label": "Brookesville, FL",
+                "url": "#"
+              }
+            ]
+          },
+          "styles": {
+            "base": {
+              "display": "inline-block",
+              "paddingLeft": 15
+            }
+          }
+        },
+        {
+          "id": "text-10",
+          "type": "text",
+          "props": {
+            "align": "left",
+            "width": "full",
+            "text": "Write somethinWith multiple locations and a knowledgeable team at each, Sun State International makes it easier to get parts quickly without unnecessary travel or delays.g here."
+          }
         }
       ]
     }
