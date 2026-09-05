@@ -151,7 +151,7 @@
                       "id": "column-4",
                       "type": "column",
                       "props": {
-                        "span": 6
+                        "span": 12
                       },
                       "children": [
                         {
@@ -169,13 +169,31 @@
                           }
                         },
                         {
-                          "id": "text-2",
-                          "type": "text",
+                          "id": "row-6",
+                          "type": "row",
                           "props": {
-                            "align": "left",
-                            "width": "prose",
-                            "text": "Our Parts Department supports both truck and trailer operations, offering a wide selection of heavy-duty and medium-duty commercial truck parts and accessories. From essential wear items to specialized components, our team works quickly to locate the exact part your equipment requires. If it’s not on our shelf today, we’ll source it through our trusted network and get it moving to you without delay."
-                          }
+                            "gap": 6
+                          },
+                          "children": [
+                            {
+                              "id": "column-5",
+                              "type": "column",
+                              "props": {
+                                "span": 12
+                              },
+                              "children": [
+                                {
+                                  "id": "text-2",
+                                  "type": "text",
+                                  "props": {
+                                    "align": "left",
+                                    "width": "full",
+                                    "text": "Our Parts Department supports both truck and trailer operations, offering a wide selection of heavy-duty and medium-duty commercial truck parts and accessories. From essential wear items to specialized components, our team works quickly to locate the exact part your equipment requires. If it’s not on our shelf today, we’ll source it through our trusted network and get it moving to you without delay."
+                                  }
+                                }
+                              ]
+                            }
+                          ]
                         },
                         {
                           "id": "buttons-2",
@@ -212,61 +230,6 @@
                             "base": {
                               "display": "inline-block",
                               "paddingLeft": 20
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "id": "column-5",
-                      "type": "column",
-                      "props": {
-                        "span": 6
-                      },
-                      "children": [
-                        {
-                          "id": "heading-3",
-                          "type": "heading",
-                          "props": {
-                            "headingLevel": 2,
-                            "align": "left",
-                            "text": "Our In-Store Locations"
-                          },
-                          "styles": {
-                            "base": {
-                              "paddingBottom": 0
-                            }
-                          }
-                        },
-                        {
-                          "id": "text-3",
-                          "type": "text",
-                          "props": {
-                            "align": "left",
-                            "width": "prose",
-                            "text": "Convenience matters when time is money. Sun State International operates multiple Parts Department locations across Florida, ensuring you’re never far from the help you need."
-                          }
-                        },
-                        {
-                          "id": "text-4",
-                          "type": "text",
-                          "props": {
-                            "align": "left",
-                            "width": "prose",
-                            "text": "We offer local delivery from our locations to the following counties: Hillsborough, Pinellas, Pasco, Polk, Brooksville, Hernando, DeSoto, Highlands, Hardee, Manatee, and Sarasota."
-                          }
-                        },
-                        {
-                          "id": "heading-4",
-                          "type": "heading",
-                          "props": {
-                            "headingLevel": 3,
-                            "align": "left",
-                            "text": "Our parts locations include:"
-                          },
-                          "styles": {
-                            "base": {
-                              "fontSize": 18
                             }
                           }
                         }
@@ -363,7 +326,26 @@
               "props": {
                 "span": 4
               },
-              "children": []
+              "children": [
+                {
+                  "id": "heading-7",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 3,
+                    "align": "left",
+                    "text": "Beyond Semi Truck Parts"
+                  }
+                },
+                {
+                  "id": "text-9",
+                  "type": "text",
+                  "props": {
+                    "align": "left",
+                    "width": "prose",
+                    "text": "We offer all OE truck & trailer parts for International, IC Bus, Globe, and Hyundai Translead equipment, giving fleets and owner-operators a single, reliable place to turn. Stop in, call ahead, or work with one of our parts professionals to experience service that’s focused on getting you back on the road, not slowing you down."
+                  }
+                }
+              ]
             }
           ]
         }
