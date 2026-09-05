@@ -116,6 +116,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-2",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7,
+        "background": "ink"
+      },
+      "children": [
+        {
+          "id": "row-3",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-3",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "row-4",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-4",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "heading-2",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 2,
+                            "align": "left",
+                            "text": "Parts We Offer"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-2",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Our Parts Department supports both truck and trailer operations, offering a wide selection of heavy-duty and medium-duty commercial truck parts and accessories. From essential wear items to specialized components, our team works quickly to locate the exact part your equipment requires. If it’s not on our shelf today, we’ll source it through our trusted network and get it moving to you without delay."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-5",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
