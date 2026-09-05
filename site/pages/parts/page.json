@@ -598,6 +598,92 @@
       ]
     },
     {
+      "id": "section-5",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-11",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-14",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "row-10",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-13",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "location-card",
+                          "type": "location-card",
+                          "props": {
+                            "number": "Card number",
+                            "city": "City",
+                            "state": "State",
+                            "name": "Location name",
+                            "phone": "Phone",
+                            "brand1Color": "Brand dot 1 color",
+                            "brand1Outline": false,
+                            "brand2Color": "Brand dot 2 color",
+                            "brand2Outline": false,
+                            "perkInStoreShopping": false,
+                            "perkCurbsidePickup": false,
+                            "perkAfterHoursService": false,
+                            "perkInStorePickup": false,
+                            "perkDelivery": false,
+                            "directionsUrl": "Directions link (Google Maps)",
+                            "dataBrand": "Brand facet values (space separated, lower-case)",
+                            "dataPerk": "Perk facet values (space separated, lower-case)",
+                            "dataCity": "City facet value (lower-case, no state)"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-15",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "column-16",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "section-3",
       "type": "section",
       "props": {
@@ -607,14 +693,14 @@
       },
       "children": [
         {
-          "id": "row-10",
+          "id": "row-12",
           "type": "row",
           "props": {
             "gap": 6
           },
           "children": [
             {
-              "id": "column-13",
+              "id": "column-17",
               "type": "column",
               "props": {
                 "span": 12
