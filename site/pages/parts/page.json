@@ -348,6 +348,33 @@
               ]
             }
           ]
+        },
+        {
+          "id": "row-7",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-9",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "heading-3",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 2,
+                    "align": "left",
+                    "text": "Our In-Store Locations"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
