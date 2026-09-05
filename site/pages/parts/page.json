@@ -637,7 +637,6 @@
                           "id": "location-card",
                           "type": "location-card",
                           "props": {
-                            "number": "Card number",
                             "city": "City",
                             "state": "State",
                             "name": "Location name",
