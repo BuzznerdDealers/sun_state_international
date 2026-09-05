@@ -497,6 +497,75 @@
           }
         }
       ]
+    },
+    {
+      "id": "section-3",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-8",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-10",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "heading-8",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 2,
+                    "align": "center",
+                    "text": "Contact Us"
+                  },
+                  "styles": {
+                    "base": {
+                      "paddingBottom": 0
+                    }
+                  }
+                },
+                {
+                  "id": "text-11",
+                  "type": "text",
+                  "props": {
+                    "align": "center",
+                    "width": "full",
+                    "text": "Ready to get on the road? Contact us to explore our trucks and experience nothing less than the dedicated care you deserve."
+                  },
+                  "styles": {
+                    "base": {
+                      "fontSize": 20
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "buttons-8",
+          "type": "buttons",
+          "props": {
+            "align": "center",
+            "items": [
+              {
+                "ctaId": "careers-apply",
+                "label": "Contact Us"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
