@@ -29,7 +29,7 @@
     "title": "Parts",
     "path": "/parts",
     "out": "parts/index.html",
-    "status": "draft",
+    "status": "published",
     "seo": {
       "ogImage": null,
       "noindex": false
