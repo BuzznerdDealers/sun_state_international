@@ -707,12 +707,6 @@
                                 "desc": "Parts Hours: 7 AM – 7 PM M-F, 8 AM – 12 PM SAT"
                               }
                             ]
-                          },
-                          "styles": {
-                            "base": {
-                              "paddingBottom": 0,
-                              "paddingTop": 0
-                            }
                           }
                         },
                         {
