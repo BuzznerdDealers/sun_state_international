@@ -637,9 +637,8 @@
                           "id": "location-card",
                           "type": "location-card",
                           "props": {
-                            "city": "City",
                             "state": "State",
-                            "name": "Location name",
+                            "name": "Tampa, FL",
                             "phone": "Phone",
                             "brand1Color": "Brand dot 1 color",
                             "brand1Outline": false,
@@ -653,7 +652,8 @@
                             "directionsUrl": "Directions link (Google Maps)",
                             "dataBrand": "Brand facet values (space separated, lower-case)",
                             "dataPerk": "Perk facet values (space separated, lower-case)",
-                            "dataCity": "City facet value (lower-case, no state)"
+                            "city": "Tampa, FL",
+                            "dataCity": "bvbv"
                           }
                         }
                       ]
@@ -664,7 +664,53 @@
                       "props": {
                         "span": 4
                       },
-                      "children": []
+                      "children": [
+                        {
+                          "id": "locationsMap",
+                          "type": "locationsMap",
+                          "props": {
+                            "headingLevel": 2
+                          }
+                        },
+                        {
+                          "id": "locationsmap",
+                          "type": "locationsMap",
+                          "props": {
+                            "headingLevel": 2
+                          }
+                        },
+                        {
+                          "id": "heading-8",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 5,
+                            "align": "left",
+                            "text": "Sun State International Trucks, LLC."
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-11",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose"
+                          }
+                        },
+                        {
+                          "id": "list",
+                          "type": "list",
+                          "props": {
+                            "headingLevel": 2,
+                            "columns": 3,
+                            "items": []
+                          }
+                        }
+                      ]
                     },
                     {
                       "id": "column-16",
@@ -706,7 +752,7 @@
               },
               "children": [
                 {
-                  "id": "heading-8",
+                  "id": "heading-10",
                   "type": "heading",
                   "props": {
                     "headingLevel": 2,
@@ -721,7 +767,7 @@
                   }
                 },
                 {
-                  "id": "text-11",
+                  "id": "text-13",
                   "type": "text",
                   "props": {
                     "align": "center",
