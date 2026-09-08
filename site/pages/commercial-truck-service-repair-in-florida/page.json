@@ -1,4 +1,49 @@
 {
   "version": 2,
-  "nodes": []
+  "nodes": [
+    {
+      "id": "section",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7,
+        "background": "accent"
+      },
+      "children": [
+        {
+          "id": "row",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "heading",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 2,
+                    "align": "left",
+                    "text": "Commercial Truck Service & Repair in Florida"
+                  },
+                  "styles": {
+                    "base": {
+                      "paddingBottom": 0,
+                      "textColor": "#ffffff"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
