@@ -158,6 +158,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-3",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7,
+        "background": "paper"
+      },
+      "styles": {
+        "base": {
+          "background": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "paper"
+        }
+      },
+      "children": [
+        {
+          "id": "row-4",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-5",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }
