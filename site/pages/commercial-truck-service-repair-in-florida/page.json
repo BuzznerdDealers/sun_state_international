@@ -469,6 +469,48 @@
               ]
             }
           ]
+        },
+        {
+          "id": "row-8",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-12",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "list-4",
+                  "type": "list",
+                  "props": {
+                    "headingLevel": 6,
+                    "columns": 1,
+                    "items": [
+                      {
+                        "label": "After-Hours Service",
+                        "desc": "Need service outside normal business hours? Certified Fleet provides after-hours support from 5:00 PM to 8:00 AM, helping you get assistance when you need it most."
+                      }
+                    ]
+                  },
+                  "styles": {
+                    "base": {
+                      "background": "#ffffff",
+                      "paddingTop": 20,
+                      "paddingRight": 20,
+                      "paddingBottom": 20,
+                      "paddingLeft": 20,
+                      "marginTop": 2
+                    }
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
