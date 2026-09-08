@@ -322,13 +322,63 @@
                       "props": {
                         "span": 4
                       },
-                      "children": []
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "heading-6",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Tampa"
+                          }
+                        },
+                        {
+                          "id": "list-2",
+                          "type": "list",
+                          "props": {
+                            "headingLevel": 6,
+                            "columns": 1,
+                            "items": [
+                              {
+                                "desc": "Monday–Friday: 7:00 AM–7:00 PM"
+                              },
+                              {
+                                "label": "",
+                                "desc": "Saturday: 7:00 AM–12:00 PM"
+                              }
+                            ]
+                          },
+                          "styles": {
+                            "base": {
+                              "fontSize": 0
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
                       "id": "column-10",
                       "type": "column",
                       "props": {
                         "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
                       },
                       "children": [
                         {
@@ -370,7 +420,48 @@
                       "props": {
                         "span": 4
                       },
-                      "children": []
+                      "styles": {
+                        "base": {
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20,
+                          "background": "#3b3b3b"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "heading-7",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Tampa"
+                          }
+                        },
+                        {
+                          "id": "list-3",
+                          "type": "list",
+                          "props": {
+                            "headingLevel": 6,
+                            "columns": 1,
+                            "items": [
+                              {
+                                "desc": "Monday–Friday: 7:00 AM–7:00 PM"
+                              },
+                              {
+                                "label": "",
+                                "desc": "Saturday: 7:00 AM–12:00 PM"
+                              }
+                            ]
+                          },
+                          "styles": {
+                            "base": {
+                              "fontSize": 0
+                            }
+                          }
+                        }
+                      ]
                     }
                   ]
                 }
