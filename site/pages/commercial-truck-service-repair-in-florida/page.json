@@ -44,6 +44,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-2",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-2",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-2",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "row-3",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-3",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "heading-2",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 2,
+                            "align": "left",
+                            "text": "Commercial Truck Service & Repair"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "full",
+                            "text": "Commercial truck service, trailer repair, and fleet maintenance at Sun State International Trucks in Florida. Let’s get you going!"
+                          },
+                          "styles": {
+                            "base": {
+                              "fontSize": 20,
+                              "fontWeight": "600"
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-2",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "When your truck or trailer is out of service, every minute counts. Whether you're managing an entire fleet or operating a single truck, you need a service team that understands the demands of your business and works efficiently to get you back on the road. At Sun State International, we provide dependable commercial truck service for all makes and models backed by experienced technicians, advanced diagnostic equipment, and a commitment to minimizing downtime. From routine maintenance and trailer repair to complex engine diagnostics and warranty work, our team delivers the quality service your operation depends on."
+                          }
+                        },
+                        {
+                          "id": "buttons",
+                          "type": "buttons",
+                          "props": {
+                            "align": "left",
+                            "items": [
+                              {
+                                "ctaId": "careers-apply",
+                                "label": "Schedule Your Service Appointment"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-4",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "image",
+                          "type": "image",
+                          "props": {
+                            "width": "full",
+                            "image": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
