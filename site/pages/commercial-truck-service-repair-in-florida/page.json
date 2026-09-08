@@ -740,6 +740,192 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "id": "row-13",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-20",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-13",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Fleet Charge"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-9",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Managing a fleet comes with enough challenges without worrying about inconsistent pricing and complicated billing. Fleet Charge, designed by International, simplifies the service experience by providing consistent parts pricing, nationwide support, and streamlined billing for qualifying fleet customers."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-21",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-14",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Accelerated Service Express Diagnostics"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-10",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Sun State International participates in Accelerated Service Express Diagnostics (ASED), a commercial truck maintenance program offered through participating International dealerships. This program offers a complete vehicle diagnostic evaluation, repair assessment, and detailed estimate within two hours of arrival."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-22",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-15",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Diamond Advantage"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-11",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Whether your truck needs unexpected repairs or routine maintenance, Diamond Advantage helps keep your operation moving with greater financial flexibility. This credit program is designed specifically for today's transportation industry, giving drivers and fleet operators access to products and services while simplifying payment and expense management."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "row-14",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-23",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-16",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "OnCommand Connection"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-12",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "OnCommand® Connection is an industry-leading remote diagnostics platform that monitors vehicle health in real time, providing valuable information before minor issues become major repairs. Supporting virtually all commercial truck makes and models, OnCommand Connection transforms vehicle data into actionable insights that help improve fleet performance, reduce maintenance costs, and maximize uptime."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-24",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-17",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "International 360"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-13",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "International® 360 is a comprehensive fleet management and service communication platform designed to make the repair process more transparent from start to finish. By providing greater visibility throughout the repair process, International 360 helps fleet managers make informed decisions while keeping their operations running smoothly."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-25",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
