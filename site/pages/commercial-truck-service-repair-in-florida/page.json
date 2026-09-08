@@ -513,6 +513,92 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-5",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-9",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-13",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "row-10",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-14",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "heading-8",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 2,
+                            "align": "left",
+                            "text": "Why Choose Sun State International for Commercial Truck Service?"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-5",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "When you choose Sun State International, you're choosing more than a repair facility; you're partnering with a team dedicated to keeping your business on the road. Our full-service truck service center is equipped to handle everything from routine maintenance and DOT inspections to major drivetrain repairs and complete engine overhauls. With more than 60 certified factory-trained technicians, we have the expertise and equipment to service all makes of commercial trucks, buses, and trailers efficiently and accurately."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-15",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "image-3",
+                          "type": "image",
+                          "props": {
+                            "width": "full",
+                            "image": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
