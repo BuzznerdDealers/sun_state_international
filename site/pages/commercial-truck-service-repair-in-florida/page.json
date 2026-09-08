@@ -170,7 +170,7 @@
       "styles": {
         "base": {
           "background": "#ffffff",
-          "borderWidth": 1,
+          "borderWidth": 0,
           "borderColor": "paper"
         }
       },
@@ -188,7 +188,81 @@
               "props": {
                 "span": 12
               },
-              "children": []
+              "children": [
+                {
+                  "id": "row-5",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "styles": {
+                    "base": {
+                      "borderWidth": 0,
+                      "borderColor": "paper"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "column-6",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "image-2",
+                          "type": "image",
+                          "props": {
+                            "width": "full",
+                            "image": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-7",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "heading-3",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 2,
+                            "align": "left",
+                            "text": "Commercial Truck Service That Keeps Your Business Moving"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-3",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "As an authorized repair and warranty facility for International®, Cummins®, Allison®, and Caterpillar®, we perform warranty repairs while also providing expert service for a wide variety of commercial vehicles. Whether you operate an International truck, IC Bus, Hyundai Translead trailer, Globe Trailer, or another commercial vehicle, you can count on our team for dependable repairs and honest recommendations."
+                          }
+                        },
+                        {
+                          "id": "text-4",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Our technicians also help you schedule maintenance before small issues become expensive repairs. Combined with available parts delivery and support from our knowledgeable parts department, we make it easier to keep your fleet operating at its best. No matter the size of the repair, you can expect experienced technicians, reliable workmanship, and customer service centered around your success.\n\n"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
