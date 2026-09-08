@@ -163,7 +163,7 @@
       "id": "section-3",
       "type": "section",
       "props": {
-        "width": "full",
+        "width": "bleed-right",
         "paddingY": 7,
         "background": "none"
       },
