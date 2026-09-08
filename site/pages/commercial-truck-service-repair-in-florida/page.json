@@ -49,8 +49,13 @@
       "id": "section-2",
       "type": "section",
       "props": {
-        "width": "boxed",
+        "width": "bleed-right",
         "paddingY": 7
+      },
+      "styles": {
+        "base": {
+          "paddingBottom": 30
+        }
       },
       "children": [
         {
@@ -164,7 +169,7 @@
       "type": "section",
       "props": {
         "width": "bleed-left",
-        "paddingY": 7,
+        "paddingY": 4,
         "background": "none"
       },
       "styles": {
