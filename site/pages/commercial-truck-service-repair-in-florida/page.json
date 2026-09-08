@@ -392,7 +392,7 @@
                           "props": {
                             "headingLevel": 4,
                             "align": "left",
-                            "text": "Tampa"
+                            "text": "Davenport"
                           }
                         },
                         {
@@ -441,7 +441,7 @@
                           "props": {
                             "headingLevel": 4,
                             "align": "left",
-                            "text": "Tampa"
+                            "text": "Sarasota"
                           }
                         },
                         {
@@ -452,11 +452,7 @@
                             "columns": 1,
                             "items": [
                               {
-                                "desc": "Monday–Friday: 7:00 AM–7:00 PM"
-                              },
-                              {
-                                "label": "",
-                                "desc": "Saturday: 7:00 AM–12:00 PM"
+                                "desc": "Monday–Friday: 7:00 AM–5:00 PM"
                               }
                             ]
                           },
