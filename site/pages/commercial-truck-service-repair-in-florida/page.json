@@ -280,6 +280,11 @@
         "width": "boxed",
         "paddingY": 7
       },
+      "styles": {
+        "base": {
+          "background": "#e8e8e8"
+        }
+      },
       "children": [
         {
           "id": "row-6",
