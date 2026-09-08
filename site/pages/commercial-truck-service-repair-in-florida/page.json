@@ -282,7 +282,7 @@
       },
       "styles": {
         "base": {
-          "background": "#e8e8e8"
+          "background": "#e8e8e8@654%"
         }
       },
       "children": [
@@ -606,6 +606,11 @@
       "props": {
         "width": "boxed",
         "paddingY": 7
+      },
+      "styles": {
+        "base": {
+          "background": "#000000@654%"
+        }
       },
       "children": [
         {
