@@ -163,13 +163,13 @@
       "id": "section-3",
       "type": "section",
       "props": {
-        "width": "boxed",
+        "width": "full",
         "paddingY": 7,
-        "background": "paper"
+        "background": "none"
       },
       "styles": {
         "base": {
-          "background": "#ffffff",
+          "background": "#ffffff@444%",
           "borderWidth": 0,
           "borderColor": "paper"
         }
