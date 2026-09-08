@@ -272,6 +272,113 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-4",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-6",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-8",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "heading-4",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 2,
+                    "align": "left",
+                    "text": "Our Service Department Hours"
+                  },
+                  "styles": {
+                    "base": {
+                      "paddingBottom": 0
+                    }
+                  }
+                },
+                {
+                  "id": "row-7",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-9",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "column-10",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-5",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Tampa"
+                          }
+                        },
+                        {
+                          "id": "list",
+                          "type": "list",
+                          "props": {
+                            "headingLevel": 6,
+                            "columns": 1,
+                            "items": [
+                              {
+                                "desc": "Monday–Friday: 7:00 AM–7:00 PM"
+                              },
+                              {
+                                "label": "",
+                                "desc": "Saturday: 7:00 AM–12:00 PM"
+                              }
+                            ]
+                          },
+                          "styles": {
+                            "base": {
+                              "fontSize": 0
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-11",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
