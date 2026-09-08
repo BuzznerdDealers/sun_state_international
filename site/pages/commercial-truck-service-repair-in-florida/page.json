@@ -599,6 +599,153 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-6",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-11",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-16",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "heading-9",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 2,
+                    "align": "left",
+                    "text": "Our Commercial Truck Services"
+                  },
+                  "styles": {
+                    "base": {
+                      "paddingBottom": 0
+                    }
+                  }
+                },
+                {
+                  "id": "row-12",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-17",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-10",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Diamond Repair Estimating"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-6",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Accurate estimates help you make informed decisions, which is why Sun State International uses International's Diamond Repair Estimating system. This fully automated estimating platform allows our technicians to create detailed repair estimates with greater speed and accuracy, helping you understand the scope of repairs before work begins."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-18",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-11",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Computerized Truck & Trailer Alignment"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-7",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Accurate estimates help you make informed decisions, which is why Sun State International uses International's Diamond Repair Estimating system. This fully automated estimating platform allows our technicians to create detailed repair estimates with greater speed and accuracy, helping you understand the scope of repairs before work begins."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-19",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": [
+                        {
+                          "id": "heading-12",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 4,
+                            "align": "left",
+                            "text": "Diamond Repair Estimating"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-8",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Accurate estimates help you make informed decisions, which is why Sun State International uses International's Diamond Repair Estimating system. This fully automated estimating platform allows our technicians to create detailed repair estimates with greater speed and accuracy, helping you understand the scope of repairs before work begins."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
