@@ -46,6 +46,217 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-2",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-2",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-2",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "row-3",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-3",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "heading",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 3,
+                            "align": "left",
+                            "text": "Truck Bodies"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0,
+                              "textTransform": "uppercase"
+                            }
+                          }
+                        },
+                        {
+                          "id": "text",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "All-makes, new or used body installations and swaps"
+                          },
+                          "styles": {
+                            "base": {
+                              "fontWeight": "600"
+                            }
+                          }
+                        },
+                        {
+                          "id": "customHtml",
+                          "type": "customHtml",
+                          "props": {
+                            "html": "\n<ul>\n<li>Van</li>\n<li>Reefer</li>\n<li>Dump</li>\n<li>Flatbed</li>\n<li>Tank<//li>\n<li>Roll-off Hoist</li>"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-4",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "heading-2",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 3,
+                            "align": "left",
+                            "text": "Truck Bodies"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0,
+                              "textTransform": "uppercase"
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-2",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "All-makes, new or used body installations and swaps"
+                          },
+                          "styles": {
+                            "base": {
+                              "fontWeight": "600"
+                            }
+                          }
+                        },
+                        {
+                          "id": "customhtml",
+                          "type": "customHtml",
+                          "props": {
+                            "html": "\n<ul>\n<li>Van</li>\n<li>Reefer</li>\n<li>Dump</li>\n<li>Flatbed</li>\n<li>Tank<//li>\n<li>Roll-off Hoist</li>"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-5",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "heading-3",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 3,
+                            "align": "left",
+                            "text": "Truck Bodies"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0,
+                              "textTransform": "uppercase"
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-3",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "All-makes, new or used body installations and swaps"
+                          },
+                          "styles": {
+                            "base": {
+                              "fontWeight": "600"
+                            }
+                          }
+                        },
+                        {
+                          "id": "customhtml-2",
+                          "type": "customHtml",
+                          "props": {
+                            "html": "\n<ul>\n<li>Van</li>\n<li>Reefer</li>\n<li>Dump</li>\n<li>Flatbed</li>\n<li>Tank<//li>\n<li>Roll-off Hoist</li>"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-6",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "column-7",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
