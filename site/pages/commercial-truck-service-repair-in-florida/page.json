@@ -659,6 +659,15 @@
                       "props": {
                         "span": 4
                       },
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
+                      },
                       "children": [
                         {
                           "id": "heading-10",
