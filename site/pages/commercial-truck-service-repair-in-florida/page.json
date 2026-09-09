@@ -1368,10 +1368,75 @@
                       "paddingBottom": 0
                     }
                   }
+                },
+                {
+                  "id": "text-19",
+                  "type": "text",
+                  "props": {
+                    "align": "left",
+                    "width": "full",
+                    "text": "Call our service departments, or visit one of our dealership locations in Tampa, Sarasota, or Davenport — we'd love to hear about your experience. Your feedback helps us continue providing the dependable service our customers have come to expect."
+                  }
                 }
               ]
             }
           ]
+        },
+        {
+          "id": "buttons-5",
+          "type": "buttons",
+          "props": {
+            "align": "left",
+            "items": [
+              {
+                "ctaId": "careers-apply",
+                "label": "Tampa  (813) 521-8053"
+              }
+            ]
+          },
+          "styles": {
+            "base": {
+              "display": "inline-block"
+            }
+          }
+        },
+        {
+          "id": "buttons-6",
+          "type": "buttons",
+          "props": {
+            "align": "left",
+            "items": [
+              {
+                "ctaId": "careers-apply",
+                "label": " Sarasota  (941) 541-3251"
+              }
+            ]
+          },
+          "styles": {
+            "base": {
+              "display": "inline-block",
+              "marginLeft": 10
+            }
+          }
+        },
+        {
+          "id": "buttons-7",
+          "type": "buttons",
+          "props": {
+            "align": "left",
+            "items": [
+              {
+                "ctaId": "careers-apply",
+                "label": "Davenport  (863) 238-2939"
+              }
+            ]
+          },
+          "styles": {
+            "base": {
+              "display": "inline-block",
+              "marginLeft": 10
+            }
+          }
         }
       ]
     }
