@@ -223,6 +223,11 @@
                   "props": {
                     "gap": 6
                   },
+                  "styles": {
+                    "base": {
+                      "paddingTop": 20
+                    }
+                  },
                   "children": [
                     {
                       "id": "column-6",
