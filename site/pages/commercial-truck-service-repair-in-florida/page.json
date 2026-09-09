@@ -1337,7 +1337,7 @@
       },
       "styles": {
         "base": {
-          "background": "#000000@000%"
+          "background": "#171717"
         }
       },
       "children": [
@@ -1365,7 +1365,9 @@
                   },
                   "styles": {
                     "base": {
-                      "paddingBottom": 0
+                      "paddingBottom": 0,
+                      "textColor": "#ffffff",
+                      "textTransform": "uppercase"
                     }
                   }
                 },
@@ -1376,6 +1378,11 @@
                     "align": "left",
                     "width": "full",
                     "text": "Call our service departments, or visit one of our dealership locations in Tampa, Sarasota, or Davenport — we'd love to hear about your experience. Your feedback helps us continue providing the dependable service our customers have come to expect."
+                  },
+                  "styles": {
+                    "base": {
+                      "textColor": "#ffffff"
+                    }
                   }
                 }
               ]
