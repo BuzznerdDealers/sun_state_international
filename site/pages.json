@@ -56,5 +56,22 @@
       "footer": null,
       "utilityNav": null
     }
+  },
+  {
+    "slug": "aftermarket",
+    "dir": "aftermarket",
+    "title": "Aftermarket",
+    "path": "/aftermarket",
+    "out": "aftermarket/index.html",
+    "status": "draft",
+    "seo": {
+      "ogImage": null,
+      "noindex": false
+    },
+    "templates": {
+      "header": null,
+      "footer": null,
+      "utilityNav": null
+    }
   }
 ]
