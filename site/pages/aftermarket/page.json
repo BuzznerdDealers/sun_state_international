@@ -1,4 +1,51 @@
 {
   "version": 2,
-  "nodes": []
+  "nodes": [
+    {
+      "id": "section",
+      "type": "section",
+      "props": {
+        "width": "full",
+        "paddingY": 0
+      },
+      "children": [
+        {
+          "id": "row",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "hero",
+                  "type": "hero",
+                  "props": {
+                    "headingLevel": 1,
+                    "headline": "Aftermarket Modifications & Alterations for Trucks, Trailers, & Buses in FL",
+                    "eyebrow": "Aftermark"
+                  },
+                  "styles": {
+                    "base": {
+                      "width": "100%",
+                      "paddingTop": 50,
+                      "paddingBottom": 50,
+                      "paddingRight": 0,
+                      "paddingLeft": 40
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
