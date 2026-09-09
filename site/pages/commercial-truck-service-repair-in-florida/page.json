@@ -1258,6 +1258,91 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-10",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-21",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-35",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "locations-map-section",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "locations-map-row",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "locations-map-column",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "locations-map",
+                  "type": "widget",
+                  "props": {
+                    "widget": "locations-map",
+                    "config": {
+                      "heading": "Our Locations",
+                      "mapHeading": "Find Us on the Map",
+                      "useLiveLocations": true
+                    },
+                    "snapshot": {
+                      "locations": [
+                        {
+                          "id": "13",
+                          "name": "Sun State International",
+                          "slug": "main",
+                          "streetAddress": null,
+                          "city": null,
+                          "region": null,
+                          "postalCode": null,
+                          "country": null,
+                          "latitude": null,
+                          "longitude": null,
+                          "phone": null,
+                          "email": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
