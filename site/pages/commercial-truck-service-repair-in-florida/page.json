@@ -796,12 +796,27 @@
                   "props": {
                     "gap": 6
                   },
+                  "styles": {
+                    "base": {
+                      "paddingTop": 20
+                    }
+                  },
                   "children": [
                     {
                       "id": "column-20",
                       "type": "column",
                       "props": {
                         "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20,
+                          "borderWidth": 1,
+                          "borderColor": "#dcdcdc"
+                        }
                       },
                       "children": [
                         {
@@ -835,6 +850,16 @@
                       "props": {
                         "span": 4
                       },
+                      "styles": {
+                        "base": {
+                          "borderColor": "#dcdcdc",
+                          "borderWidth": 1,
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
+                      },
                       "children": [
                         {
                           "id": "heading-14",
@@ -866,6 +891,17 @@
                       "type": "column",
                       "props": {
                         "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20,
+                          "borderTopWidth": 1,
+                          "borderWidth": 1,
+                          "borderColor": "#dcdcdc"
+                        }
                       },
                       "children": [
                         {
@@ -901,12 +937,27 @@
                   "props": {
                     "gap": 6
                   },
+                  "styles": {
+                    "base": {
+                      "paddingTop": 20
+                    }
+                  },
                   "children": [
                     {
                       "id": "column-23",
                       "type": "column",
                       "props": {
                         "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20,
+                          "borderWidth": 1,
+                          "borderColor": "#dcdcdc"
+                        }
                       },
                       "children": [
                         {
@@ -939,6 +990,16 @@
                       "type": "column",
                       "props": {
                         "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "borderWidth": 1,
+                          "borderColor": "#dcdcdc",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
                       },
                       "children": [
                         {
