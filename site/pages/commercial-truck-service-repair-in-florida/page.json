@@ -1268,58 +1268,70 @@
       },
       "children": [
         {
-          "id": "row-21",
+          "id": "row-22",
           "type": "row",
           "props": {
             "gap": 6
           },
           "children": [
             {
-              "id": "column-35",
+              "id": "column-36",
               "type": "column",
               "props": {
-                "span": 12
-              },
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "faq-section",
-      "type": "section",
-      "props": {
-        "width": "boxed",
-        "paddingY": 7
-      },
-      "children": [
-        {
-          "id": "faq-row",
-          "type": "row",
-          "props": {
-            "gap": 6
-          },
-          "children": [
-            {
-              "id": "faq-column",
-              "type": "column",
-              "props": {
-                "span": 12
+                "span": 6
               },
               "children": [
                 {
-                  "id": "faq-widget",
-                  "type": "widget",
+                  "id": "image-7",
+                  "type": "image",
                   "props": {
-                    "widget": "faq",
-                    "config": {},
-                    "snapshot": null
+                    "width": "full",
+                    "image": {}
+                  }
+                }
+              ]
+            },
+            {
+              "id": "column-37",
+              "type": "column",
+              "props": {
+                "span": 6
+              },
+              "children": [
+                {
+                  "id": "heading-21",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 2,
+                    "align": "left",
+                    "text": "Keep Your Fleet Moving with Sun State International"
+                  },
+                  "styles": {
+                    "base": {
+                      "paddingBottom": 0
+                    }
+                  }
+                },
+                {
+                  "id": "text-18",
+                  "type": "text",
+                  "props": {
+                    "align": "left",
+                    "width": "prose",
+                    "text": "At Sun State International, we understand that dependable commercial truck service isn't just about fixing equipment; it's about helping your drivers stay on schedule, your customers stay satisfied, and your business continue operating without unnecessary interruptions. Every repair, inspection, and maintenance appointment is an opportunity to keep your business moving forward. From routine fleet maintenance and trailer repair to advanced diagnostics, warranty work, and major repairs, our experienced technicians are committed to providing service you can count on."
                   }
                 }
               ]
             }
           ]
+        },
+        {
+          "id": "row-21",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": []
         }
       ]
     }
