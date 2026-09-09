@@ -478,6 +478,18 @@
               ]
             }
           ]
+        },
+        {
+          "id": "buttons",
+          "type": "buttons",
+          "props": {
+            "align": "center",
+            "items": [
+              {
+                "label": "Contact Us"
+              }
+            ]
+          }
         }
       ]
     }
