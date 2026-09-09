@@ -364,6 +364,154 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "id": "row-5",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "styles": {
+                    "base": {
+                      "paddingTop": 20
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "column-9",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "heading-7",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 3,
+                            "align": "left",
+                            "text": "All Makes Trailer Parts & Service"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0,
+                              "textTransform": "uppercase"
+                            }
+                          }
+                        },
+                        {
+                          "id": "customhtml-6",
+                          "type": "customHtml",
+                          "props": {
+                            "html": "\n<ul>\n<li>Repair Aluminum & Fiberglass Reinforced Plywood</li>\n<li>Repair/Replace King Pins</li>\n<li>Repair/Replace Landing Gear</li>\n<li>Accessory Installation – Underbody Skirts, Vents, Side Doors, Tire Carriers</li>\n<li>Dedicated Trailer Repair Bays</li>\n</ul>"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-10",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "heading-8",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 3,
+                            "align": "left",
+                            "text": "Parts\n"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0,
+                              "textTransform": "uppercase"
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-2",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "full",
+                            "text": "All-makes, new or used body installations and swaps\n"
+                          },
+                          "styles": {
+                            "base": {
+                              "fontWeight": "600"
+                            }
+                          }
+                        },
+                        {
+                          "id": "customhtml-7",
+                          "type": "customHtml",
+                          "props": {
+                            "html": "\n<ul>\n<li>Godwin Dump Body Parts</li>\n<li>Galbreath Roll-off Hoist & Hook- lift Parts</li>\n<li>Hyundai & All-Makes Trailer Parts</li>\n<li>Capacity Yard Tractor Parts & Warranty</li>\n<li>E-Z ride and Silent Drive Lift Axle parts<//li>\n<li>A/C Parts from Carrier, MCC, ACT, Transair & Busair</li>\n</ul>"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-11",
+                      "type": "column",
+                      "props": {
+                        "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "background": "#ffffff",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "heading-9",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 3,
+                            "align": "left",
+                            "text": "Truck Aftermarket\n"
+                          },
+                          "styles": {
+                            "base": {
+                              "paddingBottom": 0,
+                              "textTransform": "uppercase"
+                            }
+                          }
+                        },
+                        {
+                          "id": "customhtml-8",
+                          "type": "customHtml",
+                          "props": {
+                            "html": "\n<ul>\n<li>DOT Safety Inspections</li>\n<li>PTO & Wet-line Kits</li>\n<li>Towing Packages</li>\n<li>Fabrication & Welding Shop</li>\n<li>Hydraulic Repairs<//li>\n<li>Wheelbase Changes</li>\n<li>Tractor Protection Systems</li>\n<li>Axle Service</li>\n</ul>\n"
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
