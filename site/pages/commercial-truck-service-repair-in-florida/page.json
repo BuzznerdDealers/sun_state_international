@@ -613,7 +613,7 @@
       },
       "styles": {
         "base": {
-          "background": "#ebebeb"
+          "background": "#ffffff"
         }
       },
       "children": [
@@ -661,7 +661,7 @@
                       },
                       "styles": {
                         "base": {
-                          "background": "#ffffff",
+                          "background": "#e8e8e8",
                           "paddingTop": 20,
                           "paddingRight": 20,
                           "paddingBottom": 20,
@@ -699,6 +699,15 @@
                       "type": "column",
                       "props": {
                         "span": 4
+                      },
+                      "styles": {
+                        "base": {
+                          "background": "#e8e8e8",
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20
+                        }
                       },
                       "children": [
                         {
