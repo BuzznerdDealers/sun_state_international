@@ -1149,6 +1149,114 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-9",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7
+      },
+      "children": [
+        {
+          "id": "row-19",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-32",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "row-20",
+                  "type": "row",
+                  "props": {
+                    "gap": 6
+                  },
+                  "children": [
+                    {
+                      "id": "column-33",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "image-6",
+                          "type": "image",
+                          "props": {
+                            "width": "full",
+                            "image": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "column-34",
+                      "type": "column",
+                      "props": {
+                        "span": 6
+                      },
+                      "children": [
+                        {
+                          "id": "heading-20",
+                          "type": "heading",
+                          "props": {
+                            "headingLevel": 2,
+                            "align": "left",
+                            "text": "Parts and Service Working Together"
+                          },
+                          "styles": {
+                            "base": {
+                              "textTransform": "uppercase",
+                              "paddingBottom": 0
+                            }
+                          }
+                        },
+                        {
+                          "id": "text-16",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "Quality repairs begin with quality parts. That's why our Service Department works closely with the Sun State International Parts Department to ensure your truck or trailer receives the components it needs without unnecessary delays.\n\n"
+                          }
+                        },
+                        {
+                          "id": "text-17",
+                          "type": "text",
+                          "props": {
+                            "align": "left",
+                            "width": "prose",
+                            "text": "We stock a large inventory of genuine OEM and high-quality aftermarket parts for a wide variety of commercial trucks, trailers, buses, and fleet vehicles. If a part isn't immediately available, our experienced parts specialists work quickly to source it through our extensive supplier network to help minimize downtime. Whether you're visiting our service department or ordering directly from our parts team, you'll receive the same dependable support and knowledgeable assistance every step of the way."
+                          }
+                        },
+                        {
+                          "id": "buttons-4",
+                          "type": "buttons",
+                          "props": {
+                            "align": "left",
+                            "items": [
+                              {
+                                "ctaId": "careers-apply"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
