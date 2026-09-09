@@ -284,7 +284,7 @@
       },
       "styles": {
         "base": {
-          "background": "#e8e8e8"
+          "background": "#f4f4f4"
         }
       },
       "children": [
@@ -661,11 +661,17 @@
                       },
                       "styles": {
                         "base": {
-                          "background": "#e8e8e8",
                           "paddingTop": 20,
                           "paddingRight": 20,
                           "paddingBottom": 20,
-                          "paddingLeft": 20
+                          "paddingLeft": 20,
+                          "borderWidth": 1,
+                          "borderTopWidth": 1,
+                          "borderRightWidth": 1,
+                          "borderBottomWidth": 1,
+                          "borderLeftWidth": 1,
+                          "borderStyle": "solid",
+                          "borderColor": "#f4f4f4"
                         }
                       },
                       "children": [
@@ -702,7 +708,7 @@
                       },
                       "styles": {
                         "base": {
-                          "background": "#e8e8e8",
+                          "background": "#d60505",
                           "paddingTop": 20,
                           "paddingRight": 20,
                           "paddingBottom": 20,
