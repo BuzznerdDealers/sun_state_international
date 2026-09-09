@@ -671,7 +671,7 @@
                           "borderBottomWidth": 1,
                           "borderLeftWidth": 1,
                           "borderStyle": "solid",
-                          "borderColor": "#f4f4f4"
+                          "borderColor": "#dcdcdc"
                         }
                       },
                       "children": [
