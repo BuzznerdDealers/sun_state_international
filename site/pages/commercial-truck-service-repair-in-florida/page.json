@@ -1326,6 +1326,54 @@
           ]
         }
       ]
+    },
+    {
+      "id": "section-11",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 7,
+        "background": "none"
+      },
+      "styles": {
+        "base": {
+          "background": "#000000@000%"
+        }
+      },
+      "children": [
+        {
+          "id": "row-21",
+          "type": "row",
+          "props": {
+            "gap": 6
+          },
+          "children": [
+            {
+              "id": "column-35",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "heading-22",
+                  "type": "heading",
+                  "props": {
+                    "headingLevel": 2,
+                    "align": "left",
+                    "text": "Need Help? Contact Our Service Departments"
+                  },
+                  "styles": {
+                    "base": {
+                      "paddingBottom": 0
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
