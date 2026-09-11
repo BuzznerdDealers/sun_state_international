@@ -3,10 +3,10 @@
   "contractVersion": "4.0.0",
   "name": "Sun State International",
   "shortName": "Sun State",
-  "channelToken": "REPLACE_CHANNEL_TOKEN",
-  "domain": "REPLACE_CHANNEL_TOKEN.buzznerd.com",
-  "url": "https://REPLACE_CHANNEL_TOKEN.buzznerd.com",
-  "storefrontOrigin": "https://REPLACE_STOREFRONT_ORIGIN",
+  "channelToken": "sun-state-international-mtn66xhs",
+  "domain": "sun_state_international.vercel.app",
+  "url": "https://sun_state_international.vercel.app",
+  "storefrontOrigin": "https://sun-state-international.buzznerdrv.com",
   "storefrontPrefix": "store",
   "logo": "/img/sunstate-logo.png",
   "favicon": "/img/sunstate-logo.png",
@@ -27,7 +27,10 @@
     "latitude": 27.9506,
     "longitude": -82.4572,
     "priceRange": "$$",
-    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-16:00"]
+    "openingHours": [
+      "Mo-Fr 08:00-18:00",
+      "Sa 09:00-16:00"
+    ]
   },
   "seo": {
     "defaultTitle": "Sun State International — Trucks, Trailers & Parts in Southwest Florida",
