@@ -1,0 +1,138 @@
+{
+  "version": 2,
+  "id": "loc-panels",
+  "name": "Promo panels",
+  "description": "Two bordered promo panels side by side: kicker, title, copy and a pair of arrow links.",
+  "props": [
+    {
+      "key": "items",
+      "type": "list",
+      "label": "Panels",
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": "Kicker"
+        },
+        {
+          "key": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "key": "body",
+          "type": "textarea",
+          "label": "Copy"
+        },
+        {
+          "key": "body2",
+          "type": "richtext",
+          "label": "Second paragraph"
+        },
+        {
+          "key": "link1Label",
+          "type": "text",
+          "label": "Link 1 label"
+        },
+        {
+          "key": "link1Url",
+          "type": "url",
+          "label": "Link 1"
+        },
+        {
+          "key": "link2Label",
+          "type": "text",
+          "label": "Link 2 label"
+        },
+        {
+          "key": "link2Url",
+          "type": "url",
+          "label": "Link 2"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "loc-panels-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 1
+      },
+      "children": [
+        {
+          "id": "loc-panels-row",
+          "type": "row",
+          "props": {
+            "gap": 6,
+            "align": "stretch",
+            "stackOn": "tablet"
+          },
+          "children": [
+            {
+              "id": "loc-panel",
+              "type": "column",
+              "props": {
+                "span": 6,
+                "padding": 0,
+                "repeat": "items"
+              },
+              "children": [
+                {
+                  "id": "loc-panel-kicker",
+                  "type": "text",
+                  "props": {
+                    "text": "{{kicker}}"
+                  }
+                },
+                {
+                  "id": "loc-panel-title",
+                  "type": "heading",
+                  "props": {
+                    "text": "{{title}}",
+                    "headingLevel": 2
+                  }
+                },
+                {
+                  "id": "loc-panel-body",
+                  "type": "text",
+                  "props": {
+                    "text": "{{body}}"
+                  }
+                },
+                {
+                  "id": "loc-panel-body2",
+                  "type": "text",
+                  "props": {
+                    "text": "{{body2}}"
+                  }
+                },
+                {
+                  "id": "loc-panel-links",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "label": "{{link1Label}}",
+                        "url": "{{link1Url}}",
+                        "style": "link"
+                      },
+                      {
+                        "label": "{{link2Label}}",
+                        "url": "{{link2Url}}",
+                        "style": "link"
+                      }
+                    ],
+                    "align": "left"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-node=\"loc-panels-band\"]{padding-top:90px;padding-bottom:90px;}\n[data-bz-node=\"loc-panels-band\"] .bz-block{padding-block:0;}\n[data-bz-node=\"loc-panels-row\"]{gap:28px;}\n[data-bz-node=\"loc-panels-row\"] > .bz-col{display:flex;flex-direction:column;border:1px solid var(--line);padding:36px 32px;}\n[data-bz-node=\"loc-panels-row\"] .bz-text,[data-bz-node=\"loc-panels-row\"] .bz-headingblock{max-width:none;}\n[data-bz-node=\"loc-panels-row\"] > .bz-col > .bz-block:nth-child(1) p{font:700 10px/1 var(--font-body);letter-spacing:.14em;color:var(--accent);margin:0 0 12px;}\n[data-bz-node=\"loc-panels-row\"] h2{font:800 24px/1.7 var(--font-heading);letter-spacing:normal;margin:0 0 18px;}\n[data-bz-node=\"loc-panels-row\"] > .bz-col > .bz-block:nth-child(3),\n[data-bz-node=\"loc-panels-row\"] > .bz-col > .bz-block:nth-child(4){margin-bottom:18px;}\n[data-bz-node=\"loc-panels-row\"] > .bz-col > .bz-block:nth-child(3) p,\n[data-bz-node=\"loc-panels-row\"] > .bz-col > .bz-block:nth-child(4) p{font-size:15px;line-height:1.7;color:#3f3f3f;margin:0;}\n[data-bz-node=\"loc-panels-row\"] > .bz-col > .bz-block:nth-child(4) a{color:var(--accent);text-decoration:none;}\n[data-bz-node=\"loc-panels-row\"] > .bz-col > .bz-block:nth-child(4) a:hover{text-decoration:underline;}\n[data-bz-node=\"loc-panels-row\"] .bz-btns{gap:26px;}\n[data-bz-node=\"loc-panels-row\"] .bz-btn{padding:0;font:700 15px/1.7 var(--font-body);text-decoration:none;}\n@media (max-width:640px){[data-bz-node=\"loc-panels-band\"]{padding-top:56px;padding-bottom:56px;}}\n"
+}

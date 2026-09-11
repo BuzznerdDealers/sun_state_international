@@ -1,0 +1,63 @@
+{
+  "id": "hours-card",
+  "label": "Department hours card",
+  "description": "One department's opening hours: title, phone and a row per day. A leaf card — the seven day/time pairs are one shape no block expresses, and writing them as blocks would be seven rows of markup per card.",
+  "category": "content",
+  "props": [
+    {
+      "key": "title",
+      "type": "text",
+      "label": "Department",
+      "required": true
+    },
+    {
+      "key": "phone",
+      "type": "text",
+      "label": "Phone",
+      "required": true
+    },
+    {
+      "key": "phoneHref",
+      "type": "url",
+      "label": "Phone link",
+      "required": true
+    },
+    {
+      "key": "mon",
+      "type": "text",
+      "label": "Monday"
+    },
+    {
+      "key": "tue",
+      "type": "text",
+      "label": "Tuesday"
+    },
+    {
+      "key": "wed",
+      "type": "text",
+      "label": "Wednesday"
+    },
+    {
+      "key": "thu",
+      "type": "text",
+      "label": "Thursday"
+    },
+    {
+      "key": "fri",
+      "type": "text",
+      "label": "Friday"
+    },
+    {
+      "key": "sat",
+      "type": "text",
+      "label": "Saturday"
+    },
+    {
+      "key": "sun",
+      "type": "text",
+      "label": "Sunday"
+    }
+  ],
+  "html": "<div class=\"ss-card\"><h3 class=\"ss-card__title\">{{title}}</h3><a class=\"ss-card__phone\" href=\"{{link phoneHref}}\">{{phone}}</a><div class=\"ss-hours\"><div class=\"ss-hours__row\"><span class=\"ss-hours__day\">Monday</span><span class=\"ss-hours__time\">{{mon}}</span></div><div class=\"ss-hours__row\"><span class=\"ss-hours__day\">Tuesday</span><span class=\"ss-hours__time\">{{tue}}</span></div><div class=\"ss-hours__row\"><span class=\"ss-hours__day\">Wednesday</span><span class=\"ss-hours__time\">{{wed}}</span></div><div class=\"ss-hours__row\"><span class=\"ss-hours__day\">Thursday</span><span class=\"ss-hours__time\">{{thu}}</span></div><div class=\"ss-hours__row\"><span class=\"ss-hours__day\">Friday</span><span class=\"ss-hours__time\">{{fri}}</span></div><div class=\"ss-hours__row\"><span class=\"ss-hours__day\">Saturday</span><span class=\"ss-hours__time\">{{sat}}</span></div><div class=\"ss-hours__row\"><span class=\"ss-hours__day\">Sunday</span><span class=\"ss-hours__time\">{{sun}}</span></div></div></div>",
+  "css": ".ss-card{border:1px solid var(--line);padding:30px 26px;height:100%;background:var(--card);font-family:var(--font-body);}h3.ss-card__title{font:800 20px/1.7 var(--font-heading);color:#242424;margin:0 0 6px;}.ss-card__phone{font:700 15px/1.7 var(--font-body);color:var(--accent);display:inline-block;margin-bottom:18px;text-decoration:none;}.ss-hours{display:flex;flex-direction:column;gap:8px;}.ss-hours__row{display:flex;justify-content:space-between;gap:18px;font-size:14px;line-height:1.5;border-top:1px solid var(--line);padding-top:8px;}.ss-hours__day{font-weight:700;color:#242424;}.ss-hours__time{color:#3f3f3f;}"
+}

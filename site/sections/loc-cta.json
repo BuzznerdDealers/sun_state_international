@@ -1,0 +1,88 @@
+{
+  "version": 2,
+  "id": "loc-cta",
+  "name": "Location closing CTA",
+  "description": "Centred closing call to action on the dark field, with an eyebrow and two buttons.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "body",
+      "type": "textarea",
+      "label": "Copy"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "loc-cta-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 1,
+        "anchor": "contact"
+      },
+      "children": [
+        {
+          "id": "loc-cta-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "loc-cta-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "loc-cta-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2,
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "loc-cta-body",
+                  "type": "text",
+                  "props": {
+                    "text": "{{body}}",
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "loc-cta-buttons",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "ctaId": "sarasota-call"
+                      },
+                      {
+                        "ctaId": "schedule-service"
+                      }
+                    ],
+                    "align": "center"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "/* The handoff sets this band on --color-ink (#242424), the text colour, not\n   the near-black the header and footer use. */\n[data-bz-node=\"loc-cta-band\"]{background:#242424;padding-top:90px;padding-bottom:90px;text-align:center;}\n[data-bz-node=\"loc-cta-band\"] .bz-block{padding-block:0;}\n.bz-block[data-bz-node=\"loc-cta-heading\"] p.bz-eyebrow{font:700 11px/1 var(--font-body);letter-spacing:.16em;color:#A0A0A0;margin:0 0 18px;}\n[data-bz-node=\"loc-cta-heading\"] h2{font:800 34px/1.7 var(--font-heading);letter-spacing:normal;color:#fff;margin:0 0 18px;}\n[data-bz-node=\"loc-cta-body\"]{margin-bottom:30px;}\n[data-bz-node=\"loc-cta-body\"] .bz-text{max-width:620px;margin-inline:auto;}\n[data-bz-node=\"loc-cta-body\"] p{font-size:15px;line-height:1.7;color:#C7C1B4;margin:0;}\n[data-bz-node=\"loc-cta-buttons\"] .bz-btns{justify-content:center;gap:14px;}\n[data-bz-node=\"loc-cta-buttons\"] .bz-btn{min-height:48px;padding:0 26px;font:700 14px/1.7 var(--font-body);}\n[data-bz-node=\"loc-cta-buttons\"] .bz-btn--secondary{background:none;border:1px solid #fff;color:#fff;}\n[data-bz-node=\"loc-cta-buttons\"] .bz-btn--secondary:hover{background:#fff;color:#141414;}\n@media (max-width:640px){[data-bz-node=\"loc-cta-band\"]{padding-top:56px;padding-bottom:56px;}[data-bz-node=\"loc-cta-heading\"] h2{font-size:26px;}}\n"
+}

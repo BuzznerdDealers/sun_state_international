@@ -55,6 +55,27 @@
       "url": "#",
       "style": "primary",
       "intent": "careers"
+    },
+    {
+      "id": "sarasota-call",
+      "label": "Call (941) 355-7681",
+      "url": "tel:+19413557681",
+      "style": "primary",
+      "intent": "call"
+    },
+    {
+      "id": "sarasota-directions",
+      "label": "Get directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=1000+Sarasota+Center+Blvd+Sarasota+FL+34240",
+      "style": "secondary",
+      "intent": "directions"
+    },
+    {
+      "id": "schedule-service",
+      "label": "Schedule service",
+      "url": "/#services",
+      "style": "secondary",
+      "intent": "service-appointment"
     }
   ]
 }

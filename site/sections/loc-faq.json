@@ -1,0 +1,112 @@
+{
+  "version": 2,
+  "id": "loc-faq",
+  "name": "Location FAQ",
+  "description": "Single-open accordion at prose width. The opening and closing is the platform's dropdown behaviour — each item's trigger and panel are paired by name — so nothing here is scripted.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "items",
+      "type": "list",
+      "label": "Questions",
+      "fields": [
+        {
+          "key": "itemId",
+          "type": "text",
+          "label": "Item id (unique on the page)"
+        },
+        {
+          "key": "question",
+          "type": "text",
+          "label": "Question"
+        },
+        {
+          "key": "answer",
+          "type": "textarea",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "loc-faq-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 1,
+        "anchor": "faq",
+        "behaviour": "dropdown",
+        "behaviourOptions": "{\"trigger\":\"click\",\"closeOnOutside\":false}"
+      },
+      "children": [
+        {
+          "id": "loc-faq-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "loc-faq-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "loc-faq-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                },
+                {
+                  "id": "loc-faq-list-row",
+                  "type": "row",
+                  "props": {
+                    "gap": 0
+                  },
+                  "children": [
+                    {
+                      "id": "loc-faq-item",
+                      "type": "column",
+                      "props": {
+                        "span": 12,
+                        "padding": 0,
+                        "repeat": "items"
+                      },
+                      "children": [
+                        {
+                          "id": "loc-faq-item-widget",
+                          "type": "faq-item",
+                          "props": {
+                            "itemId": "{{itemId}}",
+                            "question": "{{question}}",
+                            "answer": "{{answer}}"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-node=\"loc-faq-band\"]{padding-top:90px;padding-bottom:90px;}\n[data-bz-node=\"loc-faq-band\"] .bz-block{padding-block:0;}\n/* The handoff sets the FAQ at prose width rather than the full container. */\n[data-bz-node=\"loc-faq-row\"],[data-bz-node=\"loc-faq-list-row\"]{max-width:804px;margin-inline:auto;}\n.bz-block[data-bz-node=\"loc-faq-heading\"] p.bz-eyebrow{font:700 11px/1 var(--font-body);letter-spacing:.16em;color:var(--muted);margin:0 0 18px;}\n[data-bz-node=\"loc-faq-heading\"] h2{font:800 34px/1.7 var(--font-heading);letter-spacing:normal;margin:0 0 40px;}\n[data-bz-node=\"loc-faq-list-row\"]{display:flex;flex-direction:column;border-top:1px solid var(--line);}\n@media (max-width:640px){[data-bz-node=\"loc-faq-band\"]{padding-top:56px;padding-bottom:56px;}}\n"
+}

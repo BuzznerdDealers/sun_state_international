@@ -1,0 +1,28 @@
+{
+  "id": "faq-item",
+  "label": "FAQ item",
+  "description": "One question and its answer. A coded widget because the trigger and its panel have to carry the dropdown behaviour's literal data-bz-part, data-bz-target and data-bz-panel attributes, which no typed block prop exposes — the opening and closing itself is the platform's behaviour, not scripted here.",
+  "category": "content",
+  "props": [
+    {
+      "key": "itemId",
+      "type": "text",
+      "label": "Item id (unique on the page)",
+      "required": true
+    },
+    {
+      "key": "question",
+      "type": "text",
+      "label": "Question",
+      "required": true
+    },
+    {
+      "key": "answer",
+      "type": "textarea",
+      "label": "Answer",
+      "required": true
+    }
+  ],
+  "html": "<div class=\"ss-faq__item\"><button class=\"ss-faq__trigger\" type=\"button\" data-bz-part=\"trigger\" data-bz-target=\"{{itemId}}\"><span>{{question}}</span><span class=\"ss-faq__icon\" aria-hidden=\"true\">+</span></button><div class=\"ss-faq__panel\" data-bz-part=\"panel\" data-bz-panel=\"{{itemId}}\">{{answer}}</div></div>",
+  "css": ".ss-faq__item{border-bottom:1px solid var(--line);}.ss-faq__trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;text-align:left;background:none;border:none;cursor:pointer;padding:22px 0;font:700 17px/normal var(--font-heading);color:#242424;}.ss-faq__trigger:hover{color:var(--accent);}.ss-faq__icon{font-size:22px;line-height:1;font-weight:400;color:var(--accent);flex-shrink:0;transition:transform .18s ease;}.ss-faq__trigger[aria-expanded=\"true\"] .ss-faq__icon{transform:rotate(45deg);}.ss-faq__panel{font-size:15px;line-height:1.7;color:#3f3f3f;padding:0 0 22px;max-width:760px;font-family:var(--font-body);}"
+}

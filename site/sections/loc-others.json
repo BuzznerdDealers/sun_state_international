@@ -1,0 +1,179 @@
+{
+  "version": 2,
+  "id": "loc-others",
+  "name": "Other locations",
+  "description": "Alt band listing the dealership's other sites: what each one does, its address, hours line, phone and a link.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "lede",
+      "type": "textarea",
+      "label": "Intro copy"
+    },
+    {
+      "key": "items",
+      "type": "list",
+      "label": "Locations",
+      "fields": [
+        {
+          "key": "kind",
+          "type": "text",
+          "label": "What it does"
+        },
+        {
+          "key": "name",
+          "type": "text",
+          "label": "City / name"
+        },
+        {
+          "key": "meta",
+          "type": "textarea",
+          "label": "Address and hours"
+        },
+        {
+          "key": "phone",
+          "type": "text",
+          "label": "Phone"
+        },
+        {
+          "key": "phoneHref",
+          "type": "url",
+          "label": "Phone link"
+        },
+        {
+          "key": "linkLabel",
+          "type": "text",
+          "label": "Link label"
+        },
+        {
+          "key": "linkUrl",
+          "type": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "loc-others-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "background": "paper",
+        "paddingY": 1,
+        "anchor": "locations"
+      },
+      "children": [
+        {
+          "id": "loc-others-head-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "loc-others-head-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "loc-others-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                },
+                {
+                  "id": "loc-others-lede",
+                  "type": "text",
+                  "props": {
+                    "text": "{{lede}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "loc-others-grid-row",
+          "type": "row",
+          "props": {
+            "gap": 5,
+            "align": "stretch",
+            "stackOn": "tablet"
+          },
+          "children": [
+            {
+              "id": "loc-other",
+              "type": "column",
+              "props": {
+                "span": 3,
+                "padding": 0,
+                "repeat": "items"
+              },
+              "children": [
+                {
+                  "id": "loc-other-kind",
+                  "type": "text",
+                  "props": {
+                    "text": "{{kind}}"
+                  }
+                },
+                {
+                  "id": "loc-other-name",
+                  "type": "heading",
+                  "props": {
+                    "text": "{{name}}",
+                    "headingLevel": 3
+                  }
+                },
+                {
+                  "id": "loc-other-meta",
+                  "type": "text",
+                  "props": {
+                    "text": "{{meta}}"
+                  }
+                },
+                {
+                  "id": "loc-other-phone",
+                  "type": "text",
+                  "props": {
+                    "text": "<a href=\"{{phoneHref}}\">{{phone}}</a>"
+                  }
+                },
+                {
+                  "id": "loc-other-link",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "label": "{{linkLabel}}",
+                        "url": "{{linkUrl}}",
+                        "style": "link"
+                      }
+                    ],
+                    "align": "left"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-node=\"loc-others-band\"]{padding-top:90px;padding-bottom:90px;}\n[data-bz-node=\"loc-others-band\"] .bz-block{padding-block:0;}\n.bz-block[data-bz-node=\"loc-others-heading\"] p.bz-eyebrow{font:700 11px/1 var(--font-body);letter-spacing:.16em;color:var(--muted);margin:0 0 18px;}\n[data-bz-node=\"loc-others-heading\"] h2{font:800 34px/1.7 var(--font-heading);letter-spacing:normal;margin:0 0 18px;}\n[data-bz-node=\"loc-others-lede\"]{margin-bottom:40px;}\n[data-bz-node=\"loc-others-lede\"] .bz-text{max-width:880px;}\n[data-bz-node=\"loc-others-lede\"] p{font-size:16px;line-height:1.75;color:#3f3f3f;margin:0;}\n[data-bz-node=\"loc-others-grid-row\"]{gap:24px;}\n[data-bz-node=\"loc-others-grid-row\"] > .bz-col{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);padding:28px;}\n[data-bz-node=\"loc-others-grid-row\"] .bz-text,\n[data-bz-node=\"loc-others-grid-row\"] .bz-headingblock{max-width:none;}\n[data-bz-node=\"loc-others-grid-row\"] > .bz-col > .bz-block:nth-child(1) p{font:700 10px/1.3 var(--font-body);letter-spacing:.14em;color:var(--accent);margin:0 0 12px;}\n[data-bz-node=\"loc-others-grid-row\"] h3{font:800 18px/1.7 var(--font-heading);margin:0 0 12px;}\n[data-bz-node=\"loc-others-grid-row\"] > .bz-col > .bz-block:nth-child(3){margin-bottom:14px;}\n[data-bz-node=\"loc-others-grid-row\"] > .bz-col > .bz-block:nth-child(3) p{font-size:14px;line-height:1.5;color:#3f3f3f;margin:0;}\n[data-bz-node=\"loc-others-grid-row\"] > .bz-col > .bz-block:nth-child(4) p{font-size:15px;line-height:1.7;margin:0 0 8px;}\n[data-bz-node=\"loc-others-grid-row\"] > .bz-col > .bz-block:nth-child(4) a{font-weight:700;color:var(--accent);text-decoration:none;}\n[data-bz-node=\"loc-others-grid-row\"] .bz-btn{padding:0;font:700 15px/1.7 var(--font-body);text-decoration:none;}\n@media (max-width:640px){[data-bz-node=\"loc-others-band\"]{padding-top:56px;padding-bottom:56px;}}\n"
+}

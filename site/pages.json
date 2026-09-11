@@ -22,5 +22,13 @@
     "path": "/locations-map",
     "out": "locations-map/index.html",
     "dir": "locations-map"
+  },
+  {
+    "slug": "sarasota",
+    "title": "Hours & Location — Sarasota, FL",
+    "description": "Sun State International Trucks at 1000 Sarasota Center Blvd., Sarasota, FL 34240. Sales, parts and service hours, phone (941) 355-7681, service (941) 541-3251, after-hours service via Certified Fleet, mobile truck service, trailer parts and service, directions and map.",
+    "path": "/locations/sarasota",
+    "out": "locations/sarasota/index.html",
+    "dir": "sarasota"
   }
 ]

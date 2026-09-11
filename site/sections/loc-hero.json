@@ -1,0 +1,141 @@
+{
+  "version": 2,
+  "id": "loc-hero",
+  "name": "Location hero",
+  "description": "Photograph with a 72% scrim, a breadcrumb, the location headline, its address line and two calls to action.",
+  "props": [
+    {
+      "key": "crumbs",
+      "type": "text",
+      "label": "Breadcrumb (last item is the current page)"
+    },
+    {
+      "key": "crumbHomeUrl",
+      "type": "url",
+      "label": "Breadcrumb: home link"
+    },
+    {
+      "key": "crumbParentUrl",
+      "type": "url",
+      "label": "Breadcrumb: parent link"
+    },
+    {
+      "key": "crumbParent",
+      "type": "text",
+      "label": "Breadcrumb: parent label"
+    },
+    {
+      "key": "headline",
+      "type": "text",
+      "label": "Headline"
+    },
+    {
+      "key": "sub",
+      "type": "textarea",
+      "label": "Address line"
+    },
+    {
+      "key": "photo",
+      "type": "image",
+      "label": "Background photograph"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "loc-hero-band",
+      "type": "section",
+      "props": {
+        "width": "full",
+        "paddingY": 1,
+        "anchor": "top"
+      },
+      "children": [
+        {
+          "id": "loc-hero-photo-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "loc-hero-photo-col",
+              "type": "column",
+              "props": {
+                "span": 12,
+                "padding": 0
+              },
+              "children": [
+                {
+                  "id": "loc-hero-photo",
+                  "type": "image",
+                  "props": {
+                    "image": "{{photo}}",
+                    "width": "full"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "loc-hero-inner",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "loc-hero-inner-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "loc-hero-crumbs",
+                  "type": "customHtml",
+                  "props": {
+                    "html": "<nav class=\"ss-crumb\" aria-label=\"Breadcrumb\"><a href=\"{{crumbHomeUrl}}\">HOME</a><span aria-hidden=\"true\">/</span><a href=\"{{crumbParentUrl}}\">{{crumbParent}}</a><span aria-hidden=\"true\">/</span><span aria-current=\"page\">{{crumbs}}</span></nav>"
+                  }
+                },
+                {
+                  "id": "loc-hero-heading",
+                  "type": "heading",
+                  "props": {
+                    "text": "{{headline}}",
+                    "headingLevel": 1,
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "loc-hero-sub",
+                  "type": "text",
+                  "props": {
+                    "text": "{{sub}}",
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "loc-hero-ctas",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "ctaId": "sarasota-call"
+                      },
+                      {
+                        "ctaId": "sarasota-directions"
+                      }
+                    ],
+                    "align": "center"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-node=\"loc-hero-band\"]{position:relative;overflow:hidden;background:#141414;text-align:center;padding:88px 48px;}\n[data-bz-node=\"loc-hero-band\"]::before{content:\"\";position:absolute;inset:0;background:rgba(20,20,20,.72);z-index:1;}\n[data-bz-node=\"loc-hero-band\"] .bz-block{padding-block:0;}\n[data-bz-node=\"loc-hero-photo-row\"]{position:absolute;inset:0;z-index:0;}\n/* The photograph is pinned to the band rather than chained through\n   height:100%. The band is shorter than the picture is tall at this width, and\n   a percentage height resolves against the grid *area*, which the oversized\n   image had already stretched — so the chain gave back the image's natural\n   720px and the crop sat too low. Pinning the figure to the absolutely\n   positioned row makes the box the band's height whatever the picture is. */\n[data-bz-node=\"loc-hero-photo-row\"] .bz-col,[data-bz-node=\"loc-hero-photo\"],\n[data-bz-node=\"loc-hero-photo\"] .bz-container{height:100%;min-height:0;}\n[data-bz-node=\"loc-hero-photo\"] figure{position:absolute;inset:0;margin:0;}\n[data-bz-node=\"loc-hero-photo\"] img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}\n[data-bz-node=\"loc-hero-inner\"]{position:relative;z-index:2;max-width:960px;margin-inline:auto;}\n.ss-crumb{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;font:700 11px/1 var(--font-body);letter-spacing:.16em;color:#E2E2E2;margin-bottom:22px;}\n.ss-crumb a{color:#E2E2E2;text-decoration:none;}\n[data-bz-node=\"loc-hero-heading\"] h1{font:800 44px/1.14 var(--font-heading);letter-spacing:-.01em;color:#fff;margin:0 0 22px;}\n[data-bz-node=\"loc-hero-sub\"]{margin-bottom:30px;}\n[data-bz-node=\"loc-hero-sub\"] .bz-text{max-width:700px;margin-inline:auto;}\n[data-bz-node=\"loc-hero-sub\"] p{font-size:17px;line-height:1.7;color:#E2E2E2;margin:0;}\n[data-bz-node=\"loc-hero-ctas\"] .bz-btns{justify-content:center;gap:14px;}\n[data-bz-node=\"loc-hero-ctas\"] .bz-btn{min-height:48px;padding:0 26px;font:700 14px/1.7 var(--font-body);}\n[data-bz-node=\"loc-hero-ctas\"] .bz-btn--secondary{background:none;border:1px solid #fff;color:#fff;}\n[data-bz-node=\"loc-hero-ctas\"] .bz-btn--secondary:hover{background:#fff;color:#141414;}\n@media (max-width:640px){\n  [data-bz-node=\"loc-hero-band\"]{padding:72px 20px;}\n  [data-bz-node=\"loc-hero-heading\"] h1{font-size:30px;}\n}\n"
+}

@@ -1,0 +1,137 @@
+{
+  "version": 2,
+  "id": "loc-features",
+  "name": "What's on site",
+  "description": "Alt band: four white capability cards, each with a title, a line of copy and an arrow link.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "items",
+      "type": "list",
+      "label": "Cards",
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "key": "body",
+          "type": "textarea",
+          "label": "Copy"
+        },
+        {
+          "key": "linkLabel",
+          "type": "text",
+          "label": "Link label"
+        },
+        {
+          "key": "linkUrl",
+          "type": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "loc-features-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "background": "paper",
+        "paddingY": 1
+      },
+      "children": [
+        {
+          "id": "loc-features-head-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "loc-features-head-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "loc-features-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "loc-features-grid-row",
+          "type": "row",
+          "props": {
+            "gap": 5,
+            "align": "stretch",
+            "stackOn": "tablet"
+          },
+          "children": [
+            {
+              "id": "loc-feature",
+              "type": "column",
+              "props": {
+                "span": 3,
+                "padding": 0,
+                "repeat": "items"
+              },
+              "children": [
+                {
+                  "id": "loc-feature-title",
+                  "type": "heading",
+                  "props": {
+                    "text": "{{title}}",
+                    "headingLevel": 3
+                  }
+                },
+                {
+                  "id": "loc-feature-body",
+                  "type": "text",
+                  "props": {
+                    "text": "{{body}}"
+                  }
+                },
+                {
+                  "id": "loc-feature-link",
+                  "type": "buttons",
+                  "props": {
+                    "items": [
+                      {
+                        "label": "{{linkLabel}}",
+                        "url": "{{linkUrl}}",
+                        "style": "link"
+                      }
+                    ],
+                    "align": "left"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-node=\"loc-features-band\"]{padding-top:90px;padding-bottom:90px;}\n[data-bz-node=\"loc-features-band\"] .bz-block{padding-block:0;}\n.bz-block[data-bz-node=\"loc-features-heading\"] p.bz-eyebrow{font:700 11px/1 var(--font-body);letter-spacing:.16em;color:var(--muted);margin:0 0 18px;}\n[data-bz-node=\"loc-features-heading\"] h2{font:800 34px/1.7 var(--font-heading);letter-spacing:normal;margin:0 0 40px;}\n[data-bz-node=\"loc-features-grid-row\"]{gap:24px;}\n[data-bz-node=\"loc-features-grid-row\"] > .bz-col{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);padding:28px;}\n[data-bz-node=\"loc-features-grid-row\"] .bz-headingblock,\n[data-bz-node=\"loc-features-grid-row\"] .bz-text{max-width:none;}\n[data-bz-node=\"loc-features-grid-row\"] h3{font:800 18px/1.7 var(--font-heading);margin:0 0 12px;}\n[data-bz-node=\"loc-features-grid-row\"] .bz-block--text{margin-bottom:14px;}\n[data-bz-node=\"loc-features-grid-row\"] .bz-block--text p{font-size:14px;line-height:1.7;color:#3f3f3f;margin:0;}\n[data-bz-node=\"loc-features-grid-row\"] .bz-block--buttons{margin-top:auto;}\n[data-bz-node=\"loc-features-grid-row\"] .bz-btn{padding:0;font:700 15px/1.7 var(--font-body);text-decoration:none;}\n@media (max-width:640px){[data-bz-node=\"loc-features-band\"]{padding-top:56px;padding-bottom:56px;}}\n"
+}

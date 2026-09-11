@@ -1,0 +1,187 @@
+{
+  "version": 2,
+  "id": "loc-store",
+  "name": "Location store details",
+  "description": "Two-up: the dealership's address, its numbered phone list and a dark announcement block, beside a framed map.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Dealership name"
+    },
+    {
+      "key": "address",
+      "type": "textarea",
+      "label": "Address"
+    },
+    {
+      "key": "noticeKicker",
+      "type": "text",
+      "label": "Notice kicker"
+    },
+    {
+      "key": "noticeTitle1",
+      "type": "text",
+      "label": "Notice title 1"
+    },
+    {
+      "key": "noticeBody1",
+      "type": "textarea",
+      "label": "Notice body 1"
+    },
+    {
+      "key": "noticeTitle2",
+      "type": "text",
+      "label": "Notice title 2"
+    },
+    {
+      "key": "noticeBody2",
+      "type": "textarea",
+      "label": "Notice body 2"
+    },
+    {
+      "key": "noticeLink",
+      "type": "text",
+      "label": "Notice link label"
+    },
+    {
+      "key": "noticeLinkUrl",
+      "type": "url",
+      "label": "Notice link"
+    },
+    {
+      "key": "map",
+      "type": "image",
+      "label": "Map image"
+    },
+    {
+      "key": "phones",
+      "type": "list",
+      "label": "Phone numbers",
+      "fields": [
+        {
+          "key": "label",
+          "type": "text",
+          "label": "Label"
+        },
+        {
+          "key": "value",
+          "type": "text",
+          "label": "Number"
+        },
+        {
+          "key": "href",
+          "type": "url",
+          "label": "Link (blank for fax)"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "loc-store-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 1,
+        "anchor": "store"
+      },
+      "children": [
+        {
+          "id": "loc-store-row",
+          "type": "row",
+          "props": {
+            "gap": 0,
+            "align": "start",
+            "stackOn": "tablet"
+          },
+          "children": [
+            {
+              "id": "loc-store-copy-col",
+              "type": "column",
+              "props": {
+                "span": 1
+              },
+              "children": [
+                {
+                  "id": "loc-store-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                },
+                {
+                  "id": "loc-store-address",
+                  "type": "text",
+                  "props": {
+                    "text": "{{address}}"
+                  }
+                },
+                {
+                  "id": "loc-store-phones-row",
+                  "type": "row",
+                  "props": {
+                    "gap": 0
+                  },
+                  "children": [
+                    {
+                      "id": "loc-phone",
+                      "type": "column",
+                      "props": {
+                        "span": 12,
+                        "padding": 0,
+                        "repeat": "phones"
+                      },
+                      "children": [
+                        {
+                          "id": "loc-phone-line",
+                          "type": "customHtml",
+                          "props": {
+                            "html": "<div class=\"ss-phone\"><span class=\"ss-phone__label\">{{label}}</span><a class=\"ss-phone__value\" href=\"{{link href}}\">{{value}}</a></div>"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "loc-store-notice",
+                  "type": "customHtml",
+                  "props": {
+                    "html": "<div class=\"ss-notice\"><div class=\"ss-notice__kicker\">{{noticeKicker}}</div><h3 class=\"ss-notice__title\">{{noticeTitle1}}</h3><p class=\"ss-notice__body\">{{noticeBody1}}</p><h3 class=\"ss-notice__title\">{{noticeTitle2}}</h3><p class=\"ss-notice__body\">{{noticeBody2}}</p><a class=\"ss-notice__link\" href=\"{{noticeLinkUrl}}\">{{noticeLink}}</a></div>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "loc-store-map-col",
+              "type": "column",
+              "props": {
+                "span": 1,
+                "padding": 0
+              },
+              "children": [
+                {
+                  "id": "loc-store-map",
+                  "type": "image",
+                  "props": {
+                    "image": "{{map}}",
+                    "width": "full"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "[data-bz-node=\"loc-store-band\"]{padding-top:90px;padding-bottom:90px;}\n[data-bz-node=\"loc-store-band\"] .bz-block{padding-block:0;}\n/* The handoff splits this 1.5fr / 1fr with a 48px gutter. */\n[data-bz-node=\"loc-store-row\"]{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:start;}\n.bz-block[data-bz-node=\"loc-store-heading\"] p.bz-eyebrow{font:700 11px/1 var(--font-body);letter-spacing:.16em;color:var(--muted);margin:0 0 18px;}\n[data-bz-node=\"loc-store-heading\"] h2{font:800 30px/1.7 var(--font-heading);letter-spacing:normal;margin:0 0 18px;}\n[data-bz-node=\"loc-store-address\"]{margin-bottom:22px;}\n[data-bz-node=\"loc-store-address\"] .bz-text{max-width:none;}\n[data-bz-node=\"loc-store-address\"] p{font-size:16px;line-height:1.75;color:#3f3f3f;margin:0;}\n[data-bz-node=\"loc-store-phones-row\"]{display:flex;flex-direction:column;gap:8px;margin-bottom:22px;}\n.ss-phone{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px;font-size:16px;line-height:1.7;}\n.ss-phone__label{font:700 10px/1.4 var(--font-body);letter-spacing:.12em;color:var(--muted);min-width:128px;}\n.ss-phone__value{font:700 15px/1.7 var(--font-body);color:#242424;text-decoration:none;}\n.ss-notice{background:#242424;padding:26px;}\n.ss-notice__kicker{font:700 10px/1.3 var(--font-body);letter-spacing:.14em;color:var(--accent);margin-bottom:18px;}\n.bz-block h3.ss-notice__title{font:800 20px/1.7 var(--font-heading);color:#fff;margin:0 0 12px;}\n.bz-block p.ss-notice__body{font-size:15px;line-height:1.7;color:#C7C1B4;margin:15px 0 14px;}\n.ss-notice__link{font:700 16px/1.7 var(--font-body);color:#fff;text-decoration:none;}\n/* Framed map: fixed height so the two-up keeps its proportion. */\n[data-bz-node=\"loc-store-map\"]{height:520px;border:1px solid var(--line);background:var(--paper);overflow:hidden;}\n[data-bz-node=\"loc-store-map\"] .bz-container,[data-bz-node=\"loc-store-map\"] figure{height:100%;}\n[data-bz-node=\"loc-store-map\"] img{width:100%;height:100%;object-fit:cover;display:block;}\n@media (max-width:1100px){[data-bz-node=\"loc-store-row\"]{grid-template-columns:1fr;gap:40px;}}\n@media (max-width:640px){[data-bz-node=\"loc-store-map\"]{height:320px;}[data-bz-node=\"loc-store-band\"]{padding-top:56px;padding-bottom:56px;}}\n"
+}

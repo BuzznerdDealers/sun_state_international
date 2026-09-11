@@ -1,0 +1,184 @@
+{
+  "version": 2,
+  "id": "loc-hours",
+  "name": "Department hours",
+  "description": "Eyebrow, heading and a card per department, each listing its week, with a closing footnote.",
+  "props": [
+    {
+      "key": "eyebrow",
+      "type": "text",
+      "label": "Eyebrow"
+    },
+    {
+      "key": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "key": "footnote",
+      "type": "textarea",
+      "label": "Footnote"
+    },
+    {
+      "key": "cards",
+      "type": "list",
+      "label": "Departments",
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "label": "Department"
+        },
+        {
+          "key": "phone",
+          "type": "text",
+          "label": "Phone"
+        },
+        {
+          "key": "phoneHref",
+          "type": "url",
+          "label": "Phone link"
+        },
+        {
+          "key": "mon",
+          "type": "text",
+          "label": "Monday"
+        },
+        {
+          "key": "tue",
+          "type": "text",
+          "label": "Tuesday"
+        },
+        {
+          "key": "wed",
+          "type": "text",
+          "label": "Wednesday"
+        },
+        {
+          "key": "thu",
+          "type": "text",
+          "label": "Thursday"
+        },
+        {
+          "key": "fri",
+          "type": "text",
+          "label": "Friday"
+        },
+        {
+          "key": "sat",
+          "type": "text",
+          "label": "Saturday"
+        },
+        {
+          "key": "sun",
+          "type": "text",
+          "label": "Sunday"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "loc-hours-band",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 1,
+        "anchor": "hours"
+      },
+      "children": [
+        {
+          "id": "loc-hours-head-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "loc-hours-head-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "loc-hours-heading",
+                  "type": "heading",
+                  "props": {
+                    "eyebrow": "{{eyebrow}}",
+                    "text": "{{heading}}",
+                    "headingLevel": 2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "loc-hours-grid-row",
+          "type": "row",
+          "props": {
+            "gap": 5,
+            "align": "stretch",
+            "stackOn": "tablet"
+          },
+          "children": [
+            {
+              "id": "loc-hours-card",
+              "type": "column",
+              "props": {
+                "span": 4,
+                "padding": 0,
+                "repeat": "cards"
+              },
+              "children": [
+                {
+                  "id": "loc-hours-card-widget",
+                  "type": "hours-card",
+                  "props": {
+                    "title": "{{title}}",
+                    "phone": "{{phone}}",
+                    "phoneHref": "{{phoneHref}}",
+                    "mon": "{{mon}}",
+                    "tue": "{{tue}}",
+                    "wed": "{{wed}}",
+                    "thu": "{{thu}}",
+                    "fri": "{{fri}}",
+                    "sat": "{{sat}}",
+                    "sun": "{{sun}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "loc-hours-foot-row",
+          "type": "row",
+          "props": {
+            "gap": 0
+          },
+          "children": [
+            {
+              "id": "loc-hours-foot-col",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "loc-hours-footnote",
+                  "type": "text",
+                  "props": {
+                    "text": "{{footnote}}"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "css": "/* This band follows the store block, which already carries the rhythm. */\n[data-bz-node=\"loc-hours-band\"]{padding-top:0;padding-bottom:90px;}\n[data-bz-node=\"loc-hours-band\"] .bz-block{padding-block:0;}\n.bz-block[data-bz-node=\"loc-hours-heading\"] p.bz-eyebrow{font:700 11px/1 var(--font-body);letter-spacing:.16em;color:var(--muted);margin:0 0 18px;}\n[data-bz-node=\"loc-hours-heading\"] h2{font:800 34px/1.7 var(--font-heading);letter-spacing:normal;margin:0 0 40px;}\n[data-bz-node=\"loc-hours-grid-row\"]{gap:24px;}\n[data-bz-node=\"loc-hours-footnote\"]{margin-top:22px;}\n[data-bz-node=\"loc-hours-footnote\"] .bz-text{max-width:860px;}\n[data-bz-node=\"loc-hours-footnote\"] p{font-size:14px;line-height:1.7;color:var(--muted);margin:0;}\n@media (max-width:640px){[data-bz-node=\"loc-hours-band\"]{padding-bottom:56px;}}\n"
+}
